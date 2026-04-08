@@ -16,9 +16,6 @@ export const metadata: Metadata = {
   title: "Quantum Computing Scientific Lineage — Many Worlds Capital",
   description:
     "Explore the connections between quantum computing researchers — advisors, collaborators, and co-authors.",
-  icons: {
-    icon: "/favicon.svg",
-  },
   openGraph: {
     title: "Quantum Computing Scientific Lineage",
     description:
