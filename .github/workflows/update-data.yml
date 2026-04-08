@@ -1,0 +1,31 @@
+name: Update Scientific Lineage Data
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Every Monday at 6 AM UTC
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Generate data from OpenAlex
+        run: npx tsx scripts/generate-data.ts
+
+      - name: Commit and push if changed
+        run: |
+          git diff --quiet public/data/ && echo "No changes" && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          git commit -m "chore: update scientist data from OpenAlex"
+          git push

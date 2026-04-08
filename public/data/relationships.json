@@ -1,0 +1,5002 @@
+[
+  {
+    "source": "A5006327208",
+    "target": "A5061874000",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Caltech under Preskill"
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5050850280",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Oxford under Deutsch"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5083228566",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Postdoc with Cirac"
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5016282235",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Long collaboration at Innsbruck"
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5001536933",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Postdoc at NIST under Wineland"
+  },
+  {
+    "source": "A5042449260",
+    "target": "A5001105113",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Vienna under Zeilinger"
+  },
+  {
+    "source": "A5016075205",
+    "target": "A5084929692",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Postdoc at Yale under Schoelkopf"
+  },
+  {
+    "source": "A5068826612",
+    "target": "A5066245772",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Harvard under Lukin"
+  },
+  {
+    "source": "A5012503150",
+    "target": "A5010879789",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Collaboration at TU Delft"
+  },
+  {
+    "source": "A5047414815",
+    "target": "A5049405877",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Collaboration at UNSW"
+  },
+  {
+    "source": "A5030940558",
+    "target": "A5061874000",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Postdoc at Caltech with Preskill"
+  },
+  {
+    "source": "A5008766821",
+    "target": "A5071039750",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at MIT, collaboration with Vazirani"
+  },
+  {
+    "source": "A5011207998",
+    "target": "A5071039750",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Berkeley under Vazirani"
+  },
+  {
+    "source": "A5020583189",
+    "target": "A5020769134",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Undergrad research at UT Austin with Aaronson"
+  },
+  {
+    "source": "A5024414185",
+    "target": "A5046083937",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Yale under Girvin"
+  },
+  {
+    "source": "A5009791247",
+    "target": "A5066245772",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Harvard under Lukin"
+  },
+  {
+    "source": "A5003369827",
+    "target": "A5066245772",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Harvard under Lukin"
+  },
+  {
+    "source": "A5066295139",
+    "target": "A5040977712",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Innsbruck under Blatt"
+  },
+  {
+    "source": "A5019616211",
+    "target": "A5071039750",
+    "type": "student-of",
+    "weight": 1,
+    "details": "PhD at Berkeley under Vazirani"
+  },
+  {
+    "source": "A5065681671",
+    "target": "A5038060570",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Collaboration at MIT with Lloyd"
+  },
+  {
+    "source": "A5073521804",
+    "target": "A5043106778",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Worked with Martinis at Google"
+  },
+  {
+    "source": "A5056095913",
+    "target": "A5053166798",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Collaboration at IBM with Bennett"
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5020744800",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Collaboration at MIT"
+  },
+  {
+    "source": "A5082160956",
+    "target": "A5040977712",
+    "type": "student-of",
+    "weight": 1,
+    "details": "Collaboration at Innsbruck with Blatt"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5061874000",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5020769134",
+    "type": "co-authored",
+    "weight": 6
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5053166798",
+    "type": "co-authored",
+    "weight": 15
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5038060570",
+    "type": "co-authored",
+    "weight": 9
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5078255491",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5036253306",
+    "type": "co-authored",
+    "weight": 20
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5058819109",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5071105459",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5078065002",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 10
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5038060570",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5016282235",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5005759724",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5066245772",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5046427077",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5006327208",
+    "type": "co-authored",
+    "weight": 12
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5027759442",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5068097121",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5036253306",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5018837979",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5058819109",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5012231169",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5071105459",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5005794608",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5019716296",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 9
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5009791247",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5003369827",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5006327208",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5036253306",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5018837979",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5052107957",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5038060570",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5059030616",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5058819109",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5071039750",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5078065002",
+    "type": "co-authored",
+    "weight": 9
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5110284072",
+    "type": "co-authored",
+    "weight": 20
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 11
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5083228566",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5040977712",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5005759724",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5059030616",
+    "type": "co-authored",
+    "weight": 16
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5001105113",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5108398851",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5071105459",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5005759724",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5078255491",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5058819109",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5012231169",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5071105459",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5005794608",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5110284072",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5012503150",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5020583189",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5031023857",
+    "target": "A5068097121",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5031023857",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5031023857",
+    "target": "A5065994445",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5016282235",
+    "type": "co-authored",
+    "weight": 210
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5040977712",
+    "type": "co-authored",
+    "weight": 25
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5066245772",
+    "type": "co-authored",
+    "weight": 41
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5042449260",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5059030616",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5001105113",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5001536933",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5108398851",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5078255491",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5001154267",
+    "type": "co-authored",
+    "weight": 80
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5111058882",
+    "type": "co-authored",
+    "weight": 24
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5016075205",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5071039750",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 15
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5078065002",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5012503150",
+    "type": "co-authored",
+    "weight": 12
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5040977712",
+    "type": "co-authored",
+    "weight": 63
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5005759724",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5066245772",
+    "type": "co-authored",
+    "weight": 53
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5001105113",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5001154267",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5111058882",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5084929692",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5016075205",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5060980314",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5006639172",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 10
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5004169905",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5012503150",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5066295139",
+    "type": "co-authored",
+    "weight": 15
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5073521804",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5009791247",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5003369827",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5005759724",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5059030616",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5001105113",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5001536933",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5108398851",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5001154267",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5082160956",
+    "type": "co-authored",
+    "weight": 28
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5066295139",
+    "type": "co-authored",
+    "weight": 119
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5012132706",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5066245772",
+    "type": "co-authored",
+    "weight": 12
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5001105113",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5001536933",
+    "type": "co-authored",
+    "weight": 67
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5108398851",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5078255491",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5084929692",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5071039750",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5110284072",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5027716155",
+    "type": "co-authored",
+    "weight": 12
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5073521804",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5019616211",
+    "type": "co-authored",
+    "weight": 6
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5001105113",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5046427077",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5036253306",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5001154267",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5084929692",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5006639172",
+    "type": "co-authored",
+    "weight": 15
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 74
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5012503150",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5073521804",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5009791247",
+    "type": "co-authored",
+    "weight": 48
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5003369827",
+    "type": "co-authored",
+    "weight": 26
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 114
+  },
+  {
+    "source": "A5042449260",
+    "target": "A5059030616",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5042449260",
+    "target": "A5001105113",
+    "type": "co-authored",
+    "weight": 40
+  },
+  {
+    "source": "A5042449260",
+    "target": "A5078255491",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5042449260",
+    "target": "A5071039750",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5042449260",
+    "target": "A5078065002",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5042449260",
+    "target": "A5012132706",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5042449260",
+    "target": "A5090412627",
+    "type": "co-authored",
+    "weight": 18
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5001105113",
+    "type": "co-authored",
+    "weight": 6
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5001536933",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5108398851",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5078255491",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5071105459",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5071039750",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5078065002",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5110284072",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5108398851",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5052107957",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5034032202",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5046427077",
+    "target": "A5001536933",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5046427077",
+    "target": "A5108398851",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5001536933",
+    "target": "A5108398851",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5001536933",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5108398851",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5108398851",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5006327208",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5071039750",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5032976159",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5078065002",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5027759442",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5068097121",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5018837979",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5005794608",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5032976159",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5036253306",
+    "type": "co-authored",
+    "weight": 21
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5111058882",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5012231169",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5064155719",
+    "type": "co-authored",
+    "weight": 8
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5005794608",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5071039750",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5073521804",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5065681671",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5103046966",
+    "type": "co-authored",
+    "weight": 30
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5018837979",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5111058882",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5018837979",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5058819109",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5043106778",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5084929692",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5064909614",
+    "type": "co-authored",
+    "weight": 19
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5019716296",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 8
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 8
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5110284072",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5012503150",
+    "type": "co-authored",
+    "weight": 19
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5066295139",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5018837979",
+    "type": "co-authored",
+    "weight": 9
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5043106778",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5012231169",
+    "type": "co-authored",
+    "weight": 16
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5089631322",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5019716296",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5073521804",
+    "type": "co-authored",
+    "weight": 11
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5065681671",
+    "type": "co-authored",
+    "weight": 20
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5009791247",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5003369827",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5001154267",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5111058882",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5071039750",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5066563480",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5023685398",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5065994445",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5009791247",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5084929692",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5064909614",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5071105459",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5019716296",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5078065002",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 35
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5018132307",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5001154267",
+    "target": "A5111058882",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5001154267",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5001154267",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5001154267",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 8
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5065994445",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5065681671",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5012231169",
+    "type": "co-authored",
+    "weight": 28
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5089631322",
+    "type": "co-authored",
+    "weight": 37
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5016075205",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5073521804",
+    "type": "co-authored",
+    "weight": 104
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5065681671",
+    "type": "co-authored",
+    "weight": 14
+  },
+  {
+    "source": "A5012231169",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5012231169",
+    "target": "A5073521804",
+    "type": "co-authored",
+    "weight": 23
+  },
+  {
+    "source": "A5012231169",
+    "target": "A5065681671",
+    "type": "co-authored",
+    "weight": 58
+  },
+  {
+    "source": "A5012231169",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5084929692",
+    "target": "A5089631322",
+    "type": "co-authored",
+    "weight": 178
+  },
+  {
+    "source": "A5084929692",
+    "target": "A5016075205",
+    "type": "co-authored",
+    "weight": 24
+  },
+  {
+    "source": "A5084929692",
+    "target": "A5030701195",
+    "type": "co-authored",
+    "weight": 26
+  },
+  {
+    "source": "A5084929692",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 133
+  },
+  {
+    "source": "A5084929692",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 70
+  },
+  {
+    "source": "A5084929692",
+    "target": "A5024414185",
+    "type": "co-authored",
+    "weight": 14
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5016075205",
+    "type": "co-authored",
+    "weight": 13
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5030701195",
+    "type": "co-authored",
+    "weight": 18
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 86
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 49
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5065681671",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5024414185",
+    "type": "co-authored",
+    "weight": 18
+  },
+  {
+    "source": "A5016075205",
+    "target": "A5030701195",
+    "type": "co-authored",
+    "weight": 14
+  },
+  {
+    "source": "A5016075205",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 23
+  },
+  {
+    "source": "A5064155719",
+    "target": "A5060980314",
+    "type": "co-authored",
+    "weight": 8
+  },
+  {
+    "source": "A5064155719",
+    "target": "A5006639172",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5064155719",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5064155719",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5064155719",
+    "target": "A5019716296",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 6
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5071105459",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5004169905",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5012503150",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5047414815",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5103068314",
+    "type": "co-authored",
+    "weight": 17
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5103068314",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5103068314",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5103068314",
+    "target": "A5012503150",
+    "type": "co-authored",
+    "weight": 16
+  },
+  {
+    "source": "A5030701195",
+    "target": "A5064909614",
+    "type": "co-authored",
+    "weight": 30
+  },
+  {
+    "source": "A5030701195",
+    "target": "A5028440699",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5030701195",
+    "target": "A5046083937",
+    "type": "co-authored",
+    "weight": 33
+  },
+  {
+    "source": "A5030701195",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5030701195",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5030701195",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5064909614",
+    "target": "A5019716296",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5064909614",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5032976159",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5012132706",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5090412627",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5005794608",
+    "target": "A5071039750",
+    "type": "co-authored",
+    "weight": 15
+  },
+  {
+    "source": "A5005794608",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5005794608",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5005794608",
+    "target": "A5019616211",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5005794608",
+    "target": "A5023852532",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5071039750",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5071039750",
+    "target": "A5078065002",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5071039750",
+    "target": "A5110284072",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5071039750",
+    "target": "A5065994445",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5071039750",
+    "target": "A5019616211",
+    "type": "co-authored",
+    "weight": 22
+  },
+  {
+    "source": "A5071039750",
+    "target": "A5023852532",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5071039750",
+    "target": "A5011207998",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5066563480",
+    "target": "A5023685398",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5066563480",
+    "target": "A5019616211",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5066563480",
+    "target": "A5011207998",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5023685398",
+    "target": "A5008766821",
+    "type": "co-authored",
+    "weight": 11
+  },
+  {
+    "source": "A5023685398",
+    "target": "A5018132307",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5028440699",
+    "target": "A5019716296",
+    "type": "co-authored",
+    "weight": 9
+  },
+  {
+    "source": "A5028440699",
+    "target": "A5065681671",
+    "type": "co-authored",
+    "weight": 10
+  },
+  {
+    "source": "A5019716296",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5019716296",
+    "target": "A5065994445",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5019716296",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5032976159",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5032976159",
+    "target": "A5047414815",
+    "type": "co-authored",
+    "weight": 9
+  },
+  {
+    "source": "A5046083937",
+    "target": "A5068826612",
+    "type": "co-authored",
+    "weight": 38
+  },
+  {
+    "source": "A5046083937",
+    "target": "A5024414185",
+    "type": "co-authored",
+    "weight": 22
+  },
+  {
+    "source": "A5068826612",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 6
+  },
+  {
+    "source": "A5068826612",
+    "target": "A5024414185",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5068826612",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 10
+  },
+  {
+    "source": "A5068826612",
+    "target": "A5009791247",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5068826612",
+    "target": "A5003369827",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5008766821",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 13
+  },
+  {
+    "source": "A5008766821",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5078065002",
+    "target": "A5110284072",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5078065002",
+    "target": "A5056095913",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5110284072",
+    "target": "A5034032202",
+    "type": "co-authored",
+    "weight": 9
+  },
+  {
+    "source": "A5056095913",
+    "target": "A5010879789",
+    "type": "co-authored",
+    "weight": 25
+  },
+  {
+    "source": "A5056095913",
+    "target": "A5012503150",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5010879789",
+    "target": "A5012503150",
+    "type": "co-authored",
+    "weight": 6
+  },
+  {
+    "source": "A5010879789",
+    "target": "A5047414815",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5012503150",
+    "target": "A5047414815",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5012503150",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5049405877",
+    "target": "A5047414815",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5047414815",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5082160956",
+    "target": "A5066295139",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5065994445",
+    "target": "A5019616211",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5066295139",
+    "target": "A5012132706",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5066295139",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5052107957",
+    "target": "A5034032202",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5039127008",
+    "target": "A5012132706",
+    "type": "co-authored",
+    "weight": 6
+  },
+  {
+    "source": "A5018132307",
+    "target": "A5030940558",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5018132307",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5012132706",
+    "target": "A5090412627",
+    "type": "co-authored",
+    "weight": 19
+  },
+  {
+    "source": "A5073521804",
+    "target": "A5065681671",
+    "type": "co-authored",
+    "weight": 15
+  },
+  {
+    "source": "A5073521804",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5065681671",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 7
+  },
+  {
+    "source": "A5030940558",
+    "target": "A5007129549",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5030940558",
+    "target": "A5003369827",
+    "type": "co-authored",
+    "weight": 3
+  },
+  {
+    "source": "A5019616211",
+    "target": "A5023852532",
+    "type": "co-authored",
+    "weight": 8
+  },
+  {
+    "source": "A5019616211",
+    "target": "A5011207998",
+    "type": "co-authored",
+    "weight": 5
+  },
+  {
+    "source": "A5023852532",
+    "target": "A5011207998",
+    "type": "co-authored",
+    "weight": 4
+  },
+  {
+    "source": "A5007129549",
+    "target": "A5003369827",
+    "type": "co-authored",
+    "weight": 1
+  },
+  {
+    "source": "A5009791247",
+    "target": "A5003369827",
+    "type": "co-authored",
+    "weight": 12
+  },
+  {
+    "source": "A5009791247",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 24
+  },
+  {
+    "source": "A5003369827",
+    "target": "A5110481134",
+    "type": "co-authored",
+    "weight": 23
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5037710835",
+    "type": "same-lab",
+    "weight": 28,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5031023857",
+    "type": "same-lab",
+    "weight": 16,
+    "details": "Nokia (United States)"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5016282235",
+    "type": "same-lab",
+    "weight": 14,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5005759724",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5001105113",
+    "type": "same-lab",
+    "weight": 25,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5006327208",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5027759442",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5068097121",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5018837979",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5001154267",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "AT&T (United States)"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5064909614",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5071039750",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Mathematical Sciences Research Institute"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5032976159",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5068826612",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020744800",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 21,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5037710835",
+    "type": "same-lab",
+    "weight": 27,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5001154267",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Harvard University"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5032976159",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5065681671",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5061874000",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 13,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5038060570",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5078255491",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5103046966",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of California, Berkeley"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5064909614",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5071039750",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of California, Berkeley"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "University of California, Berkeley"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5020769134",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5031023857",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "AT&T (United States)"
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5103046966",
+    "type": "same-lab",
+    "weight": 21,
+    "details": "IBM (United States)"
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "IBM Research - Thomas J. Watson Research Center"
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5030701195",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "IBM (United States)"
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5064909614",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "IBM Research - Thomas J. Watson Research Center"
+  },
+  {
+    "source": "A5053166798",
+    "target": "A5046083937",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "IBM Research - Thomas J. Watson Research Center"
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5078065002",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "The University of Texas at Austin"
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5052107957",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Oxford"
+  },
+  {
+    "source": "A5050850280",
+    "target": "A5012132706",
+    "type": "same-lab",
+    "weight": 22,
+    "details": "University of Oxford"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5031023857",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "Cornell University"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5016282235",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5006327208",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5027759442",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5068097121",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5018837979",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5058819109",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5001154267",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5071039750",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Cornell University"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5032976159",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5068826612",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5110284072",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "Cornell University"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5037710835",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5016282235",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5040977712",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5001105113",
+    "type": "same-lab",
+    "weight": 14,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5001536933",
+    "type": "same-lab",
+    "weight": 19,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5036253306",
+    "type": "same-lab",
+    "weight": 28,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5018837979",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5089631322",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 19,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5064909614",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5027716155",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5038060570",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 21,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5031023857",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "AT&T (United States)"
+  },
+  {
+    "source": "A5031023857",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5031023857",
+    "target": "A5071039750",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Cornell University"
+  },
+  {
+    "source": "A5031023857",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "AT&T (United States)"
+  },
+  {
+    "source": "A5031023857",
+    "target": "A5024414185",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5005759724",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Joint Institute for Laboratory Astrophysics"
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5089631322",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 13,
+    "details": "Harvard University"
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5066295139",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5065681671",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Harvard University"
+  },
+  {
+    "source": "A5083228566",
+    "target": "A5003369827",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Harvard University"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5042449260",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5046427077",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "Centre National de la Recherche Scientifique"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5001536933",
+    "type": "same-lab",
+    "weight": 32,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5108398851",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "Centre National de la Recherche Scientifique"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5006327208",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5027759442",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5068097121",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5018837979",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5058819109",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 19,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5089631322",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5032976159",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5027716155",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 18,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5016282235",
+    "target": "A5052107957",
+    "type": "same-lab",
+    "weight": 14,
+    "details": "Centre National de la Recherche Scientifique"
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5066245772",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5042449260",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5089631322",
+    "type": "same-lab",
+    "weight": 11,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5046083937",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5040977712",
+    "target": "A5027716155",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5006327208",
+    "type": "same-lab",
+    "weight": 13,
+    "details": "University of Maryland, College Park"
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5036253306",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5018837979",
+    "type": "same-lab",
+    "weight": 11,
+    "details": "University of Maryland, College Park"
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 19,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5089631322",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 30,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "Joint Quantum Institute"
+  },
+  {
+    "source": "A5005759724",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5066245772",
+    "target": "A5065681671",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Harvard University"
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5049405877",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Cambridge"
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5027716155",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Centre for Quantum Technologies"
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5052107957",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Oxford"
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5012132706",
+    "type": "same-lab",
+    "weight": 30,
+    "details": "University of Oxford"
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5090412627",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of Oxford"
+  },
+  {
+    "source": "A5059030616",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Centre for Quantum Technologies"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5078255491",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5068097121",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Los Alamos National Laboratory"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5103046966",
+    "type": "same-lab",
+    "weight": 11,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5036253306",
+    "type": "same-lab",
+    "weight": 27,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5018837979",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5001154267",
+    "type": "same-lab",
+    "weight": 16,
+    "details": "University of Vienna"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5064909614",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5008766821",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5066295139",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Universität Innsbruck"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Los Alamos National Laboratory"
+  },
+  {
+    "source": "A5001105113",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5046427077",
+    "target": "A5089631322",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Université Paris Cité"
+  },
+  {
+    "source": "A5046427077",
+    "target": "A5052107957",
+    "type": "same-lab",
+    "weight": 19,
+    "details": "Centre National de la Recherche Scientifique"
+  },
+  {
+    "source": "A5001536933",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 19,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5001536933",
+    "target": "A5089631322",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5001536933",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 31,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5001536933",
+    "target": "A5046083937",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5001536933",
+    "target": "A5027716155",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5001536933",
+    "target": "A5066295139",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of Colorado Boulder"
+  },
+  {
+    "source": "A5108398851",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "Yale University"
+  },
+  {
+    "source": "A5108398851",
+    "target": "A5089631322",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "Collège de France"
+  },
+  {
+    "source": "A5108398851",
+    "target": "A5016075205",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Yale University"
+  },
+  {
+    "source": "A5108398851",
+    "target": "A5030701195",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Yale University"
+  },
+  {
+    "source": "A5108398851",
+    "target": "A5046083937",
+    "type": "same-lab",
+    "weight": 23,
+    "details": "Yale University"
+  },
+  {
+    "source": "A5108398851",
+    "target": "A5052107957",
+    "type": "same-lab",
+    "weight": 16,
+    "details": "Centre National de la Recherche Scientifique"
+  },
+  {
+    "source": "A5108398851",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "École Normale Supérieure - PSL"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5068097121",
+    "type": "same-lab",
+    "weight": 13,
+    "details": "Los Alamos National Laboratory"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5036253306",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5018837979",
+    "type": "same-lab",
+    "weight": 19,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "Perimeter Institute"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5030701195",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5064909614",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Perimeter Institute"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5046083937",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5008766821",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5110284072",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5010879789",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5049405877",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "University of Cambridge"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5052107957",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5034032202",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 16,
+    "details": "Los Alamos National Laboratory"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Perimeter Institute"
+  },
+  {
+    "source": "A5078255491",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "Perimeter Institute"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of California, Berkeley"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5064155719",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 13,
+    "details": "University of Maryland, College Park"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Perimeter Institute"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5071039750",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of California, Berkeley"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "University of Maryland, College Park"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5110284072",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Canadian Institute for Advanced Research"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Los Alamos National Laboratory"
+  },
+  {
+    "source": "A5006327208",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Perimeter Institute"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5068097121",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5018837979",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5058819109",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5001154267",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5032976159",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5068826612",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5030940558",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5027759442",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 13,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5058819109",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5001154267",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5030701195",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Quantum (Australia)"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5032976159",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "Los Alamos National Laboratory"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5046083937",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5010879789",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5027716155",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "University of Queensland"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5065681671",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "University of New Mexico"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 17,
+    "details": "Los Alamos National Laboratory"
+  },
+  {
+    "source": "A5068097121",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of New Mexico"
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5036253306",
+    "type": "same-lab",
+    "weight": 25,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5030701195",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "IBM (United States)"
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5024414185",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5103046966",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Google (United States)"
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Harvard University"
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5064909614",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5036253306",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5058819109",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 11,
+    "details": "University of Maryland, College Park"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5030701195",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5064909614",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 10,
+    "details": "University of Maryland, College Park"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5110284072",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5018837979",
+    "target": "A5034032202",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5001154267",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5111058882",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5103068314",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "Delft University of Technology"
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5030701195",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "IBM Research - Thomas J. Watson Research Center"
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5066563480",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "University of Amsterdam"
+  },
+  {
+    "source": "A5058819109",
+    "target": "A5012503150",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "Delft University of Technology"
+  },
+  {
+    "source": "A5001154267",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5001154267",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5001154267",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5001154267",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5043106778",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Google (United States)"
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5012231169",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Google (United States)"
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5084929692",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5032976159",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5068826612",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5111058882",
+    "target": "A5073521804",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Google (United States)"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5064155719",
+    "type": "same-lab",
+    "weight": 20,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 21,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5071039750",
+    "type": "same-lab",
+    "weight": 31,
+    "details": "University of California, Berkeley"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5010879789",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5027716155",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of California, Berkeley"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 28,
+    "details": "University of California, Berkeley"
+  },
+  {
+    "source": "A5043106778",
+    "target": "A5009791247",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5084929692",
+    "target": "A5071105459",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5084929692",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5084929692",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5060980314",
+    "type": "same-lab",
+    "weight": 11,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5103068314",
+    "type": "same-lab",
+    "weight": 9,
+    "details": "Delft University of Technology"
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5071039750",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of California, Berkeley"
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5027716155",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5089631322",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "École Normale Supérieure - PSL"
+  },
+  {
+    "source": "A5016075205",
+    "target": "A5028440699",
+    "type": "same-lab",
+    "weight": 18,
+    "details": "ETH Zurich"
+  },
+  {
+    "source": "A5016075205",
+    "target": "A5030940558",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "ETH Zurich"
+  },
+  {
+    "source": "A5064155719",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5064155719",
+    "target": "A5073521804",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5064155719",
+    "target": "A5030940558",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5064155719",
+    "target": "A5009791247",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5006639172",
+    "type": "same-lab",
+    "weight": 16,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5019716296",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5010879789",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5027716155",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "National Institute of Standards and Technology"
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5073521804",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5060980314",
+    "target": "A5009791247",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5046083937",
+    "type": "same-lab",
+    "weight": 11,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5068826612",
+    "type": "same-lab",
+    "weight": 16,
+    "details": "Harvard University"
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5012503150",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5065681671",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Harvard University"
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5023852532",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "Weizmann Institute of Science"
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5024414185",
+    "type": "same-lab",
+    "weight": 18,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5006639172",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5103068314",
+    "target": "A5019716296",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5103068314",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5103068314",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 21,
+    "details": "Delft University of Technology"
+  },
+  {
+    "source": "A5030701195",
+    "target": "A5110284072",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5030701195",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5030701195",
+    "target": "A5034032202",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5064909614",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5064909614",
+    "target": "A5008766821",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5064909614",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5064909614",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5068826612",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5082160956",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5052107957",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Oxford"
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5065681671",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5071105459",
+    "target": "A5024414185",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5028440699",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5028440699",
+    "target": "A5030940558",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5019716296",
+    "target": "A5004169905",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5032976159",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 12,
+    "details": "Los Alamos National Laboratory"
+  },
+  {
+    "source": "A5032976159",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Perimeter Institute"
+  },
+  {
+    "source": "A5046083937",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5046083937",
+    "target": "A5010879789",
+    "type": "same-lab",
+    "weight": 11,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5068826612",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5068826612",
+    "target": "A5065681671",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5004169905",
+    "target": "A5008766821",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5004169905",
+    "target": "A5073521804",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "University of California, Santa Barbara"
+  },
+  {
+    "source": "A5004169905",
+    "target": "A5030940558",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Microsoft (United States)"
+  },
+  {
+    "source": "A5004169905",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5004169905",
+    "target": "A5023852532",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5004169905",
+    "target": "A5024414185",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5004169905",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5008766821",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5008766821",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 21,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5110284072",
+    "target": "A5056095913",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Cornell University"
+  },
+  {
+    "source": "A5110284072",
+    "target": "A5065994445",
+    "type": "same-lab",
+    "weight": 5,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5012503150",
+    "target": "A5024414185",
+    "type": "same-lab",
+    "weight": 15,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5065994445",
+    "target": "A5034032202",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Waterloo"
+  },
+  {
+    "source": "A5065994445",
+    "target": "A5090412627",
+    "type": "same-lab",
+    "weight": 8,
+    "details": "University of Southern California"
+  },
+  {
+    "source": "A5065994445",
+    "target": "A5065681671",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "University of Southern California"
+  },
+  {
+    "source": "A5052107957",
+    "target": "A5012132706",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "University of Oxford"
+  },
+  {
+    "source": "A5039127008",
+    "target": "A5030940558",
+    "type": "same-lab",
+    "weight": 6,
+    "details": "Imperial College London"
+  },
+  {
+    "source": "A5030940558",
+    "target": "A5019616211",
+    "type": "same-lab",
+    "weight": 13,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5019616211",
+    "target": "A5007129549",
+    "type": "same-lab",
+    "weight": 13,
+    "details": "California Institute of Technology"
+  },
+  {
+    "source": "A5019616211",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Massachusetts Institute of Technology"
+  },
+  {
+    "source": "A5023852532",
+    "target": "A5024414185",
+    "type": "same-lab",
+    "weight": 4,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5024414185",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 7,
+    "details": "Stanford University"
+  },
+  {
+    "source": "A5007129549",
+    "target": "A5110481134",
+    "type": "same-lab",
+    "weight": 3,
+    "details": "Massachusetts Institute of Technology"
+  }
+]
