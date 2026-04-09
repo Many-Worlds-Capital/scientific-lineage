@@ -16,12 +16,21 @@ export interface Scientist {
   tags: ("pioneer" | "rising-star" | "active" | "emeritus")[];
 }
 
+export interface CoAuthoredPaper {
+  title: string;
+  year: number;
+  openAlexId: string;
+  arxivId: string | null;
+  doi: string | null;
+}
+
 export interface Relationship {
   source: string;
   target: string;
   type: "student-of" | "same-lab" | "co-authored";
   weight: number;
   details?: string;
+  papers?: CoAuthoredPaper[];
 }
 
 export interface GraphData {

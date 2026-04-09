@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Graph from "@/components/Graph";
 import ScientistPanel from "@/components/ScientistPanel";
+import EdgePanel from "@/components/EdgePanel";
 import SearchBar from "@/components/SearchBar";
 import Legend from "@/components/Legend";
 import FilterControls from "@/components/FilterControls";
@@ -12,6 +13,7 @@ import { Scientist, Relationship, GraphData } from "@/lib/types";
 export default function Home() {
   const [graphData, setGraphData] = useState<GraphData | null>(null);
   const [selectedScientist, setSelectedScientist] = useState<Scientist | null>(null);
+  const [selectedEdge, setSelectedEdge] = useState<Relationship | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [edgeFilters, setEdgeFilters] = useState<Set<Relationship["type"]>>(
     () => new Set<Relationship["type"]>(["student-of", "co-authored"])
@@ -49,7 +51,7 @@ export default function Home() {
 
   const selectScientist = useCallback((scientist: Scientist | null) => {
     setSelectedScientist(scientist);
-    // Update URL
+    setSelectedEdge(null); // Close edge panel when selecting a node
     const url = new URL(window.location.href);
     if (scientist) {
       url.searchParams.set("scientist", scientist.id);
@@ -64,10 +66,15 @@ export default function Home() {
     [selectScientist]
   );
 
-  const handleBackgroundClick = useCallback(
-    () => selectScientist(null),
-    [selectScientist]
-  );
+  const handleEdgeClick = useCallback((edge: Relationship) => {
+    setSelectedEdge(edge);
+    setSelectedScientist(null); // Close scientist panel
+  }, []);
+
+  const handleBackgroundClick = useCallback(() => {
+    selectScientist(null);
+    setSelectedEdge(null);
+  }, [selectScientist]);
 
   const handleSearch = useCallback((query: string) => {
     setSearchQuery(query);
@@ -121,6 +128,7 @@ export default function Home() {
       <Graph
         data={graphData}
         onNodeClick={handleNodeClick}
+        onEdgeClick={handleEdgeClick}
         onBackgroundClick={handleBackgroundClick}
         searchQuery={searchQuery}
         edgeFilters={edgeFilters}
@@ -175,6 +183,13 @@ export default function Home() {
         scientist={selectedScientist}
         relationships={graphData.links}
         onClose={() => selectScientist(null)}
+      />
+
+      {/* Edge detail panel */}
+      <EdgePanel
+        edge={selectedEdge}
+        scientists={graphData.nodes}
+        onClose={() => setSelectedEdge(null)}
       />
 
       {/* Methodology modal */}

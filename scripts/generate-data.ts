@@ -38,12 +38,21 @@ interface Scientist {
   tags: string[];
 }
 
+interface CoAuthoredPaper {
+  title: string;
+  year: number;
+  openAlexId: string;
+  arxivId: string | null;
+  doi: string | null;
+}
+
 interface Relationship {
   source: string;
   target: string;
   type: "student-of" | "same-lab" | "co-authored";
   weight: number;
   details?: string;
+  papers?: CoAuthoredPaper[];
 }
 
 // --- Constants ---
@@ -161,10 +170,52 @@ async function fetchAuthor(id: string): Promise<any> {
   return fetchJson(url);
 }
 
-async function fetchCoauthoredWorks(id1: string, id2: string): Promise<number> {
-  const url = `https://api.openalex.org/works?filter=authorships.author.id:${id1},authorships.author.id:${id2}&per_page=1`;
+async function fetchCoauthoredWorks(
+  id1: string,
+  id2: string
+): Promise<{ count: number; papers: CoAuthoredPaper[] }> {
+  const url = `https://api.openalex.org/works?filter=authorships.author.id:${id1},authorships.author.id:${id2}&per_page=10&sort=cited_by_count:desc`;
   const data = await fetchJson(url);
-  return data.meta?.count ?? 0;
+  const count = data.meta?.count ?? 0;
+  const papers: CoAuthoredPaper[] = [];
+
+  if (data.results) {
+    for (const work of data.results) {
+      const openAlexId = work.id?.replace("https://openalex.org/", "") ?? "";
+      // Extract arXiv ID from locations or ids
+      let arxivId: string | null = null;
+      // Check all locations for arxiv landing page URLs
+      const locations = [
+        work.primary_location,
+        ...(work.locations ?? []),
+      ].filter(Boolean);
+      for (const loc of locations) {
+        const url = loc.landing_page_url ?? loc.pdf_url ?? "";
+        const match = url.match(/arxiv\.org\/(?:abs|pdf)\/(.+?)(?:v\d+)?$/);
+        if (match) {
+          arxivId = match[1];
+          break;
+        }
+      }
+      // Also check ids.doi for arxiv DOIs
+      if (!arxivId && work.doi) {
+        const arxivDoiMatch = work.doi.match(/10\.48550\/arXiv\.(.+)/);
+        if (arxivDoiMatch) {
+          arxivId = arxivDoiMatch[1];
+        }
+      }
+
+      papers.push({
+        title: work.title ?? "Untitled",
+        year: work.publication_year ?? 0,
+        openAlexId,
+        arxivId,
+        doi: work.doi?.replace("https://doi.org/", "") ?? null,
+      });
+    }
+  }
+
+  return { count, papers };
 }
 
 function parseAffiliations(author: any): Affiliation[] {
@@ -321,13 +372,14 @@ async function main() {
         console.log(`    Progress: ${pairIndex}/${totalPairs}`);
       }
       try {
-        const count = await fetchCoauthoredWorks(scientistIds[i], scientistIds[j]);
-        if (count > 0) {
+        const result = await fetchCoauthoredWorks(scientistIds[i], scientistIds[j]);
+        if (result.count > 0) {
           relationships.push({
             source: scientistIds[i],
             target: scientistIds[j],
             type: "co-authored",
-            weight: count,
+            weight: result.count,
+            papers: result.papers,
           });
           coauthorCount++;
         }

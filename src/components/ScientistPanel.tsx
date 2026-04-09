@@ -204,6 +204,14 @@ export default function ScientistPanel({
         </h3>
         <div className="flex flex-col gap-2">
           <a
+            href={`https://brain.manyworldscapital.com/papers?q=${encodeURIComponent(scientist.name)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-primary hover:text-primary-dark transition-colors font-medium"
+          >
+            Search papers on Quantum Brain &rarr;
+          </a>
+          <a
             href={scientist.openAlexUrl}
             target="_blank"
             rel="noopener noreferrer"

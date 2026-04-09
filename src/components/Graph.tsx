@@ -19,6 +19,7 @@ const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
 interface GraphProps {
   data: GraphData;
   onNodeClick: (node: Scientist) => void;
+  onEdgeClick: (edge: Relationship) => void;
   onBackgroundClick: () => void;
   searchQuery: string;
   edgeFilters: Set<Relationship["type"]>;
@@ -34,6 +35,7 @@ interface TooltipState {
 export default function Graph({
   data,
   onNodeClick,
+  onEdgeClick,
   onBackgroundClick,
   searchQuery,
   edgeFilters,
@@ -289,6 +291,16 @@ export default function Graph({
     node.fy = undefined;
   }, []);
 
+  // Click edge to show papers
+  const handleLinkClick = useCallback(
+    (link: any) => {
+      if (link.type === "co-authored") {
+        onEdgeClick(link as Relationship);
+      }
+    },
+    [onEdgeClick]
+  );
+
   // Click empty space to deselect
   const handleBackgroundClick = useCallback(() => {
     onBackgroundClick();
@@ -349,7 +361,21 @@ export default function Graph({
         onNodeHover={handleNodeHover}
         onNodeDragEnd={handleNodeDragEnd}
         onNodeRightClick={handleNodeRightClick}
+        onLinkClick={handleLinkClick}
         onBackgroundClick={handleBackgroundClick}
+        linkPointerAreaPaint={(link: any, _color: string, ctx: CanvasRenderingContext2D) => {
+          // Make co-authored edges easier to click with a wider hit area
+          if (link.type !== "co-authored") return;
+          const start = link.source;
+          const end = link.target;
+          if (!start?.x || !end?.x) return;
+          ctx.beginPath();
+          ctx.moveTo(start.x, start.y);
+          ctx.lineTo(end.x, end.y);
+          ctx.strokeStyle = "rgba(0,0,0,0)";
+          ctx.lineWidth = 10;
+          ctx.stroke();
+        }}
         backgroundColor="#0a0a0f"
         cooldownTicks={100}
         warmupTicks={50}
