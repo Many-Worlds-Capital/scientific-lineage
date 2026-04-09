@@ -56,13 +56,28 @@ export default function Graph({
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
+  // Pre-compute initial positions: spread nodes in a large circle
+  // so the simulation starts from a spread layout, not a tight random cluster
+  const initializedNodes = useMemo(() => {
+    const radius = Math.max(dimensions.width, dimensions.height) * 0.8;
+    return data.nodes.map((node, i) => {
+      if ((node as any).x !== undefined) return node; // already positioned
+      const angle = (2 * Math.PI * i) / data.nodes.length;
+      return {
+        ...node,
+        x: Math.cos(angle) * radius * 0.5,
+        y: Math.sin(angle) * radius * 0.5,
+      };
+    });
+  }, [data.nodes, dimensions]);
+
   // Filter links based on edge type filters
   const filteredData = useMemo(
     () => ({
-      nodes: data.nodes,
+      nodes: initializedNodes,
       links: data.links.filter((l) => edgeFilters.has(l.type)),
     }),
-    [data, edgeFilters]
+    [initializedNodes, data.links, edgeFilters]
   );
 
   // Compute neighbor set for the highlighted node (ego network)
@@ -324,8 +339,8 @@ export default function Graph({
     const fg = graphRef.current;
     if (!fg) return;
 
-    // Strong repulsion to spread nodes apart
-    fg.d3Force("charge")?.strength(-1000);
+    // Very strong repulsion to spread nodes apart
+    fg.d3Force("charge")?.strength(-2000).distanceMax(500);
 
     // Center pull (gentle)
     fg.d3Force("center")?.strength(0.02);
@@ -333,7 +348,7 @@ export default function Graph({
     // Link force: scale by edge type and weight
     const linkForce = fg.d3Force("link");
     if (linkForce) {
-      linkForce.distance(180);
+      linkForce.distance(250);
       linkForce.strength((link: any) => {
         if (link.type === "student-of") return 0.3;
         if (link.type === "co-authored") {
@@ -419,8 +434,10 @@ export default function Graph({
           ctx.stroke();
         }}
         backgroundColor="#0a0a0f"
-        cooldownTicks={300}
-        warmupTicks={200}
+        d3AlphaDecay={0.01}
+        d3VelocityDecay={0.3}
+        cooldownTicks={400}
+        warmupTicks={100}
         enableNodeDrag={true}
         enableZoomInteraction={true}
         enablePanInteraction={true}
