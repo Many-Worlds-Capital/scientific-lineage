@@ -279,6 +279,11 @@ export default function Graph({
     []
   );
 
+  // Change cursor on link hover
+  const handleLinkHover = useCallback((link: any) => {
+    document.body.style.cursor = link && link.type === "co-authored" ? "pointer" : "default";
+  }, []);
+
   // Pin node in place after dragging
   const handleNodeDragEnd = useCallback((node: any) => {
     node.fx = node.x;
@@ -362,18 +367,17 @@ export default function Graph({
         onNodeDragEnd={handleNodeDragEnd}
         onNodeRightClick={handleNodeRightClick}
         onLinkClick={handleLinkClick}
+        onLinkHover={handleLinkHover}
         onBackgroundClick={handleBackgroundClick}
-        linkPointerAreaPaint={(link: any, _color: string, ctx: CanvasRenderingContext2D) => {
-          // Make co-authored edges easier to click with a wider hit area
-          if (link.type !== "co-authored") return;
+        linkPointerAreaPaint={(link: any, color: string, ctx: CanvasRenderingContext2D) => {
           const start = link.source;
           const end = link.target;
           if (!start?.x || !end?.x) return;
           ctx.beginPath();
           ctx.moveTo(start.x, start.y);
           ctx.lineTo(end.x, end.y);
-          ctx.strokeStyle = "rgba(0,0,0,0)";
-          ctx.lineWidth = 10;
+          ctx.strokeStyle = color;
+          ctx.lineWidth = link.type === "co-authored" ? 12 : 6;
           ctx.stroke();
         }}
         backgroundColor="#0a0a0f"
