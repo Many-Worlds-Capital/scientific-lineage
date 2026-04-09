@@ -318,10 +318,11 @@ export default function Graph({
     onBackgroundClick();
   }, [onBackgroundClick]);
 
-  // Configure forces + zoom-to-fit on first load
+  // Configure forces — runs on mount and when edge filters change
+  const forcesApplied = useRef(false);
   useEffect(() => {
-    if (!graphRef.current) return;
     const fg = graphRef.current;
+    if (!fg) return;
 
     // Strong repulsion to spread nodes apart
     fg.d3Force("charge")?.strength(-1000);
@@ -343,12 +344,18 @@ export default function Graph({
     }
 
     // Collision detection to prevent node overlap
-    import("d3-force-3d").then((d3) => {
-      fg.d3Force(
-        "collide",
-        d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 10)
-      );
-    }).catch(() => {/* d3-force-3d not available */});
+    if (!forcesApplied.current) {
+      import("d3-force-3d").then((d3) => {
+        fg.d3Force(
+          "collide",
+          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 10)
+        );
+      }).catch(() => {/* d3-force-3d not available */});
+      forcesApplied.current = true;
+    }
+
+    // Reheat so nodes re-layout with new forces
+    fg.d3ReheatSimulation();
   }, [filteredData]);
 
   // Auto zoom-to-fit after initial layout settles
