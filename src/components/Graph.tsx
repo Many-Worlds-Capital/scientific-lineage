@@ -335,6 +335,7 @@ export default function Graph({
   const handleNodeDragEnd = useCallback((node: any) => {
     node.fx = node.x;
     node.fy = node.y;
+    node._userDragged = true;
   }, []);
 
   // Right-click to unpin
@@ -358,16 +359,59 @@ export default function Graph({
     onBackgroundClick();
   }, [onBackgroundClick]);
 
-  // No forces needed — all nodes are pinned with fx/fy.
-  // Just disable simulation and zoom to fit.
+  // Start pinned, then unpin with gentle forces after layout is visible
   useEffect(() => {
     const fg = graphRef.current;
     if (!fg) return;
+
+    // Initially: no forces, nodes stay pinned
     fg.d3Force("charge", null);
     fg.d3Force("center", null);
     fg.d3Force("link", null);
     fg.cooldownTicks(0);
   }, [filteredData]);
+
+  // After 1.5s: unpin nodes and enable very gentle forces
+  const unpinned = useRef(false);
+  useEffect(() => {
+    if (unpinned.current || !graphRef.current || !initialFit) return;
+
+    const timer = setTimeout(() => {
+      const fg = graphRef.current;
+      if (!fg) return;
+
+      // Unpin all nodes (unless user has dragged them)
+      filteredData.nodes.forEach((node: any) => {
+        if (node._userDragged) return;
+        node.fx = undefined;
+        node.fy = undefined;
+      });
+
+      // Gentle charge — just enough to push overlapping nodes apart
+      fg.d3Force("charge")?.strength(-150);
+
+      // Very weak links — connected nodes drift slightly closer
+      const linkForce = fg.d3Force("link");
+      if (linkForce) {
+        linkForce.distance(200);
+        linkForce.strength(() => 0.003);
+      }
+
+      // Collision so nodes don't overlap
+      import("d3-force-3d").then((d3) => {
+        fg.d3Force(
+          "collide",
+          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 6)
+        );
+      }).catch(() => {});
+
+      // Restart simulation gently
+      fg.d3ReheatSimulation();
+      unpinned.current = true;
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, [initialFit, filteredData.nodes]);
 
   // Zoom to fit on load
   useEffect(() => {
@@ -430,7 +474,7 @@ export default function Graph({
           ctx.stroke();
         }}
         backgroundColor="#0a0a0f"
-        cooldownTicks={0}
+        cooldownTicks={200}
         enableNodeDrag={true}
         enableZoomInteraction={true}
         enablePanInteraction={true}
