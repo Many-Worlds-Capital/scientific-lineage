@@ -45,7 +45,7 @@ export default function Graph({
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<TooltipState | null>(null);
-  const [initialFit, setInitialFit] = useState(false);
+  // removed initialFit — zoom handled in the phase effect
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -359,70 +359,48 @@ export default function Graph({
     onBackgroundClick();
   }, [onBackgroundClick]);
 
-  // Start pinned, then unpin with gentle forces after layout is visible
+  // Phase 1: Start with no forces (nodes pinned), zoom to fit
+  // Phase 2: After 2s, unpin and add gentle forces for movement
   useEffect(() => {
     const fg = graphRef.current;
-    if (!fg) return;
+    if (!fg || dimensions.width === 0) return;
 
-    // Initially: no forces, nodes stay pinned
+    // Phase 1: kill all forces so pinned layout holds
     fg.d3Force("charge", null);
     fg.d3Force("center", null);
     fg.d3Force("link", null);
-    fg.cooldownTicks(0);
-  }, [filteredData]);
 
-  // After 1.5s: unpin nodes and enable very gentle forces
-  const unpinned = useRef(false);
-  useEffect(() => {
-    if (unpinned.current || !graphRef.current || !initialFit) return;
+    // Zoom to fit immediately
+    setTimeout(() => fg.zoomToFit(400, 40), 300);
 
-    const timer = setTimeout(() => {
-      const fg = graphRef.current;
-      if (!fg) return;
-
-      // Unpin all nodes (unless user has dragged them)
+    // Phase 2: unpin and add gentle movement
+    const unpinTimer = setTimeout(() => {
+      // Unpin non-dragged nodes
       filteredData.nodes.forEach((node: any) => {
         if (node._userDragged) return;
         node.fx = undefined;
         node.fy = undefined;
       });
 
-      // Gentle charge — just enough to push overlapping nodes apart
-      fg.d3Force("charge")?.strength(-150);
-
-      // Very weak links — connected nodes drift slightly closer
-      const linkForce = fg.d3Force("link");
-      if (linkForce) {
-        linkForce.distance(200);
-        linkForce.strength(() => 0.003);
-      }
-
-      // Collision so nodes don't overlap
+      // Re-create forces from scratch (since we nulled them)
       import("d3-force-3d").then((d3) => {
-        fg.d3Force(
-          "collide",
-          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 6)
-        );
+        // Gentle repulsion
+        fg.d3Force("charge", d3.forceManyBody().strength(-120));
+        // Collision
+        fg.d3Force("collide", d3.forceCollide().radius(
+          (node: any) => getNodeRadius(node as Scientist) + 6
+        ));
+        // Very weak link attraction
+        fg.d3Force("link")?.distance(200).strength(() => 0.002);
+
+        // Kick the simulation alive
+        fg.d3ReheatSimulation();
       }).catch(() => {});
+    }, 2000);
 
-      // Restart simulation gently
-      fg.d3ReheatSimulation();
-      unpinned.current = true;
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, [initialFit, filteredData.nodes]);
-
-  // Zoom to fit on load
-  useEffect(() => {
-    if (graphRef.current && !initialFit && dimensions.width > 0) {
-      const timer = setTimeout(() => {
-        graphRef.current?.zoomToFit(400, 40);
-        setInitialFit(true);
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-  }, [dimensions, initialFit]);
+    return () => clearTimeout(unpinTimer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dimensions.width]);
 
   if (dimensions.width === 0) return null;
 
