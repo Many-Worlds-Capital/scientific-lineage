@@ -223,18 +223,25 @@ export default function Graph({
 
   const linkColor = useCallback(
     (link: any) => {
-      if (!neighborSet) {
-        return EDGE_COLORS[link.type as Relationship["type"]] ?? "#737688";
+      if (neighborSet) {
+        // In ego-network mode, dim non-adjacent links
+        const srcId =
+          typeof link.source === "object" ? link.source.id : link.source;
+        const tgtId =
+          typeof link.target === "object" ? link.target.id : link.target;
+        if (!neighborSet.has(srcId) || !neighborSet.has(tgtId)) {
+          return "rgba(50,50,60,0.05)";
+        }
       }
-      // In ego-network mode, dim non-adjacent links
-      const srcId =
-        typeof link.source === "object" ? link.source.id : link.source;
-      const tgtId =
-        typeof link.target === "object" ? link.target.id : link.target;
-      if (neighborSet.has(srcId) && neighborSet.has(tgtId)) {
-        return EDGE_COLORS[link.type as Relationship["type"]] ?? "#737688";
+
+      // Fade weak co-authored edges
+      if (link.type === "co-authored") {
+        const w = link.weight ?? 1;
+        if (w <= 2) return "rgba(115, 118, 136, 0.15)";
+        if (w <= 5) return "rgba(115, 118, 136, 0.4)";
       }
-      return "rgba(50,50,60,0.05)";
+
+      return EDGE_COLORS[link.type as Relationship["type"]] ?? "#737688";
     },
     [neighborSet]
   );
@@ -313,11 +320,35 @@ export default function Graph({
 
   // Configure forces + zoom-to-fit on first load
   useEffect(() => {
-    if (graphRef.current) {
-      graphRef.current.d3Force("charge")?.strength(-400);
-      graphRef.current.d3Force("link")?.distance(120);
-      graphRef.current.d3Force("center")?.strength(0.03);
+    if (!graphRef.current) return;
+    const fg = graphRef.current;
+
+    // Strong repulsion to spread nodes apart
+    fg.d3Force("charge")?.strength(-1000);
+
+    // Center pull (gentle)
+    fg.d3Force("center")?.strength(0.02);
+
+    // Link force: scale by edge type and weight
+    const linkForce = fg.d3Force("link");
+    if (linkForce) {
+      linkForce.distance(180);
+      linkForce.strength((link: any) => {
+        if (link.type === "student-of") return 0.3;
+        if (link.type === "co-authored") {
+          return 0.05 + Math.min((link.weight || 1) / 30, 0.15);
+        }
+        return 0.1; // same-lab
+      });
     }
+
+    // Collision detection to prevent node overlap
+    import("d3-force-3d").then((d3) => {
+      fg.d3Force(
+        "collide",
+        d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 10)
+      );
+    }).catch(() => {/* d3-force-3d not available */});
   }, [filteredData]);
 
   // Auto zoom-to-fit after initial layout settles
@@ -326,7 +357,7 @@ export default function Graph({
       const timer = setTimeout(() => {
         graphRef.current?.zoomToFit(400, 60);
         setInitialFit(true);
-      }, 1500);
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [dimensions, initialFit]);
@@ -381,8 +412,8 @@ export default function Graph({
           ctx.stroke();
         }}
         backgroundColor="#0a0a0f"
-        cooldownTicks={100}
-        warmupTicks={50}
+        cooldownTicks={300}
+        warmupTicks={200}
         enableNodeDrag={true}
         enableZoomInteraction={true}
         enablePanInteraction={true}
