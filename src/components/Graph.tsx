@@ -56,23 +56,49 @@ export default function Graph({
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  // Scatter nodes across the full viewport on first load
+  // Layout: Nobel & pioneers on outer ring, rest in inner area
   const initializedNodes = useMemo(() => {
-    const w = dimensions.width || 1400;
-    const h = dimensions.height || 900;
-    return data.nodes.map((node, i) => {
-      if ((node as any).x !== undefined) return node;
-      // Golden-angle spiral for even distribution across viewport
-      const golden = Math.PI * (3 - Math.sqrt(5));
+    const size = Math.min(dimensions.width || 1400, dimensions.height || 900);
+    const outerR = size * 0.42;
+    const innerR = size * 0.18;
+
+    const outer: typeof data.nodes = [];
+    const inner: typeof data.nodes = [];
+    for (const node of data.nodes) {
+      if (node.isNobelLaureate || node.tags.includes("pioneer")) {
+        outer.push(node);
+      } else {
+        inner.push(node);
+      }
+    }
+
+    const positioned = [];
+
+    // Outer ring: Nobel + pioneers evenly spaced
+    for (let i = 0; i < outer.length; i++) {
+      const angle = (2 * Math.PI * i) / outer.length - Math.PI / 2;
+      positioned.push({
+        ...outer[i],
+        x: Math.cos(angle) * outerR,
+        y: Math.sin(angle) * outerR,
+      });
+    }
+
+    // Inner: active + rising stars scattered inside
+    const golden = Math.PI * (3 - Math.sqrt(5));
+    for (let i = 0; i < inner.length; i++) {
       const angle = i * golden;
-      const r = Math.sqrt(i / data.nodes.length) * Math.min(w, h) * 0.45;
-      return {
-        ...node,
+      const r = Math.sqrt((i + 1) / (inner.length + 1)) * innerR;
+      positioned.push({
+        ...inner[i],
         x: Math.cos(angle) * r,
         y: Math.sin(angle) * r,
-      };
-    });
-  }, [data.nodes, dimensions]);
+      });
+    }
+
+    return positioned;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data.nodes.length, dimensions.width, dimensions.height]);
 
   // Filter links by edge type toggles (keep all weights)
   const filteredData = useMemo(
