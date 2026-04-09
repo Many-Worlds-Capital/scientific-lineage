@@ -56,31 +56,29 @@ export default function Graph({
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  // Pre-compute initial positions: spread nodes in a large circle
-  // so the simulation starts from a spread layout, not a tight random cluster
+  // Scatter nodes across the full viewport on first load
   const initializedNodes = useMemo(() => {
-    const radius = Math.max(dimensions.width, dimensions.height) * 0.8;
+    const w = dimensions.width || 1400;
+    const h = dimensions.height || 900;
     return data.nodes.map((node, i) => {
-      if ((node as any).x !== undefined) return node; // already positioned
-      const angle = (2 * Math.PI * i) / data.nodes.length;
+      if ((node as any).x !== undefined) return node;
+      // Golden-angle spiral for even distribution across viewport
+      const golden = Math.PI * (3 - Math.sqrt(5));
+      const angle = i * golden;
+      const r = Math.sqrt(i / data.nodes.length) * Math.min(w, h) * 0.45;
       return {
         ...node,
-        x: Math.cos(angle) * radius * 0.5,
-        y: Math.sin(angle) * radius * 0.5,
+        x: Math.cos(angle) * r,
+        y: Math.sin(angle) * r,
       };
     });
   }, [data.nodes, dimensions]);
 
-  // Filter links: by type AND by minimum weight for co-authored
+  // Filter links by edge type toggles (keep all weights)
   const filteredData = useMemo(
     () => ({
       nodes: initializedNodes,
-      links: data.links.filter((l) => {
-        if (!edgeFilters.has(l.type)) return false;
-        // Only show co-authored edges with 3+ shared papers
-        if (l.type === "co-authored" && (l.weight ?? 0) < 3) return false;
-        return true;
-      }),
+      links: data.links.filter((l) => edgeFilters.has(l.type)),
     }),
     [initializedNodes, data.links, edgeFilters]
   );
@@ -344,22 +342,22 @@ export default function Graph({
     const fg = graphRef.current;
     if (!fg) return;
 
-    // Very strong repulsion to spread nodes apart
-    fg.d3Force("charge")?.strength(-2000);
+    // Strong repulsion keeps nodes spread
+    fg.d3Force("charge")?.strength(-1500);
 
-    // Remove center force — it collapses everything to the middle
+    // No center force — let the graph float freely
     fg.d3Force("center", null);
 
-    // Link force: long distance, weak pull
+    // Very weak link pull — nodes stay scattered, connected ones drift closer
     const linkForce = fg.d3Force("link");
     if (linkForce) {
-      linkForce.distance(300);
+      linkForce.distance(350);
       linkForce.strength((link: any) => {
-        if (link.type === "student-of") return 0.15;
+        if (link.type === "student-of") return 0.08;
         if (link.type === "co-authored") {
-          return 0.02 + Math.min((link.weight || 1) / 50, 0.08);
+          return 0.01 + Math.min((link.weight || 1) / 80, 0.04);
         }
-        return 0.05; // same-lab
+        return 0.02; // same-lab
       });
     }
 
