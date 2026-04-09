@@ -71,11 +71,16 @@ export default function Graph({
     });
   }, [data.nodes, dimensions]);
 
-  // Filter links based on edge type filters
+  // Filter links: by type AND by minimum weight for co-authored
   const filteredData = useMemo(
     () => ({
       nodes: initializedNodes,
-      links: data.links.filter((l) => edgeFilters.has(l.type)),
+      links: data.links.filter((l) => {
+        if (!edgeFilters.has(l.type)) return false;
+        // Only show co-authored edges with 3+ shared papers
+        if (l.type === "co-authored" && (l.weight ?? 0) < 3) return false;
+        return true;
+      }),
     }),
     [initializedNodes, data.links, edgeFilters]
   );
@@ -340,21 +345,21 @@ export default function Graph({
     if (!fg) return;
 
     // Very strong repulsion to spread nodes apart
-    fg.d3Force("charge")?.strength(-2000).distanceMax(500);
+    fg.d3Force("charge")?.strength(-2000);
 
-    // Center pull (gentle)
-    fg.d3Force("center")?.strength(0.02);
+    // Remove center force — it collapses everything to the middle
+    fg.d3Force("center", null);
 
-    // Link force: scale by edge type and weight
+    // Link force: long distance, weak pull
     const linkForce = fg.d3Force("link");
     if (linkForce) {
-      linkForce.distance(250);
+      linkForce.distance(300);
       linkForce.strength((link: any) => {
-        if (link.type === "student-of") return 0.3;
+        if (link.type === "student-of") return 0.15;
         if (link.type === "co-authored") {
-          return 0.05 + Math.min((link.weight || 1) / 30, 0.15);
+          return 0.02 + Math.min((link.weight || 1) / 50, 0.08);
         }
-        return 0.1; // same-lab
+        return 0.05; // same-lab
       });
     }
 
