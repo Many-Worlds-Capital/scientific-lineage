@@ -45,7 +45,6 @@ export default function Graph({
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<TooltipState | null>(null);
-  // removed initialFit — zoom handled in the phase effect
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -56,9 +55,8 @@ export default function Graph({
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  // Pin every node at a fixed position — simulation cannot move them.
-  // Nobel & pioneers on outer ring, rest in inner area.
-  // Users can still drag nodes (onNodeDragEnd updates fx/fy).
+  // Spread initial positions: pioneers/Nobel outer ring, rest inner.
+  // Only x/y — NO fx/fy so forces can work.
   const initializedNodes = useMemo(() => {
     const size = Math.min(dimensions.width || 1400, dimensions.height || 900);
     const outerR = size * 0.38;
@@ -78,18 +76,22 @@ export default function Graph({
 
     for (let i = 0; i < outer.length; i++) {
       const angle = (2 * Math.PI * i) / outer.length - Math.PI / 2;
-      const x = Math.cos(angle) * outerR;
-      const y = Math.sin(angle) * outerR;
-      positioned.push({ ...outer[i], x, y, fx: x, fy: y });
+      positioned.push({
+        ...outer[i],
+        x: Math.cos(angle) * outerR,
+        y: Math.sin(angle) * outerR,
+      });
     }
 
     const golden = Math.PI * (3 - Math.sqrt(5));
     for (let i = 0; i < inner.length; i++) {
       const angle = i * golden;
       const r = Math.sqrt((i + 1) / (inner.length + 1)) * innerR;
-      const x = Math.cos(angle) * r;
-      const y = Math.sin(angle) * r;
-      positioned.push({ ...inner[i], x, y, fx: x, fy: y });
+      positioned.push({
+        ...inner[i],
+        x: Math.cos(angle) * r,
+        y: Math.sin(angle) * r,
+      });
     }
 
     return positioned;
@@ -359,48 +361,40 @@ export default function Graph({
     onBackgroundClick();
   }, [onBackgroundClick]);
 
-  // Phase 1: Start with no forces (nodes pinned), zoom to fit
-  // Phase 2: After 2s, unpin and add gentle forces for movement
+  // Configure gentle forces — DON'T null them, just tune them soft.
+  // Forces let nodes drift slightly while keeping the spread layout.
+  const forcesConfigured = useRef(false);
   useEffect(() => {
     const fg = graphRef.current;
-    if (!fg || dimensions.width === 0) return;
+    if (!fg) return;
 
-    // Phase 1: kill all forces so pinned layout holds
-    fg.d3Force("charge", null);
+    // Gentle charge repulsion — prevents collapse
+    fg.d3Force("charge")?.strength(-200);
+
+    // Remove center force so graph doesn't pull to middle
     fg.d3Force("center", null);
-    fg.d3Force("link", null);
 
-    // Zoom to fit immediately
-    setTimeout(() => fg.zoomToFit(400, 40), 300);
+    // Very weak link force — connected nodes drift closer slowly
+    const linkForce = fg.d3Force("link");
+    if (linkForce) {
+      linkForce.distance(250);
+      linkForce.strength(() => 0.003);
+    }
 
-    // Phase 2: unpin and add gentle movement
-    const unpinTimer = setTimeout(() => {
-      // Unpin non-dragged nodes
-      filteredData.nodes.forEach((node: any) => {
-        if (node._userDragged) return;
-        node.fx = undefined;
-        node.fy = undefined;
-      });
-
-      // Re-create forces from scratch (since we nulled them)
+    // Add collision detection once
+    if (!forcesConfigured.current) {
       import("d3-force-3d").then((d3) => {
-        // Gentle repulsion
-        fg.d3Force("charge", d3.forceManyBody().strength(-120));
-        // Collision
-        fg.d3Force("collide", d3.forceCollide().radius(
-          (node: any) => getNodeRadius(node as Scientist) + 6
-        ));
-        // Very weak link attraction
-        fg.d3Force("link")?.distance(200).strength(() => 0.002);
-
-        // Kick the simulation alive
-        fg.d3ReheatSimulation();
+        fg.d3Force(
+          "collide",
+          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 6)
+        );
       }).catch(() => {});
-    }, 2000);
+      forcesConfigured.current = true;
+    }
 
-    return () => clearTimeout(unpinTimer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dimensions.width]);
+    // Zoom to fit after a moment
+    setTimeout(() => fg.zoomToFit(400, 40), 500);
+  }, [filteredData]);
 
   if (dimensions.width === 0) return null;
 
@@ -452,7 +446,10 @@ export default function Graph({
           ctx.stroke();
         }}
         backgroundColor="#0a0a0f"
-        cooldownTicks={200}
+        d3AlphaDecay={0.02}
+        d3VelocityDecay={0.4}
+        cooldownTicks={300}
+        warmupTicks={0}
         enableNodeDrag={true}
         enableZoomInteraction={true}
         enablePanInteraction={true}
