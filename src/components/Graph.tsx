@@ -368,23 +368,17 @@ export default function Graph({
     const fg = graphRef.current;
     if (!fg) return;
 
-    // Strong repulsion keeps nodes spread
-    fg.d3Force("charge")?.strength(-1500);
+    // Strong charge repulsion
+    fg.d3Force("charge")?.strength(-800);
 
-    // No center force — let the graph float freely
+    // No center force
     fg.d3Force("center", null);
 
-    // Very weak link pull — nodes stay scattered, connected ones drift closer
+    // Minimal link pull — just enough to hint at connections
     const linkForce = fg.d3Force("link");
     if (linkForce) {
-      linkForce.distance(350);
-      linkForce.strength((link: any) => {
-        if (link.type === "student-of") return 0.08;
-        if (link.type === "co-authored") {
-          return 0.01 + Math.min((link.weight || 1) / 80, 0.04);
-        }
-        return 0.02; // same-lab
-      });
+      linkForce.distance(200);
+      linkForce.strength(() => 0.005);
     }
 
     // Collision detection to prevent node overlap
@@ -392,13 +386,12 @@ export default function Graph({
       import("d3-force-3d").then((d3) => {
         fg.d3Force(
           "collide",
-          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 10)
+          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 8)
         );
       }).catch(() => {/* d3-force-3d not available */});
       forcesApplied.current = true;
     }
 
-    // Reheat so nodes re-layout with new forces
     fg.d3ReheatSimulation();
   }, [filteredData]);
 
@@ -463,10 +456,10 @@ export default function Graph({
           ctx.stroke();
         }}
         backgroundColor="#0a0a0f"
-        d3AlphaDecay={0.01}
-        d3VelocityDecay={0.3}
-        cooldownTicks={400}
-        warmupTicks={100}
+        d3AlphaDecay={0.05}
+        d3VelocityDecay={0.6}
+        cooldownTicks={80}
+        warmupTicks={0}
         enableNodeDrag={true}
         enableZoomInteraction={true}
         enablePanInteraction={true}
