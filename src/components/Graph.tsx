@@ -56,11 +56,13 @@ export default function Graph({
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  // Layout: Nobel & pioneers on outer ring, rest in inner area
+  // Pin every node at a fixed position — simulation cannot move them.
+  // Nobel & pioneers on outer ring, rest in inner area.
+  // Users can still drag nodes (onNodeDragEnd updates fx/fy).
   const initializedNodes = useMemo(() => {
     const size = Math.min(dimensions.width || 1400, dimensions.height || 900);
-    const outerR = size * 0.42;
-    const innerR = size * 0.18;
+    const outerR = size * 0.38;
+    const innerR = size * 0.2;
 
     const outer: typeof data.nodes = [];
     const inner: typeof data.nodes = [];
@@ -72,28 +74,22 @@ export default function Graph({
       }
     }
 
-    const positioned = [];
+    const positioned: any[] = [];
 
-    // Outer ring: Nobel + pioneers evenly spaced
     for (let i = 0; i < outer.length; i++) {
       const angle = (2 * Math.PI * i) / outer.length - Math.PI / 2;
-      positioned.push({
-        ...outer[i],
-        x: Math.cos(angle) * outerR,
-        y: Math.sin(angle) * outerR,
-      });
+      const x = Math.cos(angle) * outerR;
+      const y = Math.sin(angle) * outerR;
+      positioned.push({ ...outer[i], x, y, fx: x, fy: y });
     }
 
-    // Inner: active + rising stars scattered inside
     const golden = Math.PI * (3 - Math.sqrt(5));
     for (let i = 0; i < inner.length; i++) {
       const angle = i * golden;
       const r = Math.sqrt((i + 1) / (inner.length + 1)) * innerR;
-      positioned.push({
-        ...inner[i],
-        x: Math.cos(angle) * r,
-        y: Math.sin(angle) * r,
-      });
+      const x = Math.cos(angle) * r;
+      const y = Math.sin(angle) * r;
+      positioned.push({ ...inner[i], x, y, fx: x, fy: y });
     }
 
     return positioned;
@@ -362,46 +358,24 @@ export default function Graph({
     onBackgroundClick();
   }, [onBackgroundClick]);
 
-  // Configure forces — runs on mount and when edge filters change
-  const forcesApplied = useRef(false);
+  // No forces needed — all nodes are pinned with fx/fy.
+  // Just disable simulation and zoom to fit.
   useEffect(() => {
     const fg = graphRef.current;
     if (!fg) return;
-
-    // Strong charge repulsion
-    fg.d3Force("charge")?.strength(-800);
-
-    // No center force
+    fg.d3Force("charge", null);
     fg.d3Force("center", null);
-
-    // Minimal link pull — just enough to hint at connections
-    const linkForce = fg.d3Force("link");
-    if (linkForce) {
-      linkForce.distance(200);
-      linkForce.strength(() => 0.005);
-    }
-
-    // Collision detection to prevent node overlap
-    if (!forcesApplied.current) {
-      import("d3-force-3d").then((d3) => {
-        fg.d3Force(
-          "collide",
-          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 8)
-        );
-      }).catch(() => {/* d3-force-3d not available */});
-      forcesApplied.current = true;
-    }
-
-    fg.d3ReheatSimulation();
+    fg.d3Force("link", null);
+    fg.cooldownTicks(0);
   }, [filteredData]);
 
-  // Auto zoom-to-fit after initial layout settles
+  // Zoom to fit on load
   useEffect(() => {
     if (graphRef.current && !initialFit && dimensions.width > 0) {
       const timer = setTimeout(() => {
-        graphRef.current?.zoomToFit(400, 60);
+        graphRef.current?.zoomToFit(400, 40);
         setInitialFit(true);
-      }, 3000);
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [dimensions, initialFit]);
@@ -456,10 +430,7 @@ export default function Graph({
           ctx.stroke();
         }}
         backgroundColor="#0a0a0f"
-        d3AlphaDecay={0.05}
-        d3VelocityDecay={0.6}
-        cooldownTicks={80}
-        warmupTicks={0}
+        cooldownTicks={0}
         enableNodeDrag={true}
         enableZoomInteraction={true}
         enablePanInteraction={true}
