@@ -15,9 +15,20 @@ interface AdvisorEntry {
   _skip?: boolean;
 }
 
+interface CompanyEntry {
+  company: string;
+  scientists: { id: string; role: string }[];
+}
+
 interface Affiliation {
   name: string;
   years: string;
+}
+
+interface YearCount {
+  year: number;
+  worksCount: number;
+  citedByCount: number;
 }
 
 interface Scientist {
@@ -36,6 +47,15 @@ interface Scientist {
   orcid: string | null;
   openAlexUrl: string;
   tags: string[];
+  countsByYear: YearCount[];
+  subfields: string[];
+  companies: { name: string; role: string }[];
+  risingStarSignals?: {
+    publicationAcceleration: number;
+    citationAcceleration: number;
+    collaborationBreadth: number;
+    momentum: number;
+  };
 }
 
 interface CoAuthoredPaper {
@@ -49,10 +69,11 @@ interface CoAuthoredPaper {
 interface Relationship {
   source: string;
   target: string;
-  type: "student-of" | "same-lab" | "co-authored";
+  type: "student-of" | "co-authored";
   weight: number;
   details?: string;
   papers?: CoAuthoredPaper[];
+  yearRange?: [number, number];
 }
 
 // --- Constants ---
@@ -151,18 +172,74 @@ const KNOWN_FOR: Record<string, string[]> = {
   A5065994445: ["Fault-tolerant quantum computing"],
 };
 
+// Subfield classification by keyword matching on OpenAlex topics
+const SUBFIELD_KEYWORDS: Record<string, string[]> = {
+  "superconducting-qubits": [
+    "superconducting", "transmon", "circuit qed", "josephson", "microwave",
+  ],
+  "trapped-ions": [
+    "trapped ion", "ion trap", "trapped-ion", "paul trap",
+  ],
+  "neutral-atoms": [
+    "neutral atom", "rydberg", "optical tweezer", "cold atom", "optical lattice",
+  ],
+  "photonics": [
+    "photon", "optical", "linear optic", "boson sampling", "squeezed",
+  ],
+  "spin-qubits": [
+    "spin qubit", "quantum dot", "silicon qubit", "electron spin",
+  ],
+  "topological": [
+    "topological", "majorana", "anyon", "non-abelian", "toric code",
+  ],
+  "algorithms-theory": [
+    "quantum algorithm", "computational complexity", "query complexity",
+    "quantum walk", "quantum speed", "bqp", "quantum advantage",
+    "quantum machine learning", "variational quantum",
+  ],
+  "error-correction": [
+    "error correct", "fault tolerant", "stabilizer", "surface code",
+    "magic state", "logical qubit", "bosonic code", "cat qubit",
+  ],
+  "quantum-networks": [
+    "quantum network", "quantum internet", "quantum communication",
+    "quantum key distribution", "quantum cryptograph", "quantum repeater",
+    "entanglement distribution",
+  ],
+  "quantum-sensing": [
+    "quantum sensing", "quantum metrology", "precision measurement",
+    "atomic clock", "magnetometry",
+  ],
+};
+
 // --- Helpers ---
 
 const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function fetchJson(url: string): Promise<any> {
-  const res = await fetch(url, {
-    headers: { "User-Agent": "ManyWorlds-ScientificLineage/1.0 (mailto:contact@manyworlds.vc)" },
-  });
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status} for ${url}`);
+// OpenAlex "polite pool" — add email to get 10 req/s instead of 1 req/s
+function politeUrl(url: string): string {
+  const sep = url.includes("?") ? "&" : "?";
+  return `${url}${sep}mailto=contact@manyworlds.vc`;
+}
+
+async function fetchJson(url: string, retries = 5): Promise<any> {
+  const polite = politeUrl(url);
+  for (let attempt = 0; attempt < retries; attempt++) {
+    const res = await fetch(polite, {
+      headers: { "User-Agent": "ManyWorlds-ScientificLineage/2.0 (mailto:contact@manyworlds.vc)" },
+    });
+    if (res.status === 429) {
+      const waitMs = 5000 * (attempt + 1);
+      console.log(`    Rate limited, waiting ${waitMs / 1000}s (attempt ${attempt + 1}/${retries})...`);
+      await delay(waitMs);
+      continue;
+    }
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status} for ${url}`);
+    }
+    return res.json();
   }
-  return res.json();
+  throw new Error(`Rate limited after ${retries} retries for ${url}`);
 }
 
 async function fetchAuthor(id: string): Promise<any> {
@@ -182,9 +259,7 @@ async function fetchCoauthoredWorks(
   if (data.results) {
     for (const work of data.results) {
       const openAlexId = work.id?.replace("https://openalex.org/", "") ?? "";
-      // Extract arXiv ID from locations or ids
       let arxivId: string | null = null;
-      // Check all locations for arxiv landing page URLs
       const locations = [
         work.primary_location,
         ...(work.locations ?? []),
@@ -197,7 +272,6 @@ async function fetchCoauthoredWorks(
           break;
         }
       }
-      // Also check ids.doi for arxiv DOIs
       if (!arxivId && work.doi) {
         const arxivDoiMatch = work.doi.match(/10\.48550\/arXiv\.(.+)/);
         if (arxivDoiMatch) {
@@ -256,12 +330,148 @@ function getTopTopics(author: any): string[] {
   return [];
 }
 
+function getCountsByYear(author: any): YearCount[] {
+  if (!author.counts_by_year) return [];
+  return author.counts_by_year
+    .map((c: any) => ({
+      year: c.year,
+      worksCount: c.works_count ?? 0,
+      citedByCount: c.cited_by_count ?? 0,
+    }))
+    .sort((a: YearCount, b: YearCount) => a.year - b.year);
+}
+
+function classifySubfields(topics: string[]): string[] {
+  const matched = new Set<string>();
+  const topicsLower = topics.map((t) => t.toLowerCase());
+  for (const [subfield, keywords] of Object.entries(SUBFIELD_KEYWORDS)) {
+    for (const kw of keywords) {
+      if (topicsLower.some((t) => t.includes(kw))) {
+        matched.add(subfield);
+        break;
+      }
+    }
+  }
+  return Array.from(matched);
+}
+
+function computeRisingStarSignals(
+  countsByYear: YearCount[]
+): { publicationAcceleration: number; citationAcceleration: number } {
+  // Compare last 3 years vs prior 3 years
+  const currentYear = new Date().getFullYear();
+  const recent = countsByYear.filter((c) => c.year >= currentYear - 3 && c.year < currentYear);
+  const prior = countsByYear.filter((c) => c.year >= currentYear - 6 && c.year < currentYear - 3);
+
+  const recentPubs = recent.reduce((s, c) => s + c.worksCount, 0);
+  const priorPubs = prior.reduce((s, c) => s + c.worksCount, 0);
+  const recentCites = recent.reduce((s, c) => s + c.citedByCount, 0);
+  const priorCites = prior.reduce((s, c) => s + c.citedByCount, 0);
+
+  const pubAccel = priorPubs > 0 ? (recentPubs - priorPubs) / priorPubs : recentPubs > 0 ? 1 : 0;
+  const citeAccel = priorCites > 0 ? (recentCites - priorCites) / priorCites : recentCites > 0 ? 1 : 0;
+
+  return {
+    publicationAcceleration: Math.round(pubAccel * 1000) / 1000,
+    citationAcceleration: Math.round(citeAccel * 1000) / 1000,
+  };
+}
+
+
+// --- Discovery ---
+
+async function discoverCoauthors(
+  seedIds: string[],
+  existingIds: Set<string>,
+  maxTotal: number
+): Promise<SeedEntry[]> {
+  const discovered: Map<string, { name: string; coauthorships: number }> = new Map();
+  const seedSet = new Set(seedIds);
+
+  console.log(`\nDiscovering co-authors for ${seedIds.length} seed researchers...`);
+
+  for (let i = 0; i < seedIds.length; i++) {
+    const id = seedIds[i];
+    if (i % 10 === 0) {
+      console.log(`  Discovery progress: ${i}/${seedIds.length} seeds processed, ${discovered.size} candidates found`);
+    }
+
+    try {
+      // Use OpenAlex works API grouped by co-author
+      const url = `https://api.openalex.org/works?filter=authorships.author.id:${id}&group_by=authorships.author.id&per_page=50`;
+      const data = await fetchJson(url);
+
+      if (data.group_by) {
+        for (const group of data.group_by) {
+          const coauthorId = group.key?.replace("https://openalex.org/", "") ?? "";
+          const count = group.count ?? 0;
+
+          if (!coauthorId || seedSet.has(coauthorId) || existingIds.has(coauthorId)) continue;
+          if (count < 3) continue; // At least 3 co-authored works
+
+          const existing = discovered.get(coauthorId);
+          if (existing) {
+            existing.coauthorships += count;
+          } else {
+            discovered.set(coauthorId, {
+              name: group.key_display_name ?? coauthorId,
+              coauthorships: count,
+            });
+          }
+        }
+      }
+    } catch {
+      // skip
+    }
+    await delay(200);
+  }
+
+  // Sort by total coauthorships and filter
+  const candidates = Array.from(discovered.entries())
+    .sort((a, b) => b[1].coauthorships - a[1].coauthorships)
+    .slice(0, maxTotal * 3); // fetch more than needed, will filter by h-index
+
+  console.log(`  Found ${candidates.length} co-author candidates, filtering by h-index...`);
+
+  const filtered: SeedEntry[] = [];
+  for (const [id, info] of candidates) {
+    if (filtered.length + seedIds.length >= maxTotal) break;
+
+    try {
+      const author = await fetchAuthor(id);
+      const hIndex = author.summary_stats?.h_index ?? 0;
+      const topics = getTopTopics(author);
+      const topicsLower = topics.map((t) => t.toLowerCase()).join(" ");
+
+      // Must have h-index >= 15 and quantum-related topics
+      const isQuantum = topicsLower.includes("quantum") ||
+        topicsLower.includes("qubit") ||
+        topicsLower.includes("entangle");
+
+      if (hIndex >= 15 && isQuantum) {
+        filtered.push({
+          id,
+          name: author.display_name ?? info.name,
+        });
+        console.log(`    Discovered: ${author.display_name} (h=${hIndex}, ${info.coauthorships} co-authorships)`);
+      }
+    } catch {
+      // skip
+    }
+    await delay(200);
+  }
+
+  console.log(`  Discovered ${filtered.length} new researchers`);
+  return filtered;
+}
+
 // --- Main ---
 
 async function main() {
   const rootDir = path.resolve(__dirname, "..");
   const seedPath = path.join(__dirname, "seed.json");
   const advisorsPath = path.join(__dirname, "advisors.json");
+  const companiesPath = path.join(__dirname, "companies.json");
   const outputDir = path.join(rootDir, "public", "data");
 
   const seeds: SeedEntry[] = JSON.parse(fs.readFileSync(seedPath, "utf-8"));
@@ -269,9 +479,27 @@ async function main() {
     fs.readFileSync(advisorsPath, "utf-8")
   ).filter((a: AdvisorEntry) => !a._skip);
 
-  console.log(`Fetching ${seeds.length} scientists from OpenAlex...`);
+  // Load companies data
+  let companyEntries: CompanyEntry[] = [];
+  try {
+    companyEntries = JSON.parse(fs.readFileSync(companiesPath, "utf-8"));
+  } catch {
+    console.log("No companies.json found, skipping company overlay");
+  }
 
-  // Step 1: Fetch all author profiles
+  // Build company lookup
+  const companyLookup = new Map<string, { name: string; role: string }[]>();
+  for (const entry of companyEntries) {
+    for (const sci of entry.scientists) {
+      const existing = companyLookup.get(sci.id) ?? [];
+      existing.push({ name: entry.company, role: sci.role });
+      companyLookup.set(sci.id, existing);
+    }
+  }
+
+  console.log(`Fetching ${seeds.length} seed scientists from OpenAlex...`);
+
+  // Step 1: Fetch all seed author profiles
   const scientists: Scientist[] = [];
   const idSet = new Set(seeds.map((s) => s.id));
 
@@ -280,35 +508,40 @@ async function main() {
     console.log(`  [${i + 1}/${seeds.length}] ${seed.name}...`);
     try {
       const author = await fetchAuthor(seed.id);
-      const { name: instName, country } = getCurrentInstitution(author);
-      const hIndex = author.summary_stats?.h_index ?? 0;
-      const citedByCount = author.cited_by_count ?? 0;
-      const worksCount = author.works_count ?? 0;
-
-      scientists.push({
-        id: seed.id,
-        name: author.display_name ?? seed.name,
-        hIndex,
-        citedByCount,
-        worksCount,
-        impactScore: 0, // computed later
-        institution: instName,
-        country,
-        affiliationHistory: parseAffiliations(author),
-        topTopics: getTopTopics(author),
-        knownFor: KNOWN_FOR[seed.id] ?? [],
-        isNobelLaureate: NOBEL_LAUREATES.has(seed.id),
-        orcid: author.orcid ?? null,
-        openAlexUrl: `https://openalex.org/authors/${seed.id}`,
-        tags: [],
-      });
+      const sci = buildScientist(seed.id, seed.name, author, companyLookup, false);
+      scientists.push(sci);
     } catch (err: any) {
       console.error(`  Failed to fetch ${seed.name}: ${err.message}`);
     }
-    await delay(110); // respect rate limit
+    await delay(200);
   }
 
-  // Step 2: Compute impact scores
+  // Step 2: Auto-discovery of new researchers
+  const MAX_TOTAL = 350;
+  const discoveredSeeds = await discoverCoauthors(
+    seeds.map((s) => s.id),
+    idSet,
+    MAX_TOTAL
+  );
+
+  console.log(`\nFetching ${discoveredSeeds.length} discovered scientists...`);
+  for (let i = 0; i < discoveredSeeds.length; i++) {
+    const seed = discoveredSeeds[i];
+    if (idSet.has(seed.id)) continue;
+    idSet.add(seed.id);
+
+    console.log(`  [${i + 1}/${discoveredSeeds.length}] ${seed.name}...`);
+    try {
+      const author = await fetchAuthor(seed.id);
+      const sci = buildScientist(seed.id, seed.name, author, companyLookup, true);
+      scientists.push(sci);
+    } catch (err: any) {
+      console.error(`  Failed to fetch ${seed.name}: ${err.message}`);
+    }
+    await delay(200);
+  }
+
+  // Step 3: Compute impact scores
   const hIndices = scientists.map((s) => s.hIndex);
   const citations = scientists.map((s) => s.citedByCount);
   const maxH = Math.max(...hIndices, 1);
@@ -321,12 +554,15 @@ async function main() {
     s.impactScore = Math.round((0.5 * normH + 0.3 * normC + 0.2 * nobel) * 1000) / 1000;
   }
 
-  // Step 3: Tag scientists
-  // Use percentile-based thresholds relative to the dataset
+  // Step 4: Tag scientists
   const sortedH = [...scientists].sort((a, b) => b.hIndex - a.hIndex);
   const top20pct = sortedH[Math.floor(sortedH.length * 0.2)]?.hIndex ?? 80;
 
   for (const s of scientists) {
+    // Keep "discovered" tag if present
+    const baseTag = s.tags.includes("discovered") ? "discovered" : null;
+    s.tags = baseTag ? [baseTag] : [];
+
     if (s.isNobelLaureate) {
       s.tags.push("pioneer");
     } else if (s.hIndex >= top20pct) {
@@ -336,14 +572,31 @@ async function main() {
     } else {
       s.tags.push("active");
     }
+
+    // Add founder tag
+    if (s.companies.length > 0 && s.companies.some((c) => c.role.toLowerCase().includes("founder") || c.role.toLowerCase().includes("co-founder"))) {
+      s.tags.push("founder");
+    }
+  }
+
+  // Step 5: Compute rising star signals
+  console.log(`\nComputing rising star signals...`);
+  for (const s of scientists) {
+    const { publicationAcceleration, citationAcceleration } = computeRisingStarSignals(s.countsByYear);
+    s.risingStarSignals = {
+      publicationAcceleration,
+      citationAcceleration,
+      collaborationBreadth: 0, // filled after relationships
+      momentum: 0, // computed after normalization
+    };
   }
 
   console.log(`\nBuilding relationships...`);
 
-  // Step 4: Build edges
+  // Step 6: Build edges
   const relationships: Relationship[] = [];
 
-  // 4a: Student-of from advisors.json
+  // 6a: Student-of from advisors.json
   for (const adv of advisorEntries) {
     if (idSet.has(adv.student) && idSet.has(adv.advisor) && adv.student !== adv.advisor) {
       relationships.push({
@@ -357,82 +610,112 @@ async function main() {
   }
   console.log(`  ${relationships.length} student-of edges from advisors.json`);
 
-  // 4b: Co-authored edges (check all pairs — but batch to avoid too many requests)
-  const scientistIds = scientists.map((s) => s.id);
+  // 6b: Co-authored edges via group_by (one API call per researcher)
+  const scientistIdSet = new Set(scientists.map((s) => s.id));
+  const processedPairs = new Set<string>();
   let coauthorCount = 0;
-  const totalPairs = (scientistIds.length * (scientistIds.length - 1)) / 2;
-  let pairIndex = 0;
+  let errorCount = 0;
 
-  console.log(`  Checking ${totalPairs} pairs for co-authorship...`);
-
-  for (let i = 0; i < scientistIds.length; i++) {
-    for (let j = i + 1; j < scientistIds.length; j++) {
-      pairIndex++;
-      if (pairIndex % 100 === 0) {
-        console.log(`    Progress: ${pairIndex}/${totalPairs}`);
-      }
-      try {
-        const result = await fetchCoauthoredWorks(scientistIds[i], scientistIds[j]);
-        if (result.count > 0) {
-          relationships.push({
-            source: scientistIds[i],
-            target: scientistIds[j],
-            type: "co-authored",
-            weight: result.count,
-            papers: result.papers,
-          });
-          coauthorCount++;
-        }
-      } catch {
-        // skip on error
-      }
-      await delay(110);
-    }
-  }
-  console.log(`  ${coauthorCount} co-authored edges found`);
-
-  // 4c: Same-lab edges from overlapping affiliations (require 3+ years overlap)
-  let sameLabCount = 0;
-  const existingPairs = new Set(
-    relationships.map((r) => [r.source, r.target].sort().join("|"))
-  );
+  console.log(`  Fetching co-authorships for ${scientists.length} researchers (group_by approach)...`);
 
   for (let i = 0; i < scientists.length; i++) {
-    for (let j = i + 1; j < scientists.length; j++) {
-      const pairKey = [scientists[i].id, scientists[j].id].sort().join("|");
-      if (existingPairs.has(pairKey)) continue;
+    const sci = scientists[i];
+    if ((i + 1) % 20 === 0) {
+      console.log(`    Progress: ${i + 1}/${scientists.length} (${coauthorCount} edges found)`);
+    }
 
-      let bestOverlap = 0;
-      let bestInst = "";
+    try {
+      const url = `https://api.openalex.org/works?filter=authorships.author.id:${sci.id}&group_by=authorships.author.id&per_page=200`;
+      const data = await fetchJson(url);
 
-      for (const affI of scientists[i].affiliationHistory) {
-        for (const affJ of scientists[j].affiliationHistory) {
-          if (affI.name === affJ.name) {
-            const overlap = yearsOverlapCount(affI.years, affJ.years);
-            if (overlap > bestOverlap) {
-              bestOverlap = overlap;
-              bestInst = affI.name;
+      if (data.group_by) {
+        for (const group of data.group_by) {
+          const coauthorId = group.key?.replace("https://openalex.org/", "") ?? "";
+          const count = group.count ?? 0;
+
+          // Skip self, non-dataset members, already processed, and weak links
+          if (!coauthorId || coauthorId === sci.id || !scientistIdSet.has(coauthorId)) continue;
+          if (count < 2) continue;
+
+          const pk = [sci.id, coauthorId].sort().join("|");
+          if (processedPairs.has(pk)) continue;
+          processedPairs.add(pk);
+
+          // For significant collaborations, fetch paper details (for timeline yearRange)
+          if (count >= 3) {
+            try {
+              const result = await fetchCoauthoredWorks(sci.id, coauthorId);
+              const years = result.papers.map((p) => p.year).filter((y) => y > 0);
+              relationships.push({
+                source: sci.id,
+                target: coauthorId,
+                type: "co-authored",
+                weight: count,
+                papers: result.papers,
+                yearRange: years.length > 0 ? [Math.min(...years), Math.max(...years)] : undefined,
+              });
+              await delay(200);
+            } catch {
+              // Fallback: add edge without paper details
+              relationships.push({
+                source: sci.id,
+                target: coauthorId,
+                type: "co-authored",
+                weight: count,
+              });
             }
+          } else {
+            relationships.push({
+              source: sci.id,
+              target: coauthorId,
+              type: "co-authored",
+              weight: count,
+            });
           }
+          coauthorCount++;
         }
       }
-
-      if (bestOverlap >= 3) {
-        relationships.push({
-          source: scientists[i].id,
-          target: scientists[j].id,
-          type: "same-lab",
-          weight: bestOverlap,
-          details: bestInst,
-        });
-        existingPairs.add(pairKey);
-        sameLabCount++;
+    } catch (err: any) {
+      errorCount++;
+      if (errorCount <= 10) {
+        console.log(`    Error for ${sci.name}: ${err.message}`);
       }
     }
+    await delay(200);
   }
-  console.log(`  ${sameLabCount} same-lab edges found`);
+  console.log(`  ${coauthorCount} co-authored edges found (${errorCount} errors)`);
 
-  // Step 5: Write output
+  // Step 7: Fill collaboration breadth and compute momentum
+  const coauthorCountMap = new Map<string, Set<string>>();
+  for (const r of relationships) {
+    if (r.type !== "co-authored") continue;
+    const src = typeof r.source === "string" ? r.source : (r.source as any).id;
+    const tgt = typeof r.target === "string" ? r.target : (r.target as any).id;
+    if (!coauthorCountMap.has(src)) coauthorCountMap.set(src, new Set());
+    if (!coauthorCountMap.has(tgt)) coauthorCountMap.set(tgt, new Set());
+    coauthorCountMap.get(src)!.add(tgt);
+    coauthorCountMap.get(tgt)!.add(src);
+  }
+
+  // Normalize and compute momentum
+  let maxPubAccel = 0, maxCiteAccel = 0, maxBreadth = 0;
+  for (const s of scientists) {
+    if (!s.risingStarSignals) continue;
+    s.risingStarSignals.collaborationBreadth = coauthorCountMap.get(s.id)?.size ?? 0;
+    maxPubAccel = Math.max(maxPubAccel, Math.abs(s.risingStarSignals.publicationAcceleration));
+    maxCiteAccel = Math.max(maxCiteAccel, Math.abs(s.risingStarSignals.citationAcceleration));
+    maxBreadth = Math.max(maxBreadth, s.risingStarSignals.collaborationBreadth);
+  }
+
+  for (const s of scientists) {
+    if (!s.risingStarSignals) continue;
+    const normPub = maxPubAccel > 0 ? Math.max(0, s.risingStarSignals.publicationAcceleration) / maxPubAccel : 0;
+    const normCite = maxCiteAccel > 0 ? Math.max(0, s.risingStarSignals.citationAcceleration) / maxCiteAccel : 0;
+    const normBreadth = maxBreadth > 0 ? s.risingStarSignals.collaborationBreadth / maxBreadth : 0;
+    s.risingStarSignals.momentum = Math.round((0.3 * normPub + 0.4 * normCite + 0.3 * normBreadth) * 1000) / 1000;
+  }
+
+  // Step 8: Write output
   fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(
     path.join(outputDir, "scientists.json"),
@@ -448,25 +731,40 @@ async function main() {
   );
 }
 
-function parseYearRange(s: string): [number, number] | null {
-  if (s === "unknown") return null;
-  const parts = s.split("-").map(Number);
-  if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
-    return [parts[0], parts[1]];
-  }
-  if (parts.length === 1 && !isNaN(parts[0])) {
-    return [parts[0], parts[0]];
-  }
-  return null;
-}
+function buildScientist(
+  id: string,
+  name: string,
+  author: any,
+  companyLookup: Map<string, { name: string; role: string }[]>,
+  isDiscovered: boolean
+): Scientist {
+  const { name: instName, country } = getCurrentInstitution(author);
+  const hIndex = author.summary_stats?.h_index ?? 0;
+  const citedByCount = author.cited_by_count ?? 0;
+  const worksCount = author.works_count ?? 0;
+  const topics = getTopTopics(author);
+  const countsByYear = getCountsByYear(author);
 
-function yearsOverlapCount(a: string, b: string): number {
-  const rangeA = parseYearRange(a);
-  const rangeB = parseYearRange(b);
-  if (!rangeA || !rangeB) return 0;
-  const start = Math.max(rangeA[0], rangeB[0]);
-  const end = Math.min(rangeA[1], rangeB[1]);
-  return Math.max(0, end - start + 1);
+  return {
+    id,
+    name: author.display_name ?? name,
+    hIndex,
+    citedByCount,
+    worksCount,
+    impactScore: 0,
+    institution: instName,
+    country,
+    affiliationHistory: parseAffiliations(author),
+    topTopics: topics,
+    knownFor: KNOWN_FOR[id] ?? [],
+    isNobelLaureate: NOBEL_LAUREATES.has(id),
+    orcid: author.orcid ?? null,
+    openAlexUrl: `https://openalex.org/authors/${id}`,
+    tags: isDiscovered ? ["discovered"] : [],
+    countsByYear,
+    subfields: classifySubfields(topics),
+    companies: companyLookup.get(id) ?? [],
+  };
 }
 
 main().catch(console.error);

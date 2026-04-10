@@ -65,9 +65,11 @@ export default function MethodologyModal({ isOpen, onClose }: MethodologyModalPr
               institutional affiliations (with year ranges), and research topics.
             </p>
             <p className="mt-2">
-              The dataset is seeded with a curated list of ~80 quantum computing
-              researchers and is automatically updated every week via a scheduled
-              pipeline.
+              The dataset starts with a curated seed list of ~80 key quantum computing
+              researchers. Additional researchers are <strong className="text-white">automatically discovered</strong> by
+              analyzing frequent co-authors of seed researchers, filtered by h-index
+              (&ge;15) and quantum-related topics. The full dataset is refreshed weekly
+              via a scheduled pipeline.
             </p>
           </section>
 
@@ -126,17 +128,6 @@ export default function MethodologyModal({ isOpen, onClose }: MethodologyModalPr
                   </p>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="w-5 h-0.5 rounded mt-2 shrink-0" style={{ backgroundColor: EDGE_COLORS["same-lab"] }} />
-                <div>
-                  <strong className="text-white">Same lab / institution</strong>
-                  <p className="text-white/60 mt-0.5">
-                    Derived from overlapping institutional affiliations with a minimum
-                    of 3 years of concurrent presence. Off by default to reduce visual
-                    clutter.
-                  </p>
-                </div>
-              </li>
             </ul>
           </section>
 
@@ -181,6 +172,57 @@ export default function MethodologyModal({ isOpen, onClose }: MethodologyModalPr
 
           <section>
             <h3 className="text-white font-heading font-semibold mb-2">
+              Rising Star Signals
+            </h3>
+            <p>
+              The <strong className="text-white">Rising Stars</strong> panel ranks
+              researchers by a composite momentum score that combines:
+            </p>
+            <ul className="mt-2 space-y-1 ml-4 list-disc text-white/70">
+              <li>
+                <strong className="text-white/80">Publication acceleration</strong> &mdash;
+                year-over-year growth in publications (last 3 years vs. prior 3 years)
+              </li>
+              <li>
+                <strong className="text-white/80">Citation acceleration</strong> &mdash;
+                year-over-year growth in citations received
+              </li>
+              <li>
+                <strong className="text-white/80">Collaboration breadth</strong> &mdash;
+                number of distinct co-authors in the network
+              </li>
+            </ul>
+            <div className="bg-white/5 rounded-lg p-3 mt-2 font-mono text-xs">
+              momentum = 0.3 &times; norm(pub_accel) + 0.4 &times; norm(cite_accel) + 0.3 &times; norm(breadth)
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-white font-heading font-semibold mb-2">
+              Timeline
+            </h3>
+            <p>
+              The timeline slider filters co-authored edges by publication year range.
+              Use the play button to animate the field&apos;s evolution over time.
+              Only co-authored edges with date metadata are filtered; student-advisor
+              Student-advisor edges are not filtered by timeline.
+            </p>
+          </section>
+
+          <section>
+            <h3 className="text-white font-heading font-semibold mb-2">
+              Company Overlay
+            </h3>
+            <p>
+              Researchers affiliated with quantum computing companies are tagged with
+              a <span className="text-purple-400">founder</span> badge. Company
+              affiliations are manually curated and include roles at startups like
+              IonQ, QuEra, Google Quantum AI, IBM Quantum, and others.
+            </p>
+          </section>
+
+          <section>
+            <h3 className="text-white font-heading font-semibold mb-2">
               Interaction
             </h3>
             <ul className="space-y-1 ml-4 list-disc text-white/70">
@@ -206,6 +248,14 @@ export default function MethodologyModal({ isOpen, onClose }: MethodologyModalPr
               <li>Use the <strong className="text-white/80">Filter Edges</strong> panel
                 to toggle edge types on or off
               </li>
+              <li>
+                Use the <strong className="text-white/80">Timeline</strong> slider to
+                filter collaborations by year range, or press play to animate
+              </li>
+              <li>
+                Open the <strong className="text-white/80">Rising Stars</strong> panel
+                to see a ranked leaderboard of researchers with accelerating impact
+              </li>
             </ul>
           </section>
 
@@ -226,8 +276,8 @@ export default function MethodologyModal({ isOpen, onClose }: MethodologyModalPr
             </h3>
             <ul className="space-y-1 ml-4 list-disc text-white/70">
               <li>
-                The seed list is manually curated and does not cover every quantum
-                computing researcher
+                Auto-discovered researchers depend on co-authorship with seed list
+                members &mdash; researchers without such links will not appear
               </li>
               <li>
                 Student-advisor relationships are manually maintained and may be
@@ -240,6 +290,9 @@ export default function MethodologyModal({ isOpen, onClose }: MethodologyModalPr
               <li>
                 The h-index and citation counts reflect OpenAlex&apos;s coverage, which may
                 differ slightly from Google Scholar or Scopus
+              </li>
+              <li>
+                Company affiliations are manually curated and may not be exhaustive
               </li>
             </ul>
           </section>

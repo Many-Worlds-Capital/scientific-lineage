@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { Scientist, Relationship } from "@/lib/types";
 import { EDGE_COLORS } from "@/lib/graphUtils";
+
+const TrajectoryChart = dynamic(() => import("./TrajectoryChart"), { ssr: false });
 
 interface ScientistPanelProps {
   scientist: Scientist | null;
@@ -31,7 +34,6 @@ export default function ScientistPanel({
   const connectionsByType = {
     "student-of": connections.filter((r) => r.type === "student-of"),
     "co-authored": connections.filter((r) => r.type === "co-authored"),
-    "same-lab": connections.filter((r) => r.type === "same-lab"),
   };
 
   const affiliations = scientist.affiliationHistory;
@@ -78,6 +80,10 @@ export default function ScientistPanel({
                   ? "bg-primary-dark/20 text-blue-400"
                   : tag === "rising-star"
                   ? "bg-accent-green/20 text-green-400"
+                  : tag === "founder"
+                  ? "bg-purple-500/20 text-purple-400"
+                  : tag === "discovered"
+                  ? "bg-cyan-500/20 text-cyan-400"
                   : "bg-white/10 text-white/60"
               }`}
             >
@@ -86,6 +92,28 @@ export default function ScientistPanel({
           ))}
         </div>
       </div>
+
+      {/* Company badges */}
+      {scientist.companies && scientist.companies.length > 0 && (
+        <div className="px-5 pt-4 pb-2 border-b border-white/10">
+          <h3 className="text-xs font-medium text-white/40 uppercase tracking-wider mb-2">
+            Industry
+          </h3>
+          <div className="space-y-1.5">
+            {scientist.companies.map((company, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-sm bg-purple-400/60 shrink-0" />
+                <span className="text-sm text-white/80 font-medium">
+                  {company.name}
+                </span>
+                <span className="text-xs text-white/40">
+                  {company.role}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Metrics */}
       <div className="p-5 border-b border-white/10">
@@ -100,7 +128,29 @@ export default function ScientistPanel({
           />
           <MetricCard label="Papers" value={scientist.worksCount} />
         </div>
+
+        {/* Rising star momentum */}
+        {scientist.risingStarSignals && scientist.risingStarSignals.momentum > 0 && (
+          <div className="mt-3 p-2 bg-green-500/5 border border-green-500/10 rounded-lg">
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-green-400/70">Momentum score</span>
+              <span className="text-sm font-medium text-green-400">
+                {scientist.risingStarSignals.momentum.toFixed(2)}
+              </span>
+            </div>
+          </div>
+        )}
       </div>
+
+      {/* Trajectory Chart */}
+      {scientist.countsByYear && scientist.countsByYear.length > 0 && (
+        <div className="p-5 border-b border-white/10">
+          <h3 className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
+            Publication Trajectory
+          </h3>
+          <TrajectoryChart countsByYear={scientist.countsByYear} />
+        </div>
+      )}
 
       {/* Connections in the graph */}
       <div className="p-5 border-b border-white/10">
@@ -120,9 +170,7 @@ export default function ScientistPanel({
                     {rels.length}{" "}
                     {type === "student-of"
                       ? "advisor/student"
-                      : type === "co-authored"
-                      ? "co-author"
-                      : "same-lab"}{" "}
+                      : "co-author"}{" "}
                     {rels.length === 1 ? "link" : "links"}
                   </span>
                 </div>
@@ -148,6 +196,25 @@ export default function ScientistPanel({
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {/* Subfields */}
+      {scientist.subfields && scientist.subfields.length > 0 && (
+        <div className="p-5 border-b border-white/10">
+          <h3 className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
+            Subfields
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {scientist.subfields.map((sf, i) => (
+              <span
+                key={i}
+                className="px-2 py-1 bg-primary/10 text-primary text-xs rounded border border-primary/20"
+              >
+                {sf}
+              </span>
+            ))}
+          </div>
         </div>
       )}
 

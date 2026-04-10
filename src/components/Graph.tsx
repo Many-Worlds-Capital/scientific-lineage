@@ -24,6 +24,7 @@ interface GraphProps {
   searchQuery: string;
   edgeFilters: Set<Relationship["type"]>;
   highlightNodeId: string | null;
+  timelineRange: [number, number] | null;
 }
 
 interface TooltipState {
@@ -40,6 +41,7 @@ export default function Graph({
   searchQuery,
   edgeFilters,
   highlightNodeId,
+  timelineRange,
 }: GraphProps) {
   const graphRef = useRef<any>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -59,8 +61,8 @@ export default function Graph({
   // Only x/y — NO fx/fy so forces can work.
   const initializedNodes = useMemo(() => {
     const size = Math.min(dimensions.width || 1400, dimensions.height || 900);
-    const outerR = size * 0.38;
-    const innerR = size * 0.2;
+    const outerR = size * 0.42;
+    const innerR = size * 0.28;
 
     const outer: typeof data.nodes = [];
     const inner: typeof data.nodes = [];
@@ -98,13 +100,23 @@ export default function Graph({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data.nodes.length, dimensions.width, dimensions.height]);
 
-  // Filter links by edge type toggles (keep all weights)
+  // Filter links by edge type toggles and timeline range
   const filteredData = useMemo(
     () => ({
       nodes: initializedNodes,
-      links: data.links.filter((l) => edgeFilters.has(l.type)),
+      links: data.links.filter((l) => {
+        if (!edgeFilters.has(l.type)) return false;
+        // Timeline filtering: only filter co-authored edges with yearRange data
+        if (timelineRange && l.type === "co-authored" && l.yearRange) {
+          const [filterMin, filterMax] = timelineRange;
+          const [edgeMin, edgeMax] = l.yearRange;
+          // Show edge if its year range overlaps with the filter range
+          if (edgeMax < filterMin || edgeMin > filterMax) return false;
+        }
+        return true;
+      }),
     }),
-    [initializedNodes, data.links, edgeFilters]
+    [initializedNodes, data.links, edgeFilters, timelineRange]
   );
 
   // Compute neighbor set for the highlighted node (ego network)
@@ -368,8 +380,8 @@ export default function Graph({
     const fg = graphRef.current;
     if (!fg) return;
 
-    // Gentle charge repulsion — prevents collapse
-    fg.d3Force("charge")?.strength(-200);
+    // Strong charge repulsion — prevents collapse at 350 nodes
+    fg.d3Force("charge")?.strength(-500);
 
     // Remove center force so graph doesn't pull to middle
     fg.d3Force("center", null);
@@ -377,8 +389,8 @@ export default function Graph({
     // Very weak link force — connected nodes drift closer slowly
     const linkForce = fg.d3Force("link");
     if (linkForce) {
-      linkForce.distance(250);
-      linkForce.strength(() => 0.003);
+      linkForce.distance(400);
+      linkForce.strength(() => 0.001);
     }
 
     // Add collision detection once
@@ -386,7 +398,7 @@ export default function Graph({
       import("d3-force-3d").then((d3) => {
         fg.d3Force(
           "collide",
-          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 6)
+          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 15)
         );
       }).catch(() => {});
       forcesConfigured.current = true;
@@ -446,9 +458,9 @@ export default function Graph({
           ctx.stroke();
         }}
         backgroundColor="#0a0a0f"
-        d3AlphaDecay={0.02}
-        d3VelocityDecay={0.4}
-        cooldownTicks={300}
+        d3AlphaDecay={0.01}
+        d3VelocityDecay={0.3}
+        cooldownTicks={600}
         warmupTicks={0}
         enableNodeDrag={true}
         enableZoomInteraction={true}
@@ -484,16 +496,25 @@ export default function Graph({
                 className={`px-1.5 py-0.5 rounded text-[10px] font-medium ${
                   tooltip.node.isNobelLaureate
                     ? "bg-yellow-500/20 text-yellow-400"
-                    : tooltip.node.tags[0] === "rising-star"
+                    : tooltip.node.tags.includes("rising-star")
                     ? "bg-green-500/20 text-green-400"
-                    : tooltip.node.tags[0] === "pioneer"
+                    : tooltip.node.tags.includes("pioneer")
                     ? "bg-blue-500/20 text-blue-400"
                     : "bg-white/10 text-white/50"
                 }`}
               >
                 {tooltip.node.isNobelLaureate
                   ? "Nobel"
+                  : tooltip.node.tags.includes("rising-star")
+                  ? "rising-star"
+                  : tooltip.node.tags.includes("pioneer")
+                  ? "pioneer"
                   : tooltip.node.tags[0]}
+              </span>
+            )}
+            {tooltip.node.tags.includes("founder") && (
+              <span className="px-1.5 py-0.5 rounded text-[10px] font-medium bg-purple-500/20 text-purple-400">
+                founder
               </span>
             )}
           </div>

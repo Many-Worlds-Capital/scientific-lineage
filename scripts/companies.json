@@ -1,0 +1,98 @@
+[
+  {
+    "company": "IonQ",
+    "scientists": [
+      {"id": "A5005759724", "role": "Co-founder & Chief Scientist"}
+    ]
+  },
+  {
+    "company": "QuEra Computing",
+    "scientists": [
+      {"id": "A5066245772", "role": "Co-founder"},
+      {"id": "A5110481134", "role": "Co-founder"}
+    ]
+  },
+  {
+    "company": "Silicon Quantum Computing",
+    "scientists": [
+      {"id": "A5049405877", "role": "Founder & CEO"}
+    ]
+  },
+  {
+    "company": "PsiQuantum",
+    "scientists": []
+  },
+  {
+    "company": "Google Quantum AI",
+    "scientists": [
+      {"id": "A5012231169", "role": "Head of Quantum AI"},
+      {"id": "A5043106778", "role": "Chief Scientist (former)"},
+      {"id": "A5065681671", "role": "Chief Scientist"},
+      {"id": "A5073521804", "role": "Research Scientist"}
+    ]
+  },
+  {
+    "company": "IBM Quantum",
+    "scientists": [
+      {"id": "A5030701195", "role": "IBM Fellow & VP"},
+      {"id": "A5064909614", "role": "Research Staff"}
+    ]
+  },
+  {
+    "company": "Microsoft Quantum",
+    "scientists": [
+      {"id": "A5064155719", "role": "Station Q Founder"},
+      {"id": "A5028440699", "role": "Technical Fellow"},
+      {"id": "A5019716296", "role": "VP Quantum Software"},
+      {"id": "A5103068314", "role": "VP Quantum Hardware"}
+    ]
+  },
+  {
+    "company": "Quantinuum",
+    "scientists": []
+  },
+  {
+    "company": "Alpine Quantum Technologies",
+    "scientists": [
+      {"id": "A5040977712", "role": "Co-founder"},
+      {"id": "A5066295139", "role": "Co-founder & CEO"}
+    ]
+  },
+  {
+    "company": "QC Ware / Zapata AI",
+    "scientists": []
+  },
+  {
+    "company": "Riverlane",
+    "scientists": []
+  },
+  {
+    "company": "Universal Quantum",
+    "scientists": [
+      {"id": "A5027716155", "role": "Co-founder & CEO"}
+    ]
+  },
+  {
+    "company": "Xanadu",
+    "scientists": []
+  },
+  {
+    "company": "Atom Computing",
+    "scientists": []
+  },
+  {
+    "company": "Alice & Bob",
+    "scientists": []
+  },
+  {
+    "company": "Nord Quantique",
+    "scientists": []
+  },
+  {
+    "company": "Quantum Circuits Inc",
+    "scientists": [
+      {"id": "A5084929692", "role": "Co-founder"},
+      {"id": "A5089631322", "role": "Co-founder"}
+    ]
+  }
+]

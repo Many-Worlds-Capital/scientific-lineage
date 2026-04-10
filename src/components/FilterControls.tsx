@@ -11,7 +11,6 @@ interface FilterControlsProps {
 const EDGE_TYPES: Relationship["type"][] = [
   "student-of",
   "co-authored",
-  "same-lab",
 ];
 
 export default function FilterControls({

@@ -1,3 +1,21 @@
+export interface YearCount {
+  year: number;
+  worksCount: number;
+  citedByCount: number;
+}
+
+export interface Company {
+  name: string;
+  role: string;
+}
+
+export interface RisingStarSignals {
+  publicationAcceleration: number; // year-over-year publication growth
+  citationAcceleration: number;    // year-over-year citation growth
+  collaborationBreadth: number;    // distinct co-authors in network
+  momentum: number;                // composite score 0-1
+}
+
 export interface Scientist {
   id: string;
   name: string;
@@ -13,7 +31,11 @@ export interface Scientist {
   isNobelLaureate: boolean;
   orcid: string | null;
   openAlexUrl: string;
-  tags: ("pioneer" | "rising-star" | "active" | "emeritus")[];
+  tags: ("pioneer" | "rising-star" | "active" | "emeritus" | "discovered" | "founder")[];
+  countsByYear?: YearCount[];
+  subfields?: string[];
+  companies?: Company[];
+  risingStarSignals?: RisingStarSignals;
 }
 
 export interface CoAuthoredPaper {
@@ -27,10 +49,11 @@ export interface CoAuthoredPaper {
 export interface Relationship {
   source: string;
   target: string;
-  type: "student-of" | "same-lab" | "co-authored";
+  type: "student-of" | "co-authored";
   weight: number;
   details?: string;
   papers?: CoAuthoredPaper[];
+  yearRange?: [number, number];
 }
 
 export interface GraphData {

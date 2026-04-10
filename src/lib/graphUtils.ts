@@ -10,13 +10,11 @@ export const NODE_COLORS = {
 export const EDGE_COLORS: Record<Relationship["type"], string> = {
   "student-of": "#0057ff",
   "co-authored": "#737688",
-  "same-lab": "#027a00",
 };
 
 export const EDGE_LABELS: Record<Relationship["type"], string> = {
   "student-of": "Student \u2192 Advisor",
   "co-authored": "Co-authored papers",
-  "same-lab": "Same lab/institution",
 };
 
 export function getNodeRadius(node: Scientist): number {
@@ -37,5 +35,5 @@ export function getEdgeWidth(link: Relationship): number {
     return Math.min(0.5 + link.weight * 0.3, 4);
   }
   if (link.type === "student-of") return 1.5;
-  return 0.8;
+  return 1;
 }
