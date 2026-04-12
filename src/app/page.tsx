@@ -8,7 +8,6 @@ import SearchBar from "@/components/SearchBar";
 import Legend from "@/components/Legend";
 import FilterControls from "@/components/FilterControls";
 import MethodologyModal from "@/components/MethodologyModal";
-import RisingStarsPanel from "@/components/RisingStarsPanel";
 import TimelineSlider from "@/components/TimelineSlider";
 import { Scientist, Relationship, GraphData } from "@/lib/types";
 
@@ -20,9 +19,11 @@ export default function Home() {
   const [edgeFilters, setEdgeFilters] = useState<Set<Relationship["type"]>>(
     () => new Set<Relationship["type"]>(["student-of", "co-authored"])
   );
+  const [nodeFilters, setNodeFilters] = useState<Set<string>>(
+    () => new Set(["nobel", "prominent", "active", "rising-star"])
+  );
   const [loading, setLoading] = useState(true);
   const [showMethodology, setShowMethodology] = useState(false);
-  const [showRisingStars, setShowRisingStars] = useState(false);
   const [timelineRange, setTimelineRange] = useState<[number, number] | null>(null);
 
   // Compute year bounds from data
@@ -121,17 +122,21 @@ export default function Home() {
     });
   }, []);
 
+  const handleToggleNode = useCallback((type: string) => {
+    setNodeFilters((prev) => {
+      const next = new Set(prev);
+      if (next.has(type)) {
+        next.delete(type);
+      } else {
+        next.add(type);
+      }
+      return next;
+    });
+  }, []);
+
   const handleTimelineChange = useCallback((range: [number, number]) => {
     setTimelineRange(range);
   }, []);
-
-  const handleRisingStarSelect = useCallback(
-    (scientist: Scientist) => {
-      setShowRisingStars(false);
-      selectScientist(scientist);
-    },
-    [selectScientist]
-  );
 
   if (loading) {
     return (
@@ -168,6 +173,7 @@ export default function Home() {
         onBackgroundClick={handleBackgroundClick}
         searchQuery={searchQuery}
         edgeFilters={edgeFilters}
+        nodeFilters={nodeFilters}
         highlightNodeId={selectedScientist?.id ?? null}
         timelineRange={timelineRange}
       />
@@ -193,6 +199,8 @@ export default function Home() {
         <FilterControls
           edgeFilters={edgeFilters}
           onToggleEdge={handleToggleEdge}
+          nodeFilters={nodeFilters}
+          onToggleNode={handleToggleNode}
         />
       </div>
 
@@ -213,18 +221,8 @@ export default function Home() {
         </div>
       )}
 
-      {/* Bottom right: stats + buttons */}
+      {/* Bottom right: stats + methodology */}
       <div className="absolute bottom-5 right-5 z-10 flex items-center gap-2">
-        <button
-          onClick={() => setShowRisingStars(!showRisingStars)}
-          className={`backdrop-blur border rounded-lg px-4 py-3 text-xs transition-colors ${
-            showRisingStars
-              ? "bg-green-500/10 border-green-500/30 text-green-400"
-              : "bg-[#12121a]/90 border-white/10 text-white/50 hover:text-white/80 hover:border-white/20"
-          }`}
-        >
-          Rising Stars
-        </button>
         <button
           onClick={() => setShowMethodology(true)}
           className="bg-[#12121a]/90 backdrop-blur border border-white/10 rounded-lg px-4 py-3 text-xs text-white/50 hover:text-white/80 hover:border-white/20 transition-colors"
@@ -236,14 +234,6 @@ export default function Home() {
           {graphData.links.length} connections
         </div>
       </div>
-
-      {/* Rising Stars panel */}
-      <RisingStarsPanel
-        scientists={graphData.nodes}
-        isOpen={showRisingStars}
-        onClose={() => setShowRisingStars(false)}
-        onSelectScientist={handleRisingStarSelect}
-      />
 
       {/* Scientist detail panel */}
       <ScientistPanel

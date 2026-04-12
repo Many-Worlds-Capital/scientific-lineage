@@ -76,7 +76,7 @@ export default function ScientistPanel({
             <span
               key={tag}
               className={`px-2 py-0.5 text-xs rounded-full font-medium ${
-                tag === "pioneer"
+                tag === "prominent"
                   ? "bg-primary-dark/20 text-blue-400"
                   : tag === "rising-star"
                   ? "bg-accent-green/20 text-green-400"
@@ -129,17 +129,6 @@ export default function ScientistPanel({
           <MetricCard label="Papers" value={scientist.worksCount} />
         </div>
 
-        {/* Rising star momentum */}
-        {scientist.risingStarSignals && scientist.risingStarSignals.momentum > 0 && (
-          <div className="mt-3 p-2 bg-green-500/5 border border-green-500/10 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-green-400/70">Momentum score</span>
-              <span className="text-sm font-medium text-green-400">
-                {scientist.risingStarSignals.momentum.toFixed(2)}
-              </span>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Trajectory Chart */}
@@ -199,24 +188,7 @@ export default function ScientistPanel({
         </div>
       )}
 
-      {/* Subfields */}
-      {scientist.subfields && scientist.subfields.length > 0 && (
-        <div className="p-5 border-b border-white/10">
-          <h3 className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
-            Subfields
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {scientist.subfields.map((sf, i) => (
-              <span
-                key={i}
-                className="px-2 py-1 bg-primary/10 text-primary text-xs rounded border border-primary/20"
-              >
-                {sf}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
+
 
       {/* Top Topics */}
       {scientist.topTopics.length > 0 && (

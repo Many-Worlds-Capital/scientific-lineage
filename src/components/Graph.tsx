@@ -23,6 +23,7 @@ interface GraphProps {
   onBackgroundClick: () => void;
   searchQuery: string;
   edgeFilters: Set<Relationship["type"]>;
+  nodeFilters: Set<string>;
   highlightNodeId: string | null;
   timelineRange: [number, number] | null;
 }
@@ -40,6 +41,7 @@ export default function Graph({
   onBackgroundClick,
   searchQuery,
   edgeFilters,
+  nodeFilters,
   highlightNodeId,
   timelineRange,
 }: GraphProps) {
@@ -57,7 +59,15 @@ export default function Graph({
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  // Spread initial positions: pioneers/Nobel outer ring, rest inner.
+  // Determine which filter category a scientist belongs to
+  const getNodeCategory = useCallback((node: Scientist): string => {
+    if (node.isNobelLaureate) return "nobel";
+    if (node.tags.includes("rising-star")) return "rising-star";
+    if (node.tags.includes("prominent")) return "prominent";
+    return "active";
+  }, []);
+
+  // Spread initial positions: prominent/Nobel outer ring, rest inner.
   // Only x/y — NO fx/fy so forces can work.
   const initializedNodes = useMemo(() => {
     const size = Math.min(dimensions.width || 1400, dimensions.height || 900);
@@ -67,7 +77,7 @@ export default function Graph({
     const outer: typeof data.nodes = [];
     const inner: typeof data.nodes = [];
     for (const node of data.nodes) {
-      if (node.isNobelLaureate || node.tags.includes("pioneer")) {
+      if (node.isNobelLaureate || node.tags.includes("prominent")) {
         outer.push(node);
       } else {
         inner.push(node);
@@ -172,10 +182,11 @@ export default function Graph({
       const isNeighbor = neighborSet ? neighborSet.has(scientist.id) : true;
       const isHovered = hoveredNode === scientist.id;
 
-      // Dimming logic: dim if search active and not matching, OR if ego network active and not in it
+      // Dimming logic: dim if search active and not matching, OR if ego network active and not in it, OR if node type filtered out
       const dimmedBySearch = searchQuery && !searchMatch && !isHighlighted;
       const dimmedByNeighbor = neighborSet && !isNeighbor;
-      const dimmed = dimmedBySearch || dimmedByNeighbor;
+      const dimmedByFilter = !nodeFilters.has(getNodeCategory(scientist));
+      const dimmed = dimmedBySearch || dimmedByNeighbor || dimmedByFilter;
 
       const alpha = dimmed ? 0.08 : 1;
 
@@ -270,6 +281,8 @@ export default function Graph({
       highlightNodeId,
       hoveredNode,
       neighborSet,
+      nodeFilters,
+      getNodeCategory,
       isSearchMatch,
       topScientistIds,
     ]
@@ -498,7 +511,7 @@ export default function Graph({
                     ? "bg-yellow-500/20 text-yellow-400"
                     : tooltip.node.tags.includes("rising-star")
                     ? "bg-green-500/20 text-green-400"
-                    : tooltip.node.tags.includes("pioneer")
+                    : tooltip.node.tags.includes("prominent")
                     ? "bg-blue-500/20 text-blue-400"
                     : "bg-white/10 text-white/50"
                 }`}
@@ -507,8 +520,8 @@ export default function Graph({
                   ? "Nobel"
                   : tooltip.node.tags.includes("rising-star")
                   ? "rising-star"
-                  : tooltip.node.tags.includes("pioneer")
-                  ? "pioneer"
+                  : tooltip.node.tags.includes("prominent")
+                  ? "prominent"
                   : tooltip.node.tags[0]}
               </span>
             )}

@@ -144,9 +144,9 @@ export default function MethodologyModal({ isOpen, onClose }: MethodologyModalPr
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: NODE_COLORS.pioneer }} />
+                <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: NODE_COLORS.prominent }} />
                 <span>
-                  <strong className="text-white">Pioneer</strong>{" "}
+                  <strong className="text-white">Prominent</strong>{" "}
                   <span className="text-white/60">&mdash; top 20% by h-index in the dataset</span>
                 </span>
               </li>
@@ -170,32 +170,6 @@ export default function MethodologyModal({ isOpen, onClose }: MethodologyModalPr
             </ul>
           </section>
 
-          <section>
-            <h3 className="text-white font-heading font-semibold mb-2">
-              Rising Star Signals
-            </h3>
-            <p>
-              The <strong className="text-white">Rising Stars</strong> panel ranks
-              researchers by a composite momentum score that combines:
-            </p>
-            <ul className="mt-2 space-y-1 ml-4 list-disc text-white/70">
-              <li>
-                <strong className="text-white/80">Publication acceleration</strong> &mdash;
-                year-over-year growth in publications (last 3 years vs. prior 3 years)
-              </li>
-              <li>
-                <strong className="text-white/80">Citation acceleration</strong> &mdash;
-                year-over-year growth in citations received
-              </li>
-              <li>
-                <strong className="text-white/80">Collaboration breadth</strong> &mdash;
-                number of distinct co-authors in the network
-              </li>
-            </ul>
-            <div className="bg-white/5 rounded-lg p-3 mt-2 font-mono text-xs">
-              momentum = 0.3 &times; norm(pub_accel) + 0.4 &times; norm(cite_accel) + 0.3 &times; norm(breadth)
-            </div>
-          </section>
 
           <section>
             <h3 className="text-white font-heading font-semibold mb-2">
@@ -251,10 +225,6 @@ export default function MethodologyModal({ isOpen, onClose }: MethodologyModalPr
               <li>
                 Use the <strong className="text-white/80">Timeline</strong> slider to
                 filter collaborations by year range, or press play to animate
-              </li>
-              <li>
-                Open the <strong className="text-white/80">Rising Stars</strong> panel
-                to see a ranked leaderboard of researchers with accelerating impact
               </li>
             </ul>
           </section>

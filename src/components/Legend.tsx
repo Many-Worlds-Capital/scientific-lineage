@@ -21,9 +21,9 @@ export default function Legend() {
         <div className="flex items-center gap-2">
           <span
             className="w-3 h-3 rounded-full"
-            style={{ backgroundColor: NODE_COLORS.pioneer }}
+            style={{ backgroundColor: NODE_COLORS.prominent }}
           />
-          <span className="text-white/70">Pioneer</span>
+          <span className="text-white/70">Prominent</span>
         </div>
         <div className="flex items-center gap-2">
           <span

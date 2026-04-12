@@ -1,11 +1,13 @@
 "use client";
 
 import { Relationship } from "@/lib/types";
-import { EDGE_COLORS, EDGE_LABELS } from "@/lib/graphUtils";
+import { EDGE_COLORS, EDGE_LABELS, NODE_COLORS } from "@/lib/graphUtils";
 
 interface FilterControlsProps {
   edgeFilters: Set<Relationship["type"]>;
   onToggleEdge: (type: Relationship["type"]) => void;
+  nodeFilters: Set<string>;
+  onToggleNode: (type: string) => void;
 }
 
 const EDGE_TYPES: Relationship["type"][] = [
@@ -13,13 +15,71 @@ const EDGE_TYPES: Relationship["type"][] = [
   "co-authored",
 ];
 
+const NODE_TYPES = [
+  { key: "nobel", label: "Nobel Laureate", color: NODE_COLORS.nobel },
+  { key: "prominent", label: "Prominent", color: NODE_COLORS.prominent },
+  { key: "active", label: "Active", color: NODE_COLORS.active },
+  { key: "rising-star", label: "Rising Star", color: NODE_COLORS.risingStar },
+];
+
 export default function FilterControls({
   edgeFilters,
   onToggleEdge,
+  nodeFilters,
+  onToggleNode,
 }: FilterControlsProps) {
   return (
     <div className="bg-[#12121a]/90 backdrop-blur border border-white/10 rounded-lg p-4 text-xs">
       <h3 className="text-white/60 uppercase tracking-wider font-medium mb-3">
+        Filter Nodes
+      </h3>
+      <div className="space-y-2 mb-4">
+        {NODE_TYPES.map(({ key, label, color }) => (
+          <label
+            key={key}
+            className="flex items-center gap-2 cursor-pointer group"
+          >
+            <input
+              type="checkbox"
+              checked={nodeFilters.has(key)}
+              onChange={() => onToggleNode(key)}
+              className="sr-only"
+            />
+            <span
+              className={`w-4 h-4 rounded border flex items-center justify-center transition-colors ${
+                nodeFilters.has(key)
+                  ? "border-white/40 bg-white/10"
+                  : "border-white/20"
+              }`}
+            >
+              {nodeFilters.has(key) && (
+                <svg
+                  className="w-3 h-3 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={3}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              )}
+            </span>
+            <span
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: color }}
+            />
+            <span className="text-white/70 group-hover:text-white transition-colors">
+              {label}
+            </span>
+          </label>
+        ))}
+      </div>
+
+      <h3 className="text-white/60 uppercase tracking-wider font-medium mb-3 border-t border-white/10 pt-3">
         Filter Edges
       </h3>
       <div className="space-y-2">

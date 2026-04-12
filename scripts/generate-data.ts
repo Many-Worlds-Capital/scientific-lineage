@@ -564,9 +564,9 @@ async function main() {
     s.tags = baseTag ? [baseTag] : [];
 
     if (s.isNobelLaureate) {
-      s.tags.push("pioneer");
+      s.tags.push("prominent");
     } else if (s.hIndex >= top20pct) {
-      s.tags.push("pioneer");
+      s.tags.push("prominent");
     } else if (s.worksCount < 120 && s.hIndex < 40) {
       s.tags.push("rising-star");
     } else {

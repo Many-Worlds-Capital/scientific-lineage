@@ -31,7 +31,7 @@ export interface Scientist {
   isNobelLaureate: boolean;
   orcid: string | null;
   openAlexUrl: string;
-  tags: ("pioneer" | "rising-star" | "active" | "emeritus" | "discovered" | "founder")[];
+  tags: ("prominent" | "rising-star" | "active" | "emeritus" | "discovered" | "founder")[];
   countsByYear?: YearCount[];
   subfields?: string[];
   companies?: Company[];
