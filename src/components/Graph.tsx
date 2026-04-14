@@ -283,57 +283,6 @@ export default function Graph({
       }
 
       ctx.globalAlpha = 1;
-
-      // Smart label rendering based on zoom level
-      const shouldShowLabel = (() => {
-        // Always show for hovered, selected, search matches
-        if (isHovered || isHighlighted || searchMatch) return true;
-        if (dimmed) return false;
-        // Zoom-dependent
-        if (globalScale > 3) return true; // Close zoom: all labels
-        if (globalScale > 1.5) return radius > 10; // Medium: larger nodes
-        // Far zoom: only top scientists
-        return topScientistIds.has(scientist.id);
-      })();
-
-      if (shouldShowLabel) {
-        const fontSize = Math.max(10, Math.min(14, radius * 0.8));
-        const scaledFontSize = fontSize / globalScale;
-        ctx.font = `500 ${scaledFontSize}px Inter, sans-serif`;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "top";
-
-        const labelY = scientist.y + radius + 4 / globalScale;
-
-        // Pill background so names read against the constellation mesh
-        if (!dimmed) {
-          const metrics = ctx.measureText(scientist.name);
-          const padX = 5 / globalScale;
-          const padY = 2.5 / globalScale;
-          const w = metrics.width + padX * 2;
-          const h = scaledFontSize + padY * 2;
-          const rx = 3 / globalScale;
-          const x = scientist.x - w / 2;
-          ctx.fillStyle = "rgba(10, 10, 15, 0.72)";
-          ctx.beginPath();
-          ctx.moveTo(x + rx, labelY);
-          ctx.lineTo(x + w - rx, labelY);
-          ctx.quadraticCurveTo(x + w, labelY, x + w, labelY + rx);
-          ctx.lineTo(x + w, labelY + h - rx);
-          ctx.quadraticCurveTo(x + w, labelY + h, x + w - rx, labelY + h);
-          ctx.lineTo(x + rx, labelY + h);
-          ctx.quadraticCurveTo(x, labelY + h, x, labelY + h - rx);
-          ctx.lineTo(x, labelY + rx);
-          ctx.quadraticCurveTo(x, labelY, x + rx, labelY);
-          ctx.closePath();
-          ctx.fill();
-        }
-
-        ctx.fillStyle = dimmed
-          ? "rgba(200,200,200,0.1)"
-          : "rgba(255,255,255,0.95)";
-        ctx.fillText(scientist.name, scientist.x, labelY + 2.5 / globalScale);
-      }
     },
     [
       searchQuery,
@@ -343,7 +292,95 @@ export default function Graph({
       nodeFilters,
       getNodeCategory,
       isSearchMatch,
+    ]
+  );
+
+  // Labels are drawn in a second canvas pass (onRenderFramePost) so they
+  // always sit on top of nodes and edges — otherwise a hub drawn after a
+  // Nobel laureate covers the Nobel's name.
+  const renderLabels = useCallback(
+    (ctx: CanvasRenderingContext2D, globalScale: number) => {
+      const nodes = filteredData.nodes as any[];
+      const toDraw: { scientist: Scientist & { x: number; y: number }; radius: number; priority: number }[] = [];
+
+      for (const node of nodes) {
+        const scientist = node as Scientist & { x: number; y: number };
+        if (scientist.x == null || scientist.y == null) continue;
+        const radius = getNodeRadius(scientist);
+        const searchMatch = isSearchMatch(scientist);
+        const isHighlighted = highlightNodeId === scientist.id;
+        const isHovered = hoveredNode === scientist.id;
+        const isNeighbor = neighborSet ? neighborSet.has(scientist.id) : true;
+        const dimmedBySearch = searchQuery && !searchMatch && !isHighlighted;
+        const dimmedByNeighbor = neighborSet && !isNeighbor;
+        const dimmedByFilter = !nodeFilters.has(getNodeCategory(scientist));
+        if (dimmedBySearch || dimmedByNeighbor || dimmedByFilter) continue;
+
+        const shouldShow =
+          isHovered ||
+          isHighlighted ||
+          searchMatch ||
+          globalScale > 3 ||
+          (globalScale > 1.5 && radius > 10) ||
+          topScientistIds.has(scientist.id);
+        if (!shouldShow) continue;
+
+        // Higher priority = drawn later = on top. Nobel > highlighted/hovered > prominent > rest.
+        let priority = 0;
+        if (radius > 12) priority = 1;
+        if (scientist.tags.includes("prominent")) priority = 2;
+        if (isHovered || isHighlighted || searchMatch) priority = 3;
+        if (scientist.isNobelLaureate) priority = 4;
+
+        toDraw.push({ scientist, radius, priority });
+      }
+
+      toDraw.sort((a, b) => a.priority - b.priority);
+
+      for (const { scientist, radius } of toDraw) {
+        const fontSize = Math.max(10, Math.min(14, radius * 0.8));
+        const scaledFontSize = fontSize / globalScale;
+        ctx.font = `500 ${scaledFontSize}px Inter, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "top";
+
+        const labelY = scientist.y + radius + 4 / globalScale;
+        const metrics = ctx.measureText(scientist.name);
+        const padX = 5 / globalScale;
+        const padY = 2.5 / globalScale;
+        const w = metrics.width + padX * 2;
+        const h = scaledFontSize + padY * 2;
+        const rx = 3 / globalScale;
+        const x = scientist.x - w / 2;
+
+        ctx.fillStyle = "rgba(10, 10, 15, 0.82)";
+        ctx.beginPath();
+        ctx.moveTo(x + rx, labelY);
+        ctx.lineTo(x + w - rx, labelY);
+        ctx.quadraticCurveTo(x + w, labelY, x + w, labelY + rx);
+        ctx.lineTo(x + w, labelY + h - rx);
+        ctx.quadraticCurveTo(x + w, labelY + h, x + w - rx, labelY + h);
+        ctx.lineTo(x + rx, labelY + h);
+        ctx.quadraticCurveTo(x, labelY + h, x, labelY + h - rx);
+        ctx.lineTo(x, labelY + rx);
+        ctx.quadraticCurveTo(x, labelY, x + rx, labelY);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = "rgba(255, 255, 255, 0.95)";
+        ctx.fillText(scientist.name, scientist.x, labelY + 2.5 / globalScale);
+      }
+    },
+    [
+      filteredData.nodes,
+      highlightNodeId,
+      hoveredNode,
+      searchQuery,
+      neighborSet,
+      nodeFilters,
       topScientistIds,
+      isSearchMatch,
+      getNodeCategory,
     ]
   );
 
@@ -573,6 +610,7 @@ export default function Graph({
           ctx.lineWidth = link.type === "co-authored" ? 12 : 6;
           ctx.stroke();
         }}
+        onRenderFramePost={renderLabels}
         backgroundColor="#0a0a0f"
         d3AlphaDecay={0.035}
         d3VelocityDecay={0.55}
