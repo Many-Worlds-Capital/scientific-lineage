@@ -67,35 +67,57 @@ export default function Graph({
     return "active";
   }, []);
 
-  // Spread initial positions: prominent/Nobel outer ring, rest inner.
-  // Only x/y — NO fx/fy so forces can work.
+  // Constellation layout: three concentric shells with positional anchors.
+  // __anchorX/__anchorY are consumed by forceX/forceY; __shell tunes their strength.
   const initializedNodes = useMemo(() => {
-    const size = Math.min(dimensions.width || 1400, dimensions.height || 900);
-    const outerR = size * 0.42;
-    const innerR = size * 0.28;
+    const R =
+      Math.max(dimensions.width || 1400, dimensions.height || 900) * 0.55;
 
     const outer: typeof data.nodes = [];
+    const mid: typeof data.nodes = [];
     const inner: typeof data.nodes = [];
     for (const node of data.nodes) {
-      if (node.isNobelLaureate || node.tags.includes("prominent")) {
-        outer.push(node);
-      } else {
-        inner.push(node);
-      }
+      if (node.isNobelLaureate) outer.push(node);
+      else if (node.tags.includes("prominent")) mid.push(node);
+      else inner.push(node);
     }
 
     const positioned: any[] = [];
+    const golden = Math.PI * (3 - Math.sqrt(5));
 
+    // Outer shell: Nobel laureates on a ~0.95R ring with ±3% jitter
+    const outerBase = R * 0.95;
     for (let i = 0; i < outer.length; i++) {
       const angle = (2 * Math.PI * i) / outer.length - Math.PI / 2;
+      const jitter = 1 + (Math.sin(i * 12.9898) * 43758.5453) % 0.06 - 0.03;
+      const r = outerBase * jitter;
       positioned.push({
         ...outer[i],
-        x: Math.cos(angle) * outerR,
-        y: Math.sin(angle) * outerR,
+        x: Math.cos(angle) * r,
+        y: Math.sin(angle) * r,
+        __anchorX: Math.cos(angle) * r,
+        __anchorY: Math.sin(angle) * r,
+        __shell: "outer",
       });
     }
 
-    const golden = Math.PI * (3 - Math.sqrt(5));
+    // Middle shell: prominent on a 0.5R–0.75R annulus via golden-angle
+    for (let i = 0; i < mid.length; i++) {
+      const angle = i * golden;
+      const t = (i + 0.5) / Math.max(mid.length, 1);
+      const r = R * (0.5 + t * 0.25);
+      positioned.push({
+        ...mid[i],
+        x: Math.cos(angle) * r,
+        y: Math.sin(angle) * r,
+        __anchorX: Math.cos(angle) * r,
+        __anchorY: Math.sin(angle) * r,
+        __shell: "mid",
+      });
+    }
+
+    // Inner shell: everyone else via Vogel spiral up to 0.45R
+    const innerR = R * 0.45;
     for (let i = 0; i < inner.length; i++) {
       const angle = i * golden;
       const r = Math.sqrt((i + 1) / (inner.length + 1)) * innerR;
@@ -103,6 +125,9 @@ export default function Graph({
         ...inner[i],
         x: Math.cos(angle) * r,
         y: Math.sin(angle) * r,
+        __anchorX: Math.cos(angle) * r,
+        __anchorY: Math.sin(angle) * r,
+        __shell: "inner",
       });
     }
 
@@ -148,6 +173,24 @@ export default function Graph({
     }
     return neighbors;
   }, [highlightNodeId, filteredData.links]);
+
+  // Per-node degree from currently-filtered links — used to fade hub-to-hub mesh
+  const degreeMap = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const link of filteredData.links) {
+      const srcId =
+        typeof link.source === "object"
+          ? (link.source as any).id
+          : (link.source as string);
+      const tgtId =
+        typeof link.target === "object"
+          ? (link.target as any).id
+          : (link.target as string);
+      m.set(srcId, (m.get(srcId) ?? 0) + 1);
+      m.set(tgtId, (m.get(tgtId) ?? 0) + 1);
+    }
+    return m;
+  }, [filteredData.links]);
 
   // Top scientists by impact (for label display at low zoom)
   const topScientistIds = useMemo(() => {
@@ -290,27 +333,36 @@ export default function Graph({
 
   const linkColor = useCallback(
     (link: any) => {
+      const srcId =
+        typeof link.source === "object" ? link.source.id : link.source;
+      const tgtId =
+        typeof link.target === "object" ? link.target.id : link.target;
+
       if (neighborSet) {
-        // In ego-network mode, dim non-adjacent links
-        const srcId =
-          typeof link.source === "object" ? link.source.id : link.source;
-        const tgtId =
-          typeof link.target === "object" ? link.target.id : link.target;
         if (!neighborSet.has(srcId) || !neighborSet.has(tgtId)) {
           return "rgba(50,50,60,0.05)";
         }
       }
 
-      // Fade weak co-authored edges
+      // Hub-to-hub mesh recedes so constellation lines between isolated stars show
+      const bothHubs =
+        (degreeMap.get(srcId) ?? 0) > 30 && (degreeMap.get(tgtId) ?? 0) > 30;
+      const hubMul = bothHubs ? 0.6 : 1;
+
       if (link.type === "co-authored") {
         const w = link.weight ?? 1;
-        if (w <= 2) return "rgba(115, 118, 136, 0.15)";
-        if (w <= 5) return "rgba(115, 118, 136, 0.4)";
+        const alpha =
+          w <= 2 ? 0.04 : w <= 5 ? 0.12 : w <= 15 ? 0.28 : 0.5;
+        return `rgba(115, 118, 136, ${alpha * hubMul})`;
+      }
+
+      if (link.type === "student-of") {
+        return bothHubs ? "rgba(0, 87, 255, 0.6)" : EDGE_COLORS["student-of"];
       }
 
       return EDGE_COLORS[link.type as Relationship["type"]] ?? "#737688";
     },
-    [neighborSet]
+    [neighborSet, degreeMap]
   );
 
   const linkWidth = useCallback(
@@ -324,7 +376,7 @@ export default function Graph({
           return 0.2;
         }
       }
-      return getEdgeWidth(link as Relationship);
+      return Math.max(0.3, getEdgeWidth(link as Relationship));
     },
     [neighborSet]
   );
@@ -358,11 +410,16 @@ export default function Graph({
     document.body.style.cursor = link && link.type === "co-authored" ? "pointer" : "default";
   }, []);
 
-  // Pin node in place after dragging
+  // Pin node in place after dragging. Gentle reheat so neighbors jostle a little,
+  // not a shockwave — the "bit of force, not huge" feel.
   const handleNodeDragEnd = useCallback((node: any) => {
     node.fx = node.x;
     node.fy = node.y;
     node._userDragged = true;
+    const fg = graphRef.current;
+    if (fg?.d3ReheatSimulation) {
+      fg.d3ReheatSimulation();
+    }
   }, []);
 
   // Right-click to unpin
@@ -386,39 +443,61 @@ export default function Graph({
     onBackgroundClick();
   }, [onBackgroundClick]);
 
-  // Configure gentle forces — DON'T null them, just tune them soft.
-  // Forces let nodes drift slightly while keeping the spread layout.
-  const forcesConfigured = useRef(false);
+  // Constellation physics: charge dominates, links are purely visual,
+  // per-node anchors replace the global center force with a distributed one.
   useEffect(() => {
     const fg = graphRef.current;
     if (!fg) return;
 
-    // Strong charge repulsion — prevents collapse at 350 nodes
-    fg.d3Force("charge")?.strength(-500);
+    const chargeForce = fg.d3Force("charge");
+    if (chargeForce) {
+      chargeForce.strength(-1800);
+      chargeForce.distanceMax?.(900);
+      chargeForce.theta?.(0.9);
+    }
 
-    // Remove center force so graph doesn't pull to middle
     fg.d3Force("center", null);
 
-    // Very weak link force — connected nodes drift closer slowly
     const linkForce = fg.d3Force("link");
     if (linkForce) {
-      linkForce.distance(400);
-      linkForce.strength(() => 0.001);
+      linkForce.distance(250);
+      linkForce.strength(() => 0);
     }
 
-    // Add collision detection once
-    if (!forcesConfigured.current) {
-      import("d3-force-3d").then((d3) => {
+    import("d3-force-3d")
+      .then((d3) => {
         fg.d3Force(
           "collide",
-          d3.forceCollide().radius((node: any) => getNodeRadius(node as Scientist) + 15)
+          d3
+            .forceCollide()
+            .radius((node: any) => getNodeRadius(node as Scientist) + 28)
+            .strength(1)
+            .iterations(2)
         );
-      }).catch(() => {});
-      forcesConfigured.current = true;
-    }
 
-    // Zoom to fit after a moment
-    setTimeout(() => fg.zoomToFit(400, 40), 500);
+        const anchorStrength = (node: any) =>
+          node.__shell === "outer"
+            ? 0.08
+            : node.__shell === "mid"
+            ? 0.04
+            : 0.03;
+
+        fg.d3Force(
+          "x",
+          d3
+            .forceX((node: any) => node.__anchorX ?? 0)
+            .strength(anchorStrength)
+        );
+        fg.d3Force(
+          "y",
+          d3
+            .forceY((node: any) => node.__anchorY ?? 0)
+            .strength(anchorStrength)
+        );
+      })
+      .catch(() => {});
+
+    setTimeout(() => fg.zoomToFit(400, 80), 500);
   }, [filteredData]);
 
   if (dimensions.width === 0) return null;
@@ -471,9 +550,9 @@ export default function Graph({
           ctx.stroke();
         }}
         backgroundColor="#0a0a0f"
-        d3AlphaDecay={0.01}
-        d3VelocityDecay={0.3}
-        cooldownTicks={600}
+        d3AlphaDecay={0.035}
+        d3VelocityDecay={0.55}
+        cooldownTicks={150}
         warmupTicks={0}
         enableNodeDrag={true}
         enableZoomInteraction={true}
