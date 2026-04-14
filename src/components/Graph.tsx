@@ -26,6 +26,7 @@ interface GraphProps {
   nodeFilters: Set<string>;
   highlightNodeId: string | null;
   timelineRange: [number, number] | null;
+  minCoauthorWeight: number;
 }
 
 interface TooltipState {
@@ -44,6 +45,7 @@ export default function Graph({
   nodeFilters,
   highlightNodeId,
   timelineRange,
+  minCoauthorWeight,
 }: GraphProps) {
   const graphRef = useRef<any>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -141,6 +143,7 @@ export default function Graph({
       nodes: initializedNodes,
       links: data.links.filter((l) => {
         if (!edgeFilters.has(l.type)) return false;
+        if (l.type === "co-authored" && l.weight < minCoauthorWeight) return false;
         // Timeline filtering: only filter co-authored edges with yearRange data
         if (timelineRange && l.type === "co-authored" && l.yearRange) {
           const [filterMin, filterMax] = timelineRange;
@@ -151,7 +154,7 @@ export default function Graph({
         return true;
       }),
     }),
-    [initializedNodes, data.links, edgeFilters, timelineRange]
+    [initializedNodes, data.links, edgeFilters, timelineRange, minCoauthorWeight]
   );
 
   // Compute neighbor set for the highlighted node (ego network)

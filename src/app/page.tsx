@@ -22,6 +22,7 @@ export default function Home() {
   const [nodeFilters, setNodeFilters] = useState<Set<string>>(
     () => new Set(["nobel", "prominent", "active", "rising-star"])
   );
+  const [minCoauthorWeight, setMinCoauthorWeight] = useState<number>(1);
   const [loading, setLoading] = useState(true);
   const [showMethodology, setShowMethodology] = useState(false);
   const [timelineRange, setTimelineRange] = useState<[number, number] | null>(null);
@@ -138,6 +139,10 @@ export default function Home() {
     setTimelineRange(range);
   }, []);
 
+  const handleMinWeightChange = useCallback((n: number) => {
+    setMinCoauthorWeight(n);
+  }, []);
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-[#0a0a0f]">
@@ -176,6 +181,7 @@ export default function Home() {
         nodeFilters={nodeFilters}
         highlightNodeId={selectedScientist?.id ?? null}
         timelineRange={timelineRange}
+        minCoauthorWeight={minCoauthorWeight}
       />
 
       {/* Title */}
@@ -201,6 +207,8 @@ export default function Home() {
           onToggleEdge={handleToggleEdge}
           nodeFilters={nodeFilters}
           onToggleNode={handleToggleNode}
+          minCoauthorWeight={minCoauthorWeight}
+          onMinCoauthorWeightChange={handleMinWeightChange}
         />
       </div>
 

@@ -8,6 +8,8 @@ interface FilterControlsProps {
   onToggleEdge: (type: Relationship["type"]) => void;
   nodeFilters: Set<string>;
   onToggleNode: (type: string) => void;
+  minCoauthorWeight: number;
+  onMinCoauthorWeightChange: (n: number) => void;
 }
 
 const EDGE_TYPES: Relationship["type"][] = [
@@ -27,6 +29,8 @@ export default function FilterControls({
   onToggleEdge,
   nodeFilters,
   onToggleNode,
+  minCoauthorWeight,
+  onMinCoauthorWeightChange,
 }: FilterControlsProps) {
   return (
     <div className="bg-[#12121a]/90 backdrop-blur border border-white/10 rounded-lg p-4 text-xs">
@@ -125,6 +129,25 @@ export default function FilterControls({
               {EDGE_LABELS[type]}
             </span>
           </label>
+        ))}
+      </div>
+
+      <h3 className="text-white/60 uppercase tracking-wider font-medium mb-3 mt-4 border-t border-white/10 pt-3">
+        Min Co-authored Papers
+      </h3>
+      <div className="flex gap-1">
+        {[1, 2, 3, 4, 5].map((n) => (
+          <button
+            key={n}
+            onClick={() => onMinCoauthorWeightChange(n)}
+            className={`flex-1 px-2 py-1.5 rounded text-xs transition-colors ${
+              minCoauthorWeight === n
+                ? "bg-white/15 text-white border border-white/30"
+                : "bg-white/5 text-white/60 border border-white/10 hover:text-white hover:border-white/20"
+            }`}
+          >
+            {n === 1 ? "All" : `${n}+`}
+          </button>
         ))}
       </div>
     </div>
