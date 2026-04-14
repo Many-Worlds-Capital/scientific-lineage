@@ -221,7 +221,7 @@ export default function Graph({
   );
 
   const nodeCanvasObject = useCallback(
-    (node: any, ctx: CanvasRenderingContext2D, globalScale: number) => {
+    (node: any, ctx: CanvasRenderingContext2D) => {
       const scientist = node as Scientist & { x: number; y: number; fx?: number };
       const radius = getNodeRadius(scientist);
       const searchMatch = isSearchMatch(scientist);
