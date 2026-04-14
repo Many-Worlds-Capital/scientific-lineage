@@ -136,7 +136,7 @@ export default function FilterControls({
         Min Co-authored Papers
       </h3>
       <div className="flex gap-1">
-        {[1, 2, 3, 4, 5].map((n) => (
+        {[1, 2, 3, 4, 5, 10].map((n) => (
           <button
             key={n}
             onClick={() => onMinCoauthorWeightChange(n)}
