@@ -62,10 +62,6 @@ export default function Legend() {
           <span className="w-2.5 h-2.5 rounded-sm bg-purple-400/60" />
           <span className="text-white/70">Founder</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-cyan-400/60 border border-dashed border-cyan-400/40" />
-          <span className="text-white/70">Discovered</span>
-        </div>
       </div>
 
       {/* Node size */}

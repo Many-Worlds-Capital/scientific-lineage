@@ -72,7 +72,7 @@ export default function ScientistPanel({
               Nobel Laureate
             </span>
           )}
-          {scientist.tags.map((tag) => (
+          {scientist.tags.filter((tag) => tag !== "discovered").map((tag) => (
             <span
               key={tag}
               className={`px-2 py-0.5 text-xs rounded-full font-medium ${
@@ -82,8 +82,6 @@ export default function ScientistPanel({
                   ? "bg-accent-green/20 text-green-400"
                   : tag === "founder"
                   ? "bg-purple-500/20 text-purple-400"
-                  : tag === "discovered"
-                  ? "bg-cyan-500/20 text-cyan-400"
                   : "bg-white/10 text-white/60"
               }`}
             >
