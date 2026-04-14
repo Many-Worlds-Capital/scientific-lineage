@@ -22,7 +22,7 @@ export default function Home() {
   const [nodeFilters, setNodeFilters] = useState<Set<string>>(
     () => new Set(["nobel", "prominent", "active", "rising-star"])
   );
-  const [minCoauthorWeight, setMinCoauthorWeight] = useState<number>(1);
+  const [minCoauthorWeight, setMinCoauthorWeight] = useState<number>(10);
   const [loading, setLoading] = useState(true);
   const [showMethodology, setShowMethodology] = useState(false);
   const [timelineRange, setTimelineRange] = useState<[number, number] | null>(null);

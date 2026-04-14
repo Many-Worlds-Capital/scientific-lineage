@@ -18,7 +18,7 @@ export const EDGE_LABELS: Record<Relationship["type"], string> = {
 };
 
 export function getNodeRadius(node: Scientist): number {
-  const MIN_RADIUS = 4;
+  const MIN_RADIUS = 6;
   const MAX_RADIUS = 28;
   return MIN_RADIUS + node.impactScore * (MAX_RADIUS - MIN_RADIUS);
 }

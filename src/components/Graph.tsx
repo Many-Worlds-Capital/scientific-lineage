@@ -195,13 +195,14 @@ export default function Graph({
     return m;
   }, [filteredData.links]);
 
-  // Top scientists by impact (for label display at low zoom)
+  // Top scientists by impact (for label display at low zoom). Kept small so
+  // the initial view isn't a wall of overlapping names.
   const topScientistIds = useMemo(() => {
     const sorted = [...data.nodes].sort(
       (a, b) => b.impactScore - a.impactScore
     );
     const top = new Set<string>();
-    for (let i = 0; i < Math.min(15, sorted.length); i++) {
+    for (let i = 0; i < Math.min(8, sorted.length); i++) {
       top.add(sorted[i].id);
     }
     // Always include Nobel laureates
@@ -302,24 +303,36 @@ export default function Graph({
         ctx.textAlign = "center";
         ctx.textBaseline = "top";
 
-        // Text outline for readability
-        ctx.strokeStyle = "rgba(10, 10, 15, 0.8)";
-        ctx.lineWidth = 3 / globalScale;
-        ctx.lineJoin = "round";
-        ctx.strokeText(
-          scientist.name,
-          scientist.x,
-          scientist.y + radius + 3 / globalScale
-        );
+        const labelY = scientist.y + radius + 4 / globalScale;
+
+        // Pill background so names read against the constellation mesh
+        if (!dimmed) {
+          const metrics = ctx.measureText(scientist.name);
+          const padX = 5 / globalScale;
+          const padY = 2.5 / globalScale;
+          const w = metrics.width + padX * 2;
+          const h = scaledFontSize + padY * 2;
+          const rx = 3 / globalScale;
+          const x = scientist.x - w / 2;
+          ctx.fillStyle = "rgba(10, 10, 15, 0.72)";
+          ctx.beginPath();
+          ctx.moveTo(x + rx, labelY);
+          ctx.lineTo(x + w - rx, labelY);
+          ctx.quadraticCurveTo(x + w, labelY, x + w, labelY + rx);
+          ctx.lineTo(x + w, labelY + h - rx);
+          ctx.quadraticCurveTo(x + w, labelY + h, x + w - rx, labelY + h);
+          ctx.lineTo(x + rx, labelY + h);
+          ctx.quadraticCurveTo(x, labelY + h, x, labelY + h - rx);
+          ctx.lineTo(x, labelY + rx);
+          ctx.quadraticCurveTo(x, labelY, x + rx, labelY);
+          ctx.closePath();
+          ctx.fill();
+        }
 
         ctx.fillStyle = dimmed
           ? "rgba(200,200,200,0.1)"
-          : "rgba(255,255,255,0.9)";
-        ctx.fillText(
-          scientist.name,
-          scientist.x,
-          scientist.y + radius + 3 / globalScale
-        );
+          : "rgba(255,255,255,0.95)";
+        ctx.fillText(scientist.name, scientist.x, labelY + 2.5 / globalScale);
       }
     },
     [
@@ -347,25 +360,26 @@ export default function Graph({
         }
       }
 
-      // Hub-to-hub mesh recedes so constellation lines between isolated stars show
+      // Hub-to-hub fade only matters when the full mesh is visible; once the
+      // co-author filter is at 5+ it has already done the decluttering work.
       const bothHubs =
         (degreeMap.get(srcId) ?? 0) > 30 && (degreeMap.get(tgtId) ?? 0) > 30;
-      const hubMul = bothHubs ? 0.6 : 1;
+      const hubMul = bothHubs && minCoauthorWeight < 5 ? 0.6 : 1;
 
       if (link.type === "co-authored") {
         const w = link.weight ?? 1;
         const alpha =
-          w <= 2 ? 0.04 : w <= 5 ? 0.12 : w <= 15 ? 0.28 : 0.5;
-        return `rgba(115, 118, 136, ${alpha * hubMul})`;
+          w <= 2 ? 0.05 : w <= 5 ? 0.18 : w <= 15 ? 0.4 : 0.7;
+        return `rgba(140, 145, 170, ${alpha * hubMul})`;
       }
 
       if (link.type === "student-of") {
-        return bothHubs ? "rgba(0, 87, 255, 0.6)" : EDGE_COLORS["student-of"];
+        return EDGE_COLORS["student-of"];
       }
 
       return EDGE_COLORS[link.type as Relationship["type"]] ?? "#737688";
     },
-    [neighborSet, degreeMap]
+    [neighborSet, degreeMap, minCoauthorWeight]
   );
 
   const linkWidth = useCallback(
@@ -500,7 +514,14 @@ export default function Graph({
       })
       .catch(() => {});
 
-    setTimeout(() => fg.zoomToFit(400, 80), 500);
+    // Frame the initial seed immediately, then again after the simulation
+    // settles so the final view accounts for any force-driven drift.
+    const firstFit = setTimeout(() => fg.zoomToFit(400, 80), 500);
+    const settledFit = setTimeout(() => fg.zoomToFit(600, 80), 2500);
+    return () => {
+      clearTimeout(firstFit);
+      clearTimeout(settledFit);
+    };
   }, [filteredData]);
 
   if (dimensions.width === 0) return null;
