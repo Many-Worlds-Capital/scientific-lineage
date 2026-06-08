@@ -3119,18 +3119,18 @@
         "doi": "10.1007/jhep11(2013)158"
       },
       {
-        "title": "Variational Matrix Product Operators for the Steady State of Dissipative Quantum Systems",
-        "year": 2015,
-        "openAlexId": "W1628518066",
-        "arxivId": "1501.06786",
-        "doi": "10.1103/physrevlett.114.220601"
-      },
-      {
         "title": "Algorithms for finite projected entangled pair states",
         "year": 2014,
         "openAlexId": "W2136035771",
         "arxivId": "1405.3259",
         "doi": "10.1103/physrevb.90.064425"
+      },
+      {
+        "title": "Variational Matrix Product Operators for the Steady State of Dissipative Quantum Systems",
+        "year": 2015,
+        "openAlexId": "W1628518066",
+        "arxivId": "1501.06786",
+        "doi": "10.1103/physrevlett.114.220601"
       },
       {
         "title": "Matrix Product States for Dynamical Simulation of Infinite Chains",
@@ -11827,11 +11827,11 @@
         "doi": "10.1073/pnas.2015785118"
       },
       {
-        "title": "Universal photonic quantum computation via time-delayed feedback",
-        "year": 2017,
-        "openAlexId": "W2763710457",
-        "arxivId": "1702.02119",
-        "doi": "10.1073/pnas.1711003114"
+        "title": "Quantum metasurfaces with atom arrays",
+        "year": 2020,
+        "openAlexId": "W3013298455",
+        "arxivId": "1904.07369",
+        "doi": "10.1038/s41567-020-0845-5"
       }
     ],
     "yearRange": [
@@ -12148,18 +12148,18 @@
         "doi": "10.1103/physrevlett.96.070504"
       },
       {
-        "title": "Strong coupling of single emitters to surface plasmons",
-        "year": 2007,
-        "openAlexId": "W2047200178",
-        "arxivId": "quant-ph/0603221",
-        "doi": "10.1103/physrevb.76.035420"
-      },
-      {
         "title": "Distributed quantum computation based on small quantum registers",
         "year": 2007,
         "openAlexId": "W2067587698",
         "arxivId": "0709.4539",
         "doi": "10.1103/physreva.76.062323"
+      },
+      {
+        "title": "Strong coupling of single emitters to surface plasmons",
+        "year": 2007,
+        "openAlexId": "W2047200178",
+        "arxivId": "quant-ph/0603221",
+        "doi": "10.1103/physrevb.76.035420"
       }
     ],
     "yearRange": [
@@ -12188,18 +12188,18 @@
         "doi": "10.1038/s41586-023-06927-3"
       },
       {
-        "title": "Quantum sensors for biomedical applications",
-        "year": 2023,
-        "openAlexId": "W4319079672",
-        "arxivId": null,
-        "doi": "10.1038/s42254-023-00558-3"
-      },
-      {
         "title": "High-fidelity parallel entangling gates on a neutral-atom quantum computer",
         "year": 2023,
         "openAlexId": "W4387542025",
         "arxivId": null,
         "doi": "10.1038/s41586-023-06481-y"
+      },
+      {
+        "title": "Quantum sensors for biomedical applications",
+        "year": 2023,
+        "openAlexId": "W4319079672",
+        "arxivId": null,
+        "doi": "10.1038/s42254-023-00558-3"
       },
       {
         "title": "Probing and manipulating embryogenesis via nanoscale thermometry and temperature control",
@@ -12516,18 +12516,18 @@
         "doi": "10.1103/physrevlett.119.223602"
       },
       {
-        "title": "Single-Photon Switching and Entanglement of Solid-State Qubits in an Integrated Nanophotonic System",
-        "year": 2016,
-        "openAlexId": "W3103024753",
-        "arxivId": null,
-        "doi": "10.48550/arxiv.1608.05147"
-      },
-      {
         "title": "Photon-mediated interactions between quantum emitters in a diamond nanocavity",
         "year": 2018,
         "openAlexId": "W2842391768",
         "arxivId": "1807.04265",
         "doi": "10.1126/science.aau4691"
+      },
+      {
+        "title": "Single-Photon Switching and Entanglement of Solid-State Qubits in an Integrated Nanophotonic System",
+        "year": 2016,
+        "openAlexId": "W3103024753",
+        "arxivId": null,
+        "doi": "10.48550/arxiv.1608.05147"
       },
       {
         "title": "Quantum Nonlinear Optics with a Germanium-Vacancy Color Center in a Nanoscale Diamond Waveguide",
@@ -12544,18 +12544,18 @@
         "doi": "10.1038/s41586-024-07252-z"
       },
       {
-        "title": "Robust multi-qubit quantum network node with integrated error detection",
-        "year": 2022,
-        "openAlexId": "W4308430556",
-        "arxivId": null,
-        "doi": "10.1126/science.add9771"
-      },
-      {
         "title": "An integrated nanophotonic quantum register based on silicon-vacancy spins in diamond",
         "year": 2019,
         "openAlexId": "W2966546105",
         "arxivId": "1907.13200",
         "doi": "10.1103/physrevb.100.165428"
+      },
+      {
+        "title": "Robust multi-qubit quantum network node with integrated error detection",
+        "year": 2022,
+        "openAlexId": "W4308430556",
+        "arxivId": null,
+        "doi": "10.1126/science.add9771"
       },
       {
         "title": "Optical and microwave control of germanium-vacancy center spins in diamond",
@@ -12872,18 +12872,18 @@
         "doi": "10.1038/s41567-024-02738-z"
       },
       {
+        "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
+        "year": 2025,
+        "openAlexId": "W4416075932",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
         "title": "Controlling Local Thermalization Dynamics in a Floquet-Engineered Dipolar Ensemble",
         "year": 2023,
         "openAlexId": "W4378214001",
         "arxivId": null,
         "doi": "10.1103/physrevlett.130.210403"
-      },
-      {
-        "title": "Enhancing detection of topological order by local error correction",
-        "year": 2024,
-        "openAlexId": "W4391962124",
-        "arxivId": null,
-        "doi": "10.1038/s41467-024-45584-6"
       },
       {
         "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
@@ -12893,11 +12893,11 @@
         "doi": "10.1038/s41586-025-09475-0"
       },
       {
-        "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
-        "year": 2025,
-        "openAlexId": "W4416075932",
+        "title": "Enhancing detection of topological order by local error correction",
+        "year": 2024,
+        "openAlexId": "W4391962124",
         "arxivId": null,
-        "doi": "10.1038/s41586-025-09848-5"
+        "doi": "10.1038/s41467-024-45584-6"
       }
     ],
     "yearRange": [
@@ -13863,18 +13863,18 @@
         "doi": "10.1038/nphoton.2017.116"
       },
       {
-        "title": "Experimental demonstration of a heralded entanglement source",
-        "year": 2010,
-        "openAlexId": "W2170887635",
-        "arxivId": "1007.2510",
-        "doi": "10.1038/nphoton.2010.123"
-      },
-      {
         "title": "Experimental Measurement-Device-Independent Quantum Key Distribution",
         "year": 2013,
         "openAlexId": "W2057469797",
         "arxivId": "1209.6178",
         "doi": "10.1103/physrevlett.111.130502"
+      },
+      {
+        "title": "Experimental demonstration of a heralded entanglement source",
+        "year": 2010,
+        "openAlexId": "W2170887635",
+        "arxivId": "1007.2510",
+        "doi": "10.1038/nphoton.2010.123"
       },
       {
         "title": "Sending-or-Not-Sending with Independent Lasers: Secure Twin-Field Quantum Key Distribution over 509 km",
@@ -14184,18 +14184,18 @@
         "doi": "10.1103/physrevlett.130.210801"
       },
       {
-        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
-        "year": 2014,
-        "openAlexId": "W1969395616",
-        "arxivId": "1407.8012",
-        "doi": "10.1103/physrevlett.113.190501"
-      },
-      {
         "title": "High-rate quantum key distribution exceeding 110 Mb s–1",
         "year": 2023,
         "openAlexId": "W4360977772",
         "arxivId": "2307.02364",
         "doi": "10.1038/s41566-023-01166-4"
+      },
+      {
+        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
+        "year": 2014,
+        "openAlexId": "W1969395616",
+        "arxivId": "1407.8012",
+        "doi": "10.1103/physrevlett.113.190501"
       },
       {
         "title": "Device-independent quantum random-number generation",
@@ -15557,18 +15557,18 @@
         "doi": "10.1103/physrevlett.130.210801"
       },
       {
-        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
-        "year": 2014,
-        "openAlexId": "W1969395616",
-        "arxivId": "1407.8012",
-        "doi": "10.1103/physrevlett.113.190501"
-      },
-      {
         "title": "High-rate quantum key distribution exceeding 110 Mb s–1",
         "year": 2023,
         "openAlexId": "W4360977772",
         "arxivId": "2307.02364",
         "doi": "10.1038/s41566-023-01166-4"
+      },
+      {
+        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
+        "year": 2014,
+        "openAlexId": "W1969395616",
+        "arxivId": "1407.8012",
+        "doi": "10.1103/physrevlett.113.190501"
       },
       {
         "title": "Device-independent quantum random-number generation",
@@ -16337,16 +16337,16 @@
         "doi": "10.1103/physrevlett.125.180501"
       },
       {
-        "title": "Observation of Thermalization and Information Scrambling in a Superconducting Quantum Processor",
-        "year": 2022,
-        "openAlexId": "W3124314651",
-        "arxivId": "2101.08031",
-        "doi": "10.1103/physrevlett.128.160502"
+        "title": "Experimental quantum computational chemistry with optimized unitary coupled cluster ansatz",
+        "year": 2024,
+        "openAlexId": "W4399544153",
+        "arxivId": null,
+        "doi": "10.1038/s41567-024-02530-z"
       }
     ],
     "yearRange": [
       2019,
-      2023
+      2024
     ]
   },
   {
@@ -16480,18 +16480,18 @@
         "doi": "10.1103/physrevlett.125.180501"
       },
       {
-        "title": "Implementation of a Measurement-Device-Independent Entanglement Witness",
-        "year": 2014,
-        "openAlexId": "W2315523029",
-        "arxivId": "1404.4205",
-        "doi": "10.1103/physrevlett.112.140506"
-      },
-      {
         "title": "Experimental quantum computational chemistry with optimized unitary coupled cluster ansatz",
         "year": 2024,
         "openAlexId": "W4399544153",
         "arxivId": null,
         "doi": "10.1038/s41567-024-02530-z"
+      },
+      {
+        "title": "Implementation of a Measurement-Device-Independent Entanglement Witness",
+        "year": 2014,
+        "openAlexId": "W2315523029",
+        "arxivId": "1404.4205",
+        "doi": "10.1103/physrevlett.112.140506"
       },
       {
         "title": "Experimental exploration of five-qubit quantum error-correcting code with superconducting qubits",
@@ -18852,18 +18852,18 @@
         "doi": "10.1098/rsta.2003.1205"
       },
       {
-        "title": "Trapped-Ion Quantum Simulator: Experimental Application to Nonlinear Interferometers",
-        "year": 2002,
-        "openAlexId": "W2004335071",
-        "arxivId": "quant-ph/0209028",
-        "doi": "10.1103/physrevlett.89.247901"
-      },
-      {
         "title": "Transport of quantum states and separation of ions in a dual RF ion trap",
         "year": 2002,
         "openAlexId": "W2950827727",
         "arxivId": null,
         "doi": "10.26421/qic2.4-1"
+      },
+      {
+        "title": "Trapped-Ion Quantum Simulator: Experimental Application to Nonlinear Interferometers",
+        "year": 2002,
+        "openAlexId": "W2004335071",
+        "arxivId": "quant-ph/0209028",
+        "doi": "10.1103/physrevlett.89.247901"
       },
       {
         "title": "Hyperfine Coherence in the Presence of Spontaneous Photon Scattering",
@@ -19813,18 +19813,18 @@
         "doi": "10.1038/nature05589"
       },
       {
-        "title": "Coherent Control of an Atomic Collision in a Cavity",
-        "year": 2001,
-        "openAlexId": "W2017027370",
-        "arxivId": "quant-ph/0105063",
-        "doi": "10.1103/physrevlett.87.037902"
-      },
-      {
         "title": "Real-time quantum feedback prepares and stabilizes photon number states",
         "year": 2011,
         "openAlexId": "W2053798711",
         "arxivId": "1107.4027",
         "doi": "10.1038/nature10376"
+      },
+      {
+        "title": "Coherent Control of an Atomic Collision in a Cavity",
+        "year": 2001,
+        "openAlexId": "W2017027370",
+        "arxivId": "quant-ph/0105063",
+        "doi": "10.1103/physrevlett.87.037902"
       },
       {
         "title": "Reconstruction of non-classical cavity field states with snapshots of their decoherence",
@@ -30508,18 +30508,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -43885,16 +43885,16 @@
         "doi": "10.48550/arxiv.1504.02512"
       },
       {
-        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
-        "year": 2016,
-        "openAlexId": "W2603961924",
+        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
+        "year": 2015,
+        "openAlexId": "W2243742835",
         "arxivId": null,
         "doi": null
       },
       {
-        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
-        "year": 2015,
-        "openAlexId": "W2243742835",
+        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
+        "year": 2016,
+        "openAlexId": "W2603961924",
         "arxivId": null,
         "doi": null
       }
@@ -46104,9 +46104,9 @@
         "doi": null
       },
       {
-        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
-        "year": 2016,
-        "openAlexId": "W2603961924",
+        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
+        "year": 2015,
+        "openAlexId": "W2243742835",
         "arxivId": null,
         "doi": null
       }
@@ -46418,16 +46418,16 @@
         "doi": null
       },
       {
-        "title": "Towards entanglement purification in circuit QED",
-        "year": 2017,
-        "openAlexId": "W2580729710",
+        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
+        "year": 2015,
+        "openAlexId": "W2243742835",
         "arxivId": null,
         "doi": null
       },
       {
-        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
-        "year": 2015,
-        "openAlexId": "W2243742835",
+        "title": "Towards entanglement purification in circuit QED",
+        "year": 2017,
+        "openAlexId": "W2580729710",
         "arxivId": null,
         "doi": null
       },
@@ -52960,18 +52960,18 @@
         "doi": "10.1038/ncomms5015"
       },
       {
-        "title": "Demonstration of Weight-Four Parity Measurements in the Surface Code Architecture",
-        "year": 2016,
-        "openAlexId": "W2346370519",
-        "arxivId": "1605.01351",
-        "doi": "10.1103/physrevlett.117.210505"
-      },
-      {
         "title": "Effective Hamiltonian models of the cross-resonance gate",
         "year": 2020,
         "openAlexId": "W2797451925",
         "arxivId": "1804.04073",
         "doi": "10.1103/physreva.101.052308"
+      },
+      {
+        "title": "Demonstration of Weight-Four Parity Measurements in the Surface Code Architecture",
+        "year": 2016,
+        "openAlexId": "W2346370519",
+        "arxivId": "1605.01351",
+        "doi": "10.1103/physrevlett.117.210505"
       },
       {
         "title": "Characterizing errors on qubit operations via iterative randomized benchmarking",
@@ -60165,9 +60165,9 @@
         "doi": "10.48550/arxiv.1502.08015"
       },
       {
-        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
-        "year": 2016,
-        "openAlexId": "W2603961924",
+        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
+        "year": 2015,
+        "openAlexId": "W2243742835",
         "arxivId": null,
         "doi": null
       }
@@ -60397,16 +60397,16 @@
         "doi": "10.48550/arxiv.1504.02512"
       },
       {
-        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
-        "year": 2016,
-        "openAlexId": "W2603961924",
+        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
+        "year": 2015,
+        "openAlexId": "W2243742835",
         "arxivId": null,
         "doi": null
       },
       {
-        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
-        "year": 2015,
-        "openAlexId": "W2243742835",
+        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
+        "year": 2016,
+        "openAlexId": "W2603961924",
         "arxivId": null,
         "doi": null
       },
@@ -61203,7 +61203,7 @@
         "doi": "10.1103/prxquantum.5.010347"
       },
       {
-        "title": "Clifford-deformed Surface Codes",
+        "title": "Clifford-Deformed Surface Codes",
         "year": 2022,
         "openAlexId": "W4226409576",
         "arxivId": "2201.07802",
@@ -63000,18 +63000,18 @@
         "doi": "10.1103/physrevlett.121.196801"
       },
       {
-        "title": "Zero-energy Andreev bound states from quantum dots in proximitized Rashba nanowires",
-        "year": 2018,
-        "openAlexId": "W2896976304",
-        "arxivId": "1810.09840",
-        "doi": "10.1103/physrevb.98.245407"
-      },
-      {
         "title": "Time-reversal invariant parafermions in interacting Rashba nanowires",
         "year": 2014,
         "openAlexId": "W2091731343",
         "arxivId": "1312.1998",
         "doi": "10.1103/physrevb.90.045118"
+      },
+      {
+        "title": "Zero-energy Andreev bound states from quantum dots in proximitized Rashba nanowires",
+        "year": 2018,
+        "openAlexId": "W2896976304",
+        "arxivId": "1810.09840",
+        "doi": "10.1103/physrevb.98.245407"
       },
       {
         "title": "Second-Order Topological Superconductivity in <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mml:mi>π</mml:mi></mml:math>-Junction Rashba Layers",
@@ -63274,16 +63274,16 @@
         "doi": "10.1103/physrevb.99.085402"
       },
       {
-        "title": "Spin orbit field in a physically defined p type MOS silicon double quantum dot",
-        "year": 2020,
-        "openAlexId": "W3012040533",
-        "arxivId": "2003.07079",
-        "doi": "10.48550/arxiv.2003.07079"
+        "title": "The origins of noise in the Zeeman splitting of spin qubits in natural-silicon devices",
+        "year": 2025,
+        "openAlexId": "W4417142060",
+        "arxivId": null,
+        "doi": "10.1038/s41534-025-01150-6"
       }
     ],
     "yearRange": [
       2014,
-      2023
+      2025
     ]
   },
   {
@@ -63645,18 +63645,18 @@
         "doi": "10.1103/physrevapplied.20.054024"
       },
       {
-        "title": "Spatial noise correlations beyond nearest-neighbor in ${}^{28}$Si/SiGe spin qubits",
-        "year": 2023,
-        "openAlexId": "W4321854011",
-        "arxivId": "2302.11717",
-        "doi": "10.48550/arxiv.2302.11717"
-      },
-      {
         "title": "Inferring Charge-Noise Source Locations from Correlations in Spin Qubits",
         "year": 2026,
         "openAlexId": "W4417085528",
         "arxivId": "2505.05875",
         "doi": "10.1103/glp5-bb5b"
+      },
+      {
+        "title": "Spatial noise correlations beyond nearest-neighbor in ${}^{28}$Si/SiGe spin qubits",
+        "year": 2023,
+        "openAlexId": "W4321854011",
+        "arxivId": "2302.11717",
+        "doi": "10.48550/arxiv.2302.11717"
       }
     ],
     "yearRange": [
@@ -64395,18 +64395,18 @@
         "doi": "10.1103/physrevlett.113.256802"
       },
       {
-        "title": "Second-Harmonic Coherent Driving of a Spin Qubit in a Si/SiGe Quantum Dot",
-        "year": 2015,
-        "openAlexId": "W1734136517",
-        "arxivId": "1504.06436",
-        "doi": "10.1103/physrevlett.115.106802"
-      },
-      {
         "title": "Dressed photon-orbital states in a quantum dot: Intervalley spin resonance",
         "year": 2017,
         "openAlexId": "W2509448640",
         "arxivId": "1608.06538",
         "doi": "10.1103/physrevb.95.165429"
+      },
+      {
+        "title": "Second-Harmonic Coherent Driving of a Spin Qubit in a Si/SiGe Quantum Dot",
+        "year": 2015,
+        "openAlexId": "W1734136517",
+        "arxivId": "1504.06436",
+        "doi": "10.1103/physrevlett.115.106802"
       },
       {
         "title": "Gate fidelity and coherence time of an electron spin in a Si/SiGe quantum dot",
@@ -67394,18 +67394,18 @@
         "doi": "10.1103/b9s1-6r44"
       },
       {
-        "title": "Demonstration of two-dimensional connectivity for a scalable error-corrected ion-trap quantum processor architecture",
-        "year": 2024,
-        "openAlexId": "W4399423656",
-        "arxivId": "2406.02406",
-        "doi": "10.48550/arxiv.2406.02406"
-      },
-      {
         "title": "Industrial Ion Trap Chips with Integrated Optics",
         "year": 2024,
         "openAlexId": "W4399708482",
         "arxivId": null,
         "doi": "10.1007/978-3-031-63378-2_37"
+      },
+      {
+        "title": "Demonstration of two-dimensional connectivity for a scalable error-corrected ion-trap quantum processor architecture",
+        "year": 2024,
+        "openAlexId": "W4399423656",
+        "arxivId": "2406.02406",
+        "doi": "10.48550/arxiv.2406.02406"
       }
     ],
     "yearRange": [
@@ -76534,16 +76534,16 @@
         "doi": "10.1126/science.abi8378"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2021,
-      2024
+      2025
     ]
   },
   {
@@ -76616,16 +76616,16 @@
         "doi": "10.48550/arxiv.2408.13687"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2020,
-      2024
+      2025
     ]
   },
   {
@@ -77183,18 +77183,18 @@
         "doi": "10.48550/arxiv.2408.13687"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       }
     ],
     "yearRange": [
@@ -77354,16 +77354,16 @@
         "doi": "10.48550/arxiv.2408.13687"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2020,
-      2024
+      2025
     ]
   },
   {
@@ -77982,18 +77982,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -79249,7 +79249,7 @@
         "doi": "10.1103/prxquantum.5.010347"
       },
       {
-        "title": "Clifford-deformed Surface Codes",
+        "title": "Clifford-Deformed Surface Codes",
         "year": 2022,
         "openAlexId": "W4226409576",
         "arxivId": "2201.07802",
@@ -79427,11 +79427,11 @@
         "doi": "10.1038/s41586-025-09596-6"
       },
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
-        "openAlexId": "W4414090234",
+        "openAlexId": "W4416075932",
         "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
+        "doi": "10.1038/s41586-025-09848-5"
       }
     ],
     "yearRange": [
@@ -79495,18 +79495,18 @@
         "doi": "10.1103/physrevlett.133.240602"
       },
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "Low-overhead transversal fault tolerance for universal quantum computation",
@@ -79563,18 +79563,18 @@
         "doi": "10.1038/s41586-024-08353-5"
       },
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "Low-overhead transversal fault tolerance for universal quantum computation",
@@ -79673,11 +79673,11 @@
         "doi": "10.1038/s41586-025-09596-6"
       },
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
-        "openAlexId": "W4414090234",
+        "openAlexId": "W4416075932",
         "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
+        "doi": "10.1038/s41586-025-09848-5"
       }
     ],
     "yearRange": [
@@ -80456,18 +80456,18 @@
     "weight": 5,
     "papers": [
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
@@ -82265,18 +82265,18 @@
         "doi": "10.1038/s41586-024-08353-5"
       },
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "High-fidelity parallel entangling gates on a neutral atom quantum computer",
@@ -82354,18 +82354,18 @@
         "doi": "10.1038/s41586-025-09367-3"
       },
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "High-fidelity parallel entangling gates on a neutral atom quantum computer",
@@ -82497,18 +82497,18 @@
         "doi": "10.1103/physrevlett.107.030501"
       },
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
@@ -83928,9 +83928,9 @@
         "doi": "10.48550/arxiv.1504.02512"
       },
       {
-        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
-        "year": 2016,
-        "openAlexId": "W2603961924",
+        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
+        "year": 2015,
+        "openAlexId": "W2243742835",
         "arxivId": null,
         "doi": null
       }
@@ -85224,18 +85224,18 @@
         "doi": "10.1098/rsta.2003.1205"
       },
       {
-        "title": "Trapped-Ion Quantum Simulator: Experimental Application to Nonlinear Interferometers",
-        "year": 2002,
-        "openAlexId": "W2004335071",
-        "arxivId": "quant-ph/0209028",
-        "doi": "10.1103/physrevlett.89.247901"
-      },
-      {
         "title": "Transport of quantum states and separation of ions in a dual RF ion trap",
         "year": 2002,
         "openAlexId": "W2950827727",
         "arxivId": null,
         "doi": "10.26421/qic2.4-1"
+      },
+      {
+        "title": "Trapped-Ion Quantum Simulator: Experimental Application to Nonlinear Interferometers",
+        "year": 2002,
+        "openAlexId": "W2004335071",
+        "arxivId": "quant-ph/0209028",
+        "doi": "10.1103/physrevlett.89.247901"
       },
       {
         "title": "Hyperfine Coherence in the Presence of Spontaneous Photon Scattering",
@@ -88005,13 +88005,6 @@
         "doi": "10.1126/science.abq5769"
       },
       {
-        "title": "Accurately computing the electronic properties of a quantum ring",
-        "year": 0,
-        "openAlexId": "W3173878905",
-        "arxivId": null,
-        "doi": null
-      },
-      {
         "title": "Measurement-induced state transitions in a superconducting qubit: Within the rotating-wave approximation",
         "year": 2023,
         "openAlexId": "W4388327880",
@@ -88019,11 +88012,11 @@
         "doi": "10.1103/physrevapplied.20.054008"
       },
       {
-        "title": "Resisting High-Energy Impact Events through Gap Engineering in Superconducting Qubit Arrays",
-        "year": 2024,
-        "openAlexId": "W4405187576",
+        "title": "Accurately computing the electronic properties of a quantum ring",
+        "year": 0,
+        "openAlexId": "W3173878905",
         "arxivId": null,
-        "doi": "10.1103/physrevlett.133.240601"
+        "doi": null
       },
       {
         "title": "Readout of a quantum processor with high dynamic range Josephson parametric amplifiers",
@@ -88031,6 +88024,13 @@
         "openAlexId": "W4313528238",
         "arxivId": null,
         "doi": "10.1063/5.0127375"
+      },
+      {
+        "title": "Resisting High-Energy Impact Events through Gap Engineering in Superconducting Qubit Arrays",
+        "year": 2024,
+        "openAlexId": "W4405187576",
+        "arxivId": null,
+        "doi": "10.1103/physrevlett.133.240601"
       }
     ],
     "yearRange": [
@@ -88190,16 +88190,16 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Accurately computing the electronic properties of a quantum ring",
-        "year": 0,
-        "openAlexId": "W3173878905",
+        "title": "Measurement-induced state transitions in a superconducting qubit: Within the rotating-wave approximation",
+        "year": 2023,
+        "openAlexId": "W4388327880",
         "arxivId": null,
-        "doi": null
+        "doi": "10.1103/physrevapplied.20.054008"
       }
     ],
     "yearRange": [
       2018,
-      2021
+      2023
     ]
   },
   {
@@ -106854,18 +106854,18 @@
         "doi": "10.1038/s41467-024-46623-y"
       },
       {
-        "title": "Resisting High-Energy Impact Events through Gap Engineering in Superconducting Qubit Arrays",
-        "year": 2024,
-        "openAlexId": "W4405187576",
-        "arxivId": null,
-        "doi": "10.1103/physrevlett.133.240601"
-      },
-      {
         "title": "Readout of a quantum processor with high dynamic range Josephson parametric amplifiers",
         "year": 2023,
         "openAlexId": "W4313528238",
         "arxivId": null,
         "doi": "10.1063/5.0127375"
+      },
+      {
+        "title": "Resisting High-Energy Impact Events through Gap Engineering in Superconducting Qubit Arrays",
+        "year": 2024,
+        "openAlexId": "W4405187576",
+        "arxivId": null,
+        "doi": "10.1103/physrevlett.133.240601"
       }
     ],
     "yearRange": [
@@ -114393,18 +114393,18 @@
         "doi": "10.1103/b9s1-6r44"
       },
       {
-        "title": "Demonstration of two-dimensional connectivity for a scalable error-corrected ion-trap quantum processor architecture",
-        "year": 2024,
-        "openAlexId": "W4399423656",
-        "arxivId": "2406.02406",
-        "doi": "10.48550/arxiv.2406.02406"
-      },
-      {
         "title": "Industrial Ion Trap Chips with Integrated Optics",
         "year": 2024,
         "openAlexId": "W4399708482",
         "arxivId": null,
         "doi": "10.1007/978-3-031-63378-2_37"
+      },
+      {
+        "title": "Demonstration of two-dimensional connectivity for a scalable error-corrected ion-trap quantum processor architecture",
+        "year": 2024,
+        "openAlexId": "W4399423656",
+        "arxivId": "2406.02406",
+        "doi": "10.48550/arxiv.2406.02406"
       }
     ],
     "yearRange": [
@@ -118786,18 +118786,18 @@
         "doi": "10.1038/nature05589"
       },
       {
-        "title": "Coherent Control of an Atomic Collision in a Cavity",
-        "year": 2001,
-        "openAlexId": "W2017027370",
-        "arxivId": "quant-ph/0105063",
-        "doi": "10.1103/physrevlett.87.037902"
-      },
-      {
         "title": "Real-time quantum feedback prepares and stabilizes photon number states",
         "year": 2011,
         "openAlexId": "W2053798711",
         "arxivId": "1107.4027",
         "doi": "10.1038/nature10376"
+      },
+      {
+        "title": "Coherent Control of an Atomic Collision in a Cavity",
+        "year": 2001,
+        "openAlexId": "W2017027370",
+        "arxivId": "quant-ph/0105063",
+        "doi": "10.1103/physrevlett.87.037902"
       },
       {
         "title": "Reconstruction of non-classical cavity field states with snapshots of their decoherence",
@@ -122903,18 +122903,18 @@
         "doi": "10.1126/science.adh9932"
       },
       {
-        "title": "A Fault-Tolerant Honeycomb Memory",
-        "year": 2021,
-        "openAlexId": "W3194025247",
-        "arxivId": "2108.10457",
-        "doi": "10.22331/q-2021-12-20-605"
-      },
-      {
         "title": "Dynamics of magnetization at infinite temperature in a Heisenberg spin chain",
         "year": 2024,
         "openAlexId": "W4393951973",
         "arxivId": null,
         "doi": "10.1126/science.adi7877"
+      },
+      {
+        "title": "A Fault-Tolerant Honeycomb Memory",
+        "year": 2021,
+        "openAlexId": "W3194025247",
+        "arxivId": "2108.10457",
+        "doi": "10.22331/q-2021-12-20-605"
       }
     ],
     "yearRange": [
@@ -124714,16 +124714,16 @@
         "doi": "10.1038/s41567-023-02226-w"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2016,
-      2023
+      2025
     ]
   },
   {
@@ -125984,18 +125984,18 @@
         "doi": "10.1098/rsta.2003.1205"
       },
       {
-        "title": "Trapped-Ion Quantum Simulator: Experimental Application to Nonlinear Interferometers",
-        "year": 2002,
-        "openAlexId": "W2004335071",
-        "arxivId": "quant-ph/0209028",
-        "doi": "10.1103/physrevlett.89.247901"
-      },
-      {
         "title": "Transport of quantum states and separation of ions in a dual RF ion trap",
         "year": 2002,
         "openAlexId": "W2950827727",
         "arxivId": null,
         "doi": "10.26421/qic2.4-1"
+      },
+      {
+        "title": "Trapped-Ion Quantum Simulator: Experimental Application to Nonlinear Interferometers",
+        "year": 2002,
+        "openAlexId": "W2004335071",
+        "arxivId": "quant-ph/0209028",
+        "doi": "10.1103/physrevlett.89.247901"
       },
       {
         "title": "Hyperfine Coherence in the Presence of Spontaneous Photon Scattering",
@@ -127560,18 +127560,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Accurately computing the electronic properties of a quantum ring",
-        "year": 0,
-        "openAlexId": "W3173878905",
-        "arxivId": null,
-        "doi": null
-      },
-      {
         "title": "Measurement-induced state transitions in a superconducting qubit: Within the rotating-wave approximation",
         "year": 2023,
         "openAlexId": "W4388327880",
         "arxivId": null,
         "doi": "10.1103/physrevapplied.20.054008"
+      },
+      {
+        "title": "Accurately computing the electronic properties of a quantum ring",
+        "year": 0,
+        "openAlexId": "W3173878905",
+        "arxivId": null,
+        "doi": null
       },
       {
         "title": "Direct measurement of nonlocal interactions in the many-body localized phase",
@@ -128284,18 +128284,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Accurately computing the electronic properties of a quantum ring",
-        "year": 0,
-        "openAlexId": "W3173878905",
-        "arxivId": null,
-        "doi": null
-      },
-      {
         "title": "Measurement-induced state transitions in a superconducting qubit: Within the rotating-wave approximation",
         "year": 2023,
         "openAlexId": "W4388327880",
         "arxivId": null,
         "doi": "10.1103/physrevapplied.20.054008"
+      },
+      {
+        "title": "Accurately computing the electronic properties of a quantum ring",
+        "year": 0,
+        "openAlexId": "W3173878905",
+        "arxivId": null,
+        "doi": null
       },
       {
         "title": "Readout of a quantum processor with high dynamic range Josephson parametric amplifiers",
@@ -134616,6 +134616,88 @@
   },
   {
     "source": "A5066703927",
+    "target": "A5009891438",
+    "type": "co-authored",
+    "weight": 23,
+    "papers": [
+      {
+        "title": "Charge-insensitive qubit design derived from the Cooper pair box",
+        "year": 2007,
+        "openAlexId": "W1963734567",
+        "arxivId": "cond-mat/0703002",
+        "doi": "10.1103/physreva.76.042319"
+      },
+      {
+        "title": "Coupling superconducting qubits via a cavity bus",
+        "year": 2007,
+        "openAlexId": "W2147574419",
+        "arxivId": "0709.2135",
+        "doi": "10.1038/nature06184"
+      },
+      {
+        "title": "Resolving photon number states in a superconducting circuit",
+        "year": 2007,
+        "openAlexId": "W2160661582",
+        "arxivId": "cond-mat/0608693",
+        "doi": "10.1038/nature05461"
+      },
+      {
+        "title": "Quantum trajectory approach to circuit QED: Quantum jumps and the Zeno effect",
+        "year": 2008,
+        "openAlexId": "W1973256077",
+        "arxivId": "0709.4264",
+        "doi": "10.1103/physreva.77.012112"
+      },
+      {
+        "title": "Superconducting Qubit with Purcell Protection and Tunable Coupling",
+        "year": 2011,
+        "openAlexId": "W2033343418",
+        "arxivId": "1009.4470",
+        "doi": "10.1103/physrevlett.106.030502"
+      },
+      {
+        "title": "Nanowire Superinductance Fluxonium Qubit",
+        "year": 2019,
+        "openAlexId": "W2798311991",
+        "arxivId": "1805.00938",
+        "doi": "10.1103/physrevlett.122.010504"
+      },
+      {
+        "title": "Accurate Methods for the Analysis of Strong-Drive Effects in Parametric Gates",
+        "year": 2023,
+        "openAlexId": "W3179235454",
+        "arxivId": "2107.02343",
+        "doi": "10.1103/physrevapplied.19.044003"
+      },
+      {
+        "title": "Accurate methods for the analysis of strong-drive effects in parametric gates",
+        "year": 2021,
+        "openAlexId": "W4362498291",
+        "arxivId": null,
+        "doi": "10.48550/arxiv.2107.02343"
+      },
+      {
+        "title": "Introducing the Transmon: a new superconducting qubit from optimizing the Cooper Pair Box",
+        "year": 2007,
+        "openAlexId": "W1646439094",
+        "arxivId": "cond-mat/0703002",
+        "doi": null
+      },
+      {
+        "title": "Quantum Information Processing with Superconducting Qubits and Cavities",
+        "year": 2007,
+        "openAlexId": "W2003645696",
+        "arxivId": null,
+        "doi": "10.1109/cleoe-iqec.2007.4386783"
+      }
+    ],
+    "yearRange": [
+      2007,
+      2023
+    ]
+  },
+  {
+    "source": "A5066703927",
     "target": "A5087556046",
     "type": "co-authored",
     "weight": 23,
@@ -134694,88 +134776,6 @@
     "yearRange": [
       2004,
       2009
-    ]
-  },
-  {
-    "source": "A5066703927",
-    "target": "A5009891438",
-    "type": "co-authored",
-    "weight": 21,
-    "papers": [
-      {
-        "title": "Charge-insensitive qubit design derived from the Cooper pair box",
-        "year": 2007,
-        "openAlexId": "W1963734567",
-        "arxivId": "cond-mat/0703002",
-        "doi": "10.1103/physreva.76.042319"
-      },
-      {
-        "title": "Coupling superconducting qubits via a cavity bus",
-        "year": 2007,
-        "openAlexId": "W2147574419",
-        "arxivId": "0709.2135",
-        "doi": "10.1038/nature06184"
-      },
-      {
-        "title": "Resolving photon number states in a superconducting circuit",
-        "year": 2007,
-        "openAlexId": "W2160661582",
-        "arxivId": "cond-mat/0608693",
-        "doi": "10.1038/nature05461"
-      },
-      {
-        "title": "Quantum trajectory approach to circuit QED: Quantum jumps and the Zeno effect",
-        "year": 2008,
-        "openAlexId": "W1973256077",
-        "arxivId": "0709.4264",
-        "doi": "10.1103/physreva.77.012112"
-      },
-      {
-        "title": "Superconducting Qubit with Purcell Protection and Tunable Coupling",
-        "year": 2011,
-        "openAlexId": "W2033343418",
-        "arxivId": "1009.4470",
-        "doi": "10.1103/physrevlett.106.030502"
-      },
-      {
-        "title": "Nanowire Superinductance Fluxonium Qubit",
-        "year": 2019,
-        "openAlexId": "W2798311991",
-        "arxivId": "1805.00938",
-        "doi": "10.1103/physrevlett.122.010504"
-      },
-      {
-        "title": "Accurate Methods for the Analysis of Strong-Drive Effects in Parametric Gates",
-        "year": 2023,
-        "openAlexId": "W3179235454",
-        "arxivId": "2107.02343",
-        "doi": "10.1103/physrevapplied.19.044003"
-      },
-      {
-        "title": "Accurate methods for the analysis of strong-drive effects in parametric gates",
-        "year": 2021,
-        "openAlexId": "W4362498291",
-        "arxivId": null,
-        "doi": "10.48550/arxiv.2107.02343"
-      },
-      {
-        "title": "Introducing the Transmon: a new superconducting qubit from optimizing the Cooper Pair Box",
-        "year": 2007,
-        "openAlexId": "W1646439094",
-        "arxivId": "cond-mat/0703002",
-        "doi": null
-      },
-      {
-        "title": "Quantum Information Processing with Superconducting Qubits and Cavities",
-        "year": 2007,
-        "openAlexId": "W2003645696",
-        "arxivId": null,
-        "doi": "10.1109/cleoe-iqec.2007.4386783"
-      }
-    ],
-    "yearRange": [
-      2007,
-      2023
     ]
   },
   {
@@ -142702,18 +142702,18 @@
         "doi": "10.1103/physrevlett.130.210801"
       },
       {
-        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
-        "year": 2014,
-        "openAlexId": "W1969395616",
-        "arxivId": "1407.8012",
-        "doi": "10.1103/physrevlett.113.190501"
-      },
-      {
         "title": "High-rate quantum key distribution exceeding 110 Mb s–1",
         "year": 2023,
         "openAlexId": "W4360977772",
         "arxivId": "2307.02364",
         "doi": "10.1038/s41566-023-01166-4"
+      },
+      {
+        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
+        "year": 2014,
+        "openAlexId": "W1969395616",
+        "arxivId": "1407.8012",
+        "doi": "10.1103/physrevlett.113.190501"
       },
       {
         "title": "Device-independent quantum random-number generation",
@@ -142866,18 +142866,18 @@
         "doi": "10.1103/physrevlett.130.210801"
       },
       {
-        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
-        "year": 2014,
-        "openAlexId": "W1969395616",
-        "arxivId": "1407.8012",
-        "doi": "10.1103/physrevlett.113.190501"
-      },
-      {
         "title": "High-rate quantum key distribution exceeding 110 Mb s–1",
         "year": 2023,
         "openAlexId": "W4360977772",
         "arxivId": "2307.02364",
         "doi": "10.1038/s41566-023-01166-4"
+      },
+      {
+        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
+        "year": 2014,
+        "openAlexId": "W1969395616",
+        "arxivId": "1407.8012",
+        "doi": "10.1103/physrevlett.113.190501"
       },
       {
         "title": "Device-independent quantum random-number generation",
@@ -142908,11 +142908,11 @@
         "doi": "10.1103/physrevlett.120.010503"
       },
       {
-        "title": "Implementation of a 46-node quantum metropolitan area network",
-        "year": 2021,
-        "openAlexId": "W3197412341",
-        "arxivId": "2109.04736",
-        "doi": "10.1038/s41534-021-00474-3"
+        "title": "Experimental Quantum Switching for Exponentially Superior Quantum Communication Complexity",
+        "year": 2019,
+        "openAlexId": "W2897180663",
+        "arxivId": "1810.10238",
+        "doi": "10.1103/physrevlett.122.120504"
       }
     ],
     "yearRange": [
@@ -143721,18 +143721,18 @@
         "doi": "10.1103/physrevlett.120.010503"
       },
       {
-        "title": "Multistage Entanglement Swapping",
-        "year": 2008,
-        "openAlexId": "W2039890507",
-        "arxivId": "0808.2972",
-        "doi": "10.1103/physrevlett.101.080403"
-      },
-      {
         "title": "Experimental Quantum Switching for Exponentially Superior Quantum Communication Complexity",
         "year": 2019,
         "openAlexId": "W2897180663",
         "arxivId": "1810.10238",
         "doi": "10.1103/physrevlett.122.120504"
+      },
+      {
+        "title": "Multistage Entanglement Swapping",
+        "year": 2008,
+        "openAlexId": "W2039890507",
+        "arxivId": "0808.2972",
+        "doi": "10.1103/physrevlett.101.080403"
       }
     ],
     "yearRange": [
@@ -146759,16 +146759,16 @@
         "doi": "10.1103/physrevlett.125.180501"
       },
       {
-        "title": "Observation of Thermalization and Information Scrambling in a Superconducting Quantum Processor",
-        "year": 2022,
-        "openAlexId": "W3124314651",
-        "arxivId": "2101.08031",
-        "doi": "10.1103/physrevlett.128.160502"
+        "title": "Experimental quantum computational chemistry with optimized unitary coupled cluster ansatz",
+        "year": 2024,
+        "openAlexId": "W4399544153",
+        "arxivId": null,
+        "doi": "10.1038/s41567-024-02530-z"
       }
     ],
     "yearRange": [
       2019,
-      2023
+      2024
     ]
   },
   {
@@ -146841,16 +146841,16 @@
         "doi": "10.1103/physrevlett.125.180501"
       },
       {
-        "title": "Observation of Thermalization and Information Scrambling in a Superconducting Quantum Processor",
-        "year": 2022,
-        "openAlexId": "W3124314651",
-        "arxivId": "2101.08031",
-        "doi": "10.1103/physrevlett.128.160502"
+        "title": "Experimental quantum computational chemistry with optimized unitary coupled cluster ansatz",
+        "year": 2024,
+        "openAlexId": "W4399544153",
+        "arxivId": null,
+        "doi": "10.1038/s41567-024-02530-z"
       }
     ],
     "yearRange": [
       2017,
-      2023
+      2024
     ]
   },
   {
@@ -160106,18 +160106,18 @@
         "doi": "10.1063/5.0127375"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       }
     ],
     "yearRange": [
@@ -172870,18 +172870,18 @@
         "doi": "10.1038/s41586-024-08353-5"
       },
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "High-fidelity parallel entangling gates on a neutral atom quantum computer",
@@ -173205,18 +173205,18 @@
         "doi": "10.1038/s41586-025-09367-3"
       },
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "High-fidelity parallel entangling gates on a neutral atom quantum computer",
@@ -173259,18 +173259,18 @@
     "weight": 5,
     "papers": [
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
@@ -174329,6 +174329,13 @@
         "doi": "10.48550/arxiv.2202.01357"
       },
       {
+        "title": "Inferring Charge-Noise Source Locations from Correlations in Spin Qubits",
+        "year": 2026,
+        "openAlexId": "W4417085528",
+        "arxivId": "2505.05875",
+        "doi": "10.1103/glp5-bb5b"
+      },
+      {
         "title": "Spatial noise correlations beyond nearest-neighbor in ${}^{28}$Si/SiGe spin qubits",
         "year": 2023,
         "openAlexId": "W4321854011",
@@ -174341,18 +174348,11 @@
         "openAlexId": "W4386437518",
         "arxivId": "2309.00225",
         "doi": "10.48550/arxiv.2309.00225"
-      },
-      {
-        "title": "Simultaneous High-Fidelity Single-Qubit Gates in a Spin Qubit Array",
-        "year": 2025,
-        "openAlexId": "W4415141225",
-        "arxivId": "2507.11918",
-        "doi": "10.48550/arxiv.2507.11918"
       }
     ],
     "yearRange": [
       2021,
-      2025
+      2026
     ]
   },
   {
@@ -174688,18 +174688,18 @@
         "doi": "10.1103/physrevapplied.20.054024"
       },
       {
-        "title": "Spatial noise correlations beyond nearest-neighbor in ${}^{28}$Si/SiGe spin qubits",
-        "year": 2023,
-        "openAlexId": "W4321854011",
-        "arxivId": "2302.11717",
-        "doi": "10.48550/arxiv.2302.11717"
-      },
-      {
         "title": "Inferring Charge-Noise Source Locations from Correlations in Spin Qubits",
         "year": 2026,
         "openAlexId": "W4417085528",
         "arxivId": "2505.05875",
         "doi": "10.1103/glp5-bb5b"
+      },
+      {
+        "title": "Spatial noise correlations beyond nearest-neighbor in ${}^{28}$Si/SiGe spin qubits",
+        "year": 2023,
+        "openAlexId": "W4321854011",
+        "arxivId": "2302.11717",
+        "doi": "10.48550/arxiv.2302.11717"
       }
     ],
     "yearRange": [
@@ -177762,16 +177762,16 @@
         "doi": "10.1063/5.0127375"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2017,
-      2023
+      2025
     ]
   },
   {
@@ -179005,18 +179005,18 @@
         "doi": "10.1038/s41586-022-05348-y"
       },
       {
-        "title": "Accurately computing the electronic properties of a quantum ring",
-        "year": 0,
-        "openAlexId": "W3173878905",
-        "arxivId": null,
-        "doi": null
-      },
-      {
         "title": "Measurement-induced state transitions in a superconducting qubit: Within the rotating-wave approximation",
         "year": 2023,
         "openAlexId": "W4388327880",
         "arxivId": null,
         "doi": "10.1103/physrevapplied.20.054008"
+      },
+      {
+        "title": "Accurately computing the electronic properties of a quantum ring",
+        "year": 0,
+        "openAlexId": "W3173878905",
+        "arxivId": null,
+        "doi": null
       },
       {
         "title": "Purification-based quantum error mitigation of pair-correlated electron simulations",
@@ -181369,18 +181369,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Accurately computing the electronic properties of a quantum ring",
-        "year": 0,
-        "openAlexId": "W3173878905",
-        "arxivId": null,
-        "doi": null
-      },
-      {
         "title": "Measurement-induced state transitions in a superconducting qubit: Within the rotating-wave approximation",
         "year": 2023,
         "openAlexId": "W4388327880",
         "arxivId": null,
         "doi": "10.1103/physrevapplied.20.054008"
+      },
+      {
+        "title": "Accurately computing the electronic properties of a quantum ring",
+        "year": 0,
+        "openAlexId": "W3173878905",
+        "arxivId": null,
+        "doi": null
       },
       {
         "title": "Direct measurement of nonlocal interactions in the many-body localized phase",
@@ -182763,18 +182763,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Accurately computing the electronic properties of a quantum ring",
-        "year": 0,
-        "openAlexId": "W3173878905",
-        "arxivId": null,
-        "doi": null
-      },
-      {
         "title": "Measurement-induced state transitions in a superconducting qubit: Within the rotating-wave approximation",
         "year": 2023,
         "openAlexId": "W4388327880",
         "arxivId": null,
         "doi": "10.1103/physrevapplied.20.054008"
+      },
+      {
+        "title": "Accurately computing the electronic properties of a quantum ring",
+        "year": 0,
+        "openAlexId": "W3173878905",
+        "arxivId": null,
+        "doi": null
       },
       {
         "title": "Optimizing quantum gates towards the scale of logical qubits",
@@ -187348,18 +187348,18 @@
         "doi": "10.1038/s41567-023-02226-w"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -190143,18 +190143,18 @@
         "doi": "10.1063/5.0127375"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       }
     ],
     "yearRange": [
@@ -192856,16 +192856,16 @@
         "doi": "10.1109/isscc42615.2023.10067292"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2020,
-      2023
+      2025
     ]
   },
   {
@@ -201920,18 +201920,18 @@
         "doi": "10.1103/physrevlett.131.150601"
       },
       {
-        "title": "Emergence of classical objectivity of quantum Darwinism in a photonic quantum simulator",
-        "year": 2019,
-        "openAlexId": "W2930940532",
-        "arxivId": null,
-        "doi": "10.1016/j.scib.2019.03.032"
-      },
-      {
         "title": "Solving Graph Problems Using Gaussian Boson Sampling",
         "year": 2023,
         "openAlexId": "W4375948377",
         "arxivId": null,
         "doi": "10.1103/physrevlett.130.190601"
+      },
+      {
+        "title": "Emergence of classical objectivity of quantum Darwinism in a photonic quantum simulator",
+        "year": 2019,
+        "openAlexId": "W2930940532",
+        "arxivId": null,
+        "doi": "10.1016/j.scib.2019.03.032"
       },
       {
         "title": "Unconditional and Robust Quantum Metrological Advantage beyond N00N States",
@@ -211335,16 +211335,16 @@
         "doi": "10.1103/physrevlett.132.100603"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2020,
-      2024
+      2025
     ]
   },
   {
@@ -215236,18 +215236,18 @@
         "doi": "10.1126/science.adh9932"
       },
       {
-        "title": "A Fault-Tolerant Honeycomb Memory",
-        "year": 2021,
-        "openAlexId": "W3194025247",
-        "arxivId": "2108.10457",
-        "doi": "10.22331/q-2021-12-20-605"
-      },
-      {
         "title": "Dynamics of magnetization at infinite temperature in a Heisenberg spin chain",
         "year": 2024,
         "openAlexId": "W4393951973",
         "arxivId": null,
         "doi": "10.1126/science.adi7877"
+      },
+      {
+        "title": "A Fault-Tolerant Honeycomb Memory",
+        "year": 2021,
+        "openAlexId": "W3194025247",
+        "arxivId": "2108.10457",
+        "doi": "10.22331/q-2021-12-20-605"
       }
     ],
     "yearRange": [
@@ -216028,18 +216028,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -216445,16 +216445,16 @@
         "doi": "10.1103/physrevb.40.10391"
       },
       {
-        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
-        "year": 2016,
-        "openAlexId": "W2603961924",
+        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
+        "year": 2015,
+        "openAlexId": "W2243742835",
         "arxivId": null,
         "doi": null
       },
       {
-        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
-        "year": 2015,
-        "openAlexId": "W2243742835",
+        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
+        "year": 2016,
+        "openAlexId": "W2603961924",
         "arxivId": null,
         "doi": null
       },
@@ -216614,16 +216614,16 @@
         "doi": "10.1103/physrevx.6.031036"
       },
       {
-        "title": "Entanglement of remote transmon qubits by concurrent photon detection - Part 1",
-        "year": 2016,
-        "openAlexId": "W2917139895",
+        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
+        "year": 2015,
+        "openAlexId": "W2243742835",
         "arxivId": null,
         "doi": null
       },
       {
-        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
-        "year": 2015,
-        "openAlexId": "W2243742835",
+        "title": "Entanglement of remote transmon qubits by concurrent photon detection - Part 1",
+        "year": 2016,
+        "openAlexId": "W2917139895",
         "arxivId": null,
         "doi": null
       },
@@ -220797,18 +220797,18 @@
         "doi": "10.1103/physrevlett.130.210801"
       },
       {
-        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
-        "year": 2014,
-        "openAlexId": "W1969395616",
-        "arxivId": "1407.8012",
-        "doi": "10.1103/physrevlett.113.190501"
-      },
-      {
         "title": "High-rate quantum key distribution exceeding 110 Mb s–1",
         "year": 2023,
         "openAlexId": "W4360977772",
         "arxivId": "2307.02364",
         "doi": "10.1038/s41566-023-01166-4"
+      },
+      {
+        "title": "Measurement-Device-Independent Quantum Key Distribution over 200 km",
+        "year": 2014,
+        "openAlexId": "W1969395616",
+        "arxivId": "1407.8012",
+        "doi": "10.1103/physrevlett.113.190501"
       },
       {
         "title": "Device-independent quantum random-number generation",
@@ -228690,18 +228690,18 @@
         "doi": "10.1103/physrevlett.131.150601"
       },
       {
-        "title": "Emergence of classical objectivity of quantum Darwinism in a photonic quantum simulator",
-        "year": 2019,
-        "openAlexId": "W2930940532",
-        "arxivId": null,
-        "doi": "10.1016/j.scib.2019.03.032"
-      },
-      {
         "title": "Solving Graph Problems Using Gaussian Boson Sampling",
         "year": 2023,
         "openAlexId": "W4375948377",
         "arxivId": null,
         "doi": "10.1103/physrevlett.130.190601"
+      },
+      {
+        "title": "Emergence of classical objectivity of quantum Darwinism in a photonic quantum simulator",
+        "year": 2019,
+        "openAlexId": "W2930940532",
+        "arxivId": null,
+        "doi": "10.1016/j.scib.2019.03.032"
       },
       {
         "title": "Unconditional and Robust Quantum Metrological Advantage beyond N00N States",
@@ -237718,16 +237718,16 @@
         "doi": "10.1109/isscc42615.2023.10067292"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2020,
-      2023
+      2025
     ]
   },
   {
@@ -237833,6 +237833,13 @@
         "doi": "10.1038/s41586-024-08353-5"
       },
       {
+        "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
+        "year": 2025,
+        "openAlexId": "W4416075932",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
         "title": "Controlling Local Thermalization Dynamics in a Floquet-Engineered Dipolar Ensemble",
         "year": 2023,
         "openAlexId": "W4378214001",
@@ -237845,13 +237852,6 @@
         "openAlexId": "W4414090234",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
-        "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
-        "year": 2025,
-        "openAlexId": "W4416075932",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09848-5"
       },
       {
         "title": "Low-overhead transversal fault tolerance for universal quantum computation",
@@ -237962,18 +237962,18 @@
     "weight": 6,
     "papers": [
       {
-        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
-        "year": 2025,
-        "openAlexId": "W4414090234",
-        "arxivId": null,
-        "doi": "10.1038/s41586-025-09475-0"
-      },
-      {
         "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
         "year": 2025,
         "openAlexId": "W4416075932",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09848-5"
+      },
+      {
+        "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
+        "year": 2025,
+        "openAlexId": "W4414090234",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09475-0"
       },
       {
         "title": "Large-scale quantum reservoir learning with an analog quantum computer",
@@ -238092,6 +238092,12 @@
   {
     "source": "A5101474192",
     "target": "A5074780718",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
+    "source": "A5101474192",
+    "target": "A5103046966",
     "type": "co-authored",
     "weight": 2
   },
@@ -238266,11 +238272,11 @@
         "doi": "10.1038/s41567-024-02738-z"
       },
       {
-        "title": "Enhancing detection of topological order by local error correction",
-        "year": 2024,
-        "openAlexId": "W4391962124",
+        "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
+        "year": 2025,
+        "openAlexId": "W4416075932",
         "arxivId": null,
-        "doi": "10.1038/s41467-024-45584-6"
+        "doi": "10.1038/s41586-025-09848-5"
       },
       {
         "title": "Probing the Kitaev honeycomb model on a neutral-atom quantum computer",
@@ -238280,11 +238286,11 @@
         "doi": "10.1038/s41586-025-09475-0"
       },
       {
-        "title": "A fault-tolerant neutral-atom architecture for universal quantum computation",
-        "year": 2025,
-        "openAlexId": "W4416075932",
+        "title": "Enhancing detection of topological order by local error correction",
+        "year": 2024,
+        "openAlexId": "W4391962124",
         "arxivId": null,
-        "doi": "10.1038/s41586-025-09848-5"
+        "doi": "10.1038/s41467-024-45584-6"
       },
       {
         "title": "Programmable Simulations of Molecules and Materials with Reconfigurable Quantum Processors",
@@ -241144,18 +241150,18 @@
         "doi": "10.1038/s41567-023-02226-w"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -243002,18 +243008,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -245925,16 +245931,16 @@
         "doi": "10.48550/arxiv.2408.13687"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2020,
-      2024
+      2025
     ]
   },
   {
@@ -246307,18 +246313,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -248219,18 +248225,18 @@
         "doi": "10.1063/5.0127375"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -249772,18 +249778,18 @@
         "doi": "10.1063/5.0127375"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -250776,7 +250782,7 @@
         "year": 2012,
         "openAlexId": "W33005219",
         "arxivId": "1209.5574",
-        "doi": null
+        "doi": "10.1111/eva.12989"
       }
     ],
     "yearRange": [
@@ -253549,18 +253555,18 @@
         "doi": "10.1038/s41567-023-02226-w"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -254547,18 +254553,18 @@
         "doi": "10.1063/5.0127375"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -254948,16 +254954,16 @@
         "doi": "10.1103/physrevb.40.10391"
       },
       {
-        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
-        "year": 2016,
-        "openAlexId": "W2603961924",
+        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
+        "year": 2015,
+        "openAlexId": "W2243742835",
         "arxivId": null,
         "doi": null
       },
       {
-        "title": "Engineering non-linear resonator mode interactions in circuit QED by continuous driving: Introduction",
-        "year": 2015,
-        "openAlexId": "W2243742835",
+        "title": "Stabilizing the phase of superpositions of cat states in a cavity using real-time feedback",
+        "year": 2016,
+        "openAlexId": "W2603961924",
         "arxivId": null,
         "doi": null
       },
@@ -255258,16 +255264,16 @@
         "doi": "10.1088/1367-2630/13/4/045021"
       },
       {
-        "title": "Subnanometre resolution in three-dimensional magnetic resonance imaging of individual dark spins",
-        "year": 2014,
-        "openAlexId": "W2158118753",
-        "arxivId": "1401.2674",
-        "doi": "10.1038/nnano.2014.30"
+        "title": "Nanoscale NMR spectroscopy and imaging of multiple nuclear species",
+        "year": 2015,
+        "openAlexId": "W2037799432",
+        "arxivId": "1406.3365",
+        "doi": "10.1038/nnano.2014.313"
       }
     ],
     "yearRange": [
       2008,
-      2014
+      2015
     ]
   },
   {
@@ -255576,16 +255582,16 @@
         "doi": "10.1103/physrevlett.132.100603"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
+        "title": "Observation of constructive interference at the edge of quantum ergodicity",
+        "year": 2025,
+        "openAlexId": "W4415444424",
+        "arxivId": null,
+        "doi": "10.1038/s41586-025-09526-6"
       }
     ],
     "yearRange": [
       2020,
-      2024
+      2025
     ]
   },
   {
@@ -255644,18 +255650,18 @@
         "doi": "10.1063/5.0127375"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -255719,18 +255725,18 @@
         "doi": "10.1103/physrevlett.132.100603"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -255801,18 +255807,18 @@
         "doi": "10.1063/5.0127375"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -255951,18 +255957,18 @@
         "doi": "10.48550/arxiv.2010.07965"
       },
       {
-        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
-        "year": 2021,
-        "openAlexId": "W3125745267",
-        "arxivId": "2101.08870",
-        "doi": "10.48550/arxiv.2101.08870"
-      },
-      {
         "title": "Observation of constructive interference at the edge of quantum ergodicity",
         "year": 2025,
         "openAlexId": "W4415444424",
         "arxivId": null,
         "doi": "10.1038/s41586-025-09526-6"
+      },
+      {
+        "title": "Information Scrambling in Computationally Complex Quantum Circuits",
+        "year": 2021,
+        "openAlexId": "W3125745267",
+        "arxivId": "2101.08870",
+        "doi": "10.48550/arxiv.2101.08870"
       },
       {
         "title": "Exponential suppression of bit or phase flip errors with repetitive quantum error correction",
@@ -257492,18 +257498,18 @@
         "doi": "10.1126/sciadv.adj3698"
       },
       {
-        "title": "Phase-dependent Andreev molecules and superconducting gap closing in coherently coupled Josephson junctions",
-        "year": 2023,
-        "openAlexId": "W4330338269",
-        "arxivId": "2303.10540",
-        "doi": "10.48550/arxiv.2303.10540"
-      },
-      {
         "title": "Shapiro response of superconducting diode effect derived from Andreev molecules",
         "year": 2025,
         "openAlexId": "W4408344998",
         "arxivId": null,
         "doi": "10.1103/physrevb.111.094512"
+      },
+      {
+        "title": "Phase-dependent Andreev molecules and superconducting gap closing in coherently coupled Josephson junctions",
+        "year": 2023,
+        "openAlexId": "W4330338269",
+        "arxivId": "2303.10540",
+        "doi": "10.48550/arxiv.2303.10540"
       },
       {
         "title": "Engineering of anomalous Josephson effect in coherently coupled Josephson junctions",
@@ -259119,7 +259125,7 @@
         "doi": "10.1103/prxquantum.5.010347"
       },
       {
-        "title": "Clifford-deformed Surface Codes",
+        "title": "Clifford-Deformed Surface Codes",
         "year": 2022,
         "openAlexId": "W4226409576",
         "arxivId": "2201.07802",
@@ -259237,16 +259243,16 @@
         "doi": null
       },
       {
-        "title": "3D Localization of an expanding BEC in laser speckle potential",
-        "year": 2011,
-        "openAlexId": "W2726813603",
+        "title": "Anderson Localization of an expanding BEC in laser speckle",
+        "year": 2008,
+        "openAlexId": "W3042404224",
         "arxivId": null,
         "doi": null
       },
       {
-        "title": "Anderson Localization of an expanding BEC in laser speckle",
-        "year": 2008,
-        "openAlexId": "W3042404224",
+        "title": "3D Localization of an expanding BEC in laser speckle potential",
+        "year": 2011,
+        "openAlexId": "W2726813603",
         "arxivId": null,
         "doi": null
       },
@@ -259834,7 +259840,7 @@
     "source": "A5067644085",
     "target": "A5010502919",
     "type": "co-authored",
-    "weight": 20,
+    "weight": 21,
     "papers": [
       {
         "title": "Spin–phonon interactions in silicon carbide addressed by Gaussian acoustics",
@@ -259872,6 +259878,13 @@
         "doi": "10.1103/physrevb.95.035207"
       },
       {
+        "title": "Electrically driven optical interferometry with spins in silicon carbide",
+        "year": 2019,
+        "openAlexId": "W3105090571",
+        "arxivId": null,
+        "doi": "10.6082/pzwbk-tq576"
+      },
+      {
         "title": "Coherent Control of Spins with Gaussian Acoustics",
         "year": 2018,
         "openAlexId": "W2798430963",
@@ -259896,13 +259909,6 @@
         "title": "Optical and Spin Signatures of Transition Metal Impurities in Silicon Carbide",
         "year": 2016,
         "openAlexId": "W2580623918",
-        "arxivId": null,
-        "doi": null
-      },
-      {
-        "title": "Towards quantum communication nodes using nuclear spins in silicon carbide electronics",
-        "year": 2021,
-        "openAlexId": "W3128263336",
         "arxivId": null,
         "doi": null
       }
@@ -264731,7 +264737,7 @@
     "source": "A5103270503",
     "target": "A5016511626",
     "type": "co-authored",
-    "weight": 9,
+    "weight": 11,
     "papers": [
       {
         "title": "Floquet Time Crystals",
@@ -264783,23 +264789,30 @@
         "doi": "10.48550/arxiv.2401.09549"
       },
       {
-        "title": "Realistic models for Majorana wires",
-        "year": 2014,
-        "openAlexId": "W2243147702",
-        "arxivId": null,
+        "title": "20 Second Parity Lifetime in an InAs--Pb Tetron Device",
+        "year": 2026,
+        "openAlexId": "W7163720545",
+        "arxivId": "2606.03884",
         "doi": null
       },
       {
-        "title": "Area laws and topological order in a many-body localized state",
+        "title": "20 Second Parity Lifetime in an InAs--Pb Tetron Device",
+        "year": 2026,
+        "openAlexId": "W7163351965",
+        "arxivId": null,
+        "doi": "10.48550/arxiv.2606.03884"
+      },
+      {
+        "title": "Realistic models for Majorana wires",
         "year": 2014,
-        "openAlexId": "W3175146542",
+        "openAlexId": "W2243147702",
         "arxivId": null,
         "doi": null
       }
     ],
     "yearRange": [
       2013,
-      2025
+      2026
     ]
   },
   {
@@ -264881,18 +264894,6 @@
       2006,
       2008
     ]
-  },
-  {
-    "source": "A5103270503",
-    "target": "A5053703360",
-    "type": "co-authored",
-    "weight": 2
-  },
-  {
-    "source": "A5103270503",
-    "target": "A5066245772",
-    "type": "co-authored",
-    "weight": 2
   },
   {
     "source": "A5003273032",
@@ -269454,18 +269455,18 @@
         "doi": "10.1098/rsta.2003.1205"
       },
       {
-        "title": "Trapped-Ion Quantum Simulator: Experimental Application to Nonlinear Interferometers",
-        "year": 2002,
-        "openAlexId": "W2004335071",
-        "arxivId": "quant-ph/0209028",
-        "doi": "10.1103/physrevlett.89.247901"
-      },
-      {
         "title": "Transport of quantum states and separation of ions in a dual RF ion trap",
         "year": 2002,
         "openAlexId": "W2950827727",
         "arxivId": null,
         "doi": "10.26421/qic2.4-1"
+      },
+      {
+        "title": "Trapped-Ion Quantum Simulator: Experimental Application to Nonlinear Interferometers",
+        "year": 2002,
+        "openAlexId": "W2004335071",
+        "arxivId": "quant-ph/0209028",
+        "doi": "10.1103/physrevlett.89.247901"
       },
       {
         "title": "Hyperfine Coherence in the Presence of Spontaneous Photon Scattering",
@@ -272488,16 +272489,16 @@
         "doi": "10.1063/5.0088879"
       },
       {
-        "title": "Scalable Self-Adaptive Synchronous Triggering System in Superconducting Quantum Computing",
-        "year": 2020,
-        "openAlexId": "W3015924323",
+        "title": "Active reset of superconducting qubits using the electronics based on RF switches",
+        "year": 2023,
+        "openAlexId": "W4386457133",
         "arxivId": null,
-        "doi": "10.1109/tns.2020.2986260"
+        "doi": "10.1063/5.0166535"
       }
     ],
     "yearRange": [
       2016,
-      2022
+      2023
     ]
   },
   {
@@ -275570,6 +275571,12 @@
     "weight": 2
   },
   {
+    "source": "A5053703360",
+    "target": "A5103270503",
+    "type": "co-authored",
+    "weight": 2
+  },
+  {
     "source": "A5114020729",
     "target": "A5016075205",
     "type": "co-authored",
@@ -275730,18 +275737,18 @@
         "doi": "10.1103/physrevlett.125.180501"
       },
       {
-        "title": "Observation of Thermalization and Information Scrambling in a Superconducting Quantum Processor",
-        "year": 2022,
-        "openAlexId": "W3124314651",
-        "arxivId": "2101.08031",
-        "doi": "10.1103/physrevlett.128.160502"
-      },
-      {
         "title": "Experimental quantum computational chemistry with optimized unitary coupled cluster ansatz",
         "year": 2024,
         "openAlexId": "W4399544153",
         "arxivId": null,
         "doi": "10.1038/s41567-024-02530-z"
+      },
+      {
+        "title": "Observation of Thermalization and Information Scrambling in a Superconducting Quantum Processor",
+        "year": 2022,
+        "openAlexId": "W3124314651",
+        "arxivId": "2101.08031",
+        "doi": "10.1103/physrevlett.128.160502"
       },
       {
         "title": "Emulating Quantum Teleportation of a Majorana Zero Mode Qubit",
